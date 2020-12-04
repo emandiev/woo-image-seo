@@ -205,6 +205,12 @@ $settings = woo_image_seo_get_settings();
 
 	<div id="post-success" class="hidden">Settings Saved!</div>
 
+	<div id="help-background">
+		<span>Click anywhere to close overlay</span>
+
+		<span>Click anywhere to close overlay</span>
+	</div>
+
 	<div id="force-help" class="postbox postbox--help">
 		<h2>How does "Force attribute" work?</h2>
 		<strong>If the setting is disabled:</strong><br>
@@ -301,16 +307,15 @@ jQuery(document).ready(function() {
 	jQuery('#woo_image_seo_form a.dashicons.dashicons-editor-help').click(function(event) {
 		event.preventDefault();
 		var $target = jQuery(this.hash);
+		var $helpBackground = jQuery('#help-background');
 
-		$target.addClass('postbox--active');
+		$helpBackground.fadeIn();
+		$target.fadeIn();
 
-		jQuery('html, body').animate({
-			scrollTop: $target.offset().top - 40
-		}, 700);
-
-		setTimeout(function() {
-			$target.removeClass('postbox--active');			
-		}, 1000);
+		$helpBackground.click(function() {
+			$helpBackground.fadeOut();
+			$target.fadeOut();
+		});
 	});
 
 });

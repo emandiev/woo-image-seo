@@ -138,13 +138,34 @@
 #woo_image_seo_form .dashicons-editor-help:hover {
 	transform: scale(1.2);
 }
-.postbox--help {
-	transition: box-shadow .4s;
+#woo_image_seo_form .dashicons-editor-help:focus {
+	box-shadow: none;
 }
-.postbox--active {
-    box-shadow: 0 0 5px #0073aa;
+.postbox--help {
+	display: none;
+	transition: box-shadow .4s;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10000;
+    max-height: 80vh;
+    width: 900px;
+    overflow: auto;
 }
 
 .postbox .notice {
 	display: none !important;
+}
+
+#help-background {
+	display: none;
+	position: fixed;
+	z-index: 9999;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background: #000;
+	opacity: .7;
 }
