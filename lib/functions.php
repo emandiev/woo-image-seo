@@ -3,6 +3,19 @@
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 /*
+	Lazy but sufficient approach for globally available data
+*/
+define(
+	'WOO_IMAGE_SEO',
+	[
+		'option_name' => 'woo_image_seo',
+		'root_dir' => dirname( __DIR__ ) . '/',
+		'assets_url' => plugin_dir_url( __DIR__ ) . '/assets/',
+		'default_settings' => file_get_contents( dirname( __DIR__ ) . '/data/default-settings.json' ),
+	]
+);
+
+/*
 	Get plugin settings
 	If not found, saves the default settings first
 */
@@ -14,6 +27,30 @@ function woo_image_seo_get_settings() {
 	}
 
 	return json_decode( $settings, true );
+}
+
+/*
+	Save plugin settings - works only on settings page
+*/
+function woo_image_seo_save_settings() {
+	if (
+		strpos( $_SERVER['REQUEST_URI'], '/admin.php?page=woo_image_seo' ) == false
+		||
+		empty( $_POST['_wpnonce'] )
+		||
+		wp_verify_nonce( $_POST['_wpnonce'], 'nonce' ) == false
+		||
+		current_user_can( 'administrator' ) == false
+	) {
+		return;
+	}
+
+	// Clean the $_POST variable from NONCE elements
+	unset( $_POST['_wpnonce'] );
+	unset( $_POST['_wp_http_referer'] );
+
+	// save $_POST in JSON format
+	update_option( 'woo_image_seo', json_encode( $_POST, JSON_NUMERIC_CHECK ) );
 }
 
 /*
@@ -30,7 +67,16 @@ function woo_image_seo_set_default_settings() {
 	Add settings page to dashboard
 */
 function woo_image_seo_add_page() {
-	add_submenu_page( 'woocommerce', 'Woo Image SEO', 'Woo Image SEO', 'manage_options', 'woo_image_seo', function() { include 'settings.php'; } );
+	add_submenu_page(
+		'woocommerce',
+		'Woo Image SEO',
+		'Woo Image SEO',
+		'manage_options',
+		'woo_image_seo',
+		function() {
+			include WOO_IMAGE_SEO['root_dir'] . '/views/settings.php';
+		}
+	);
 }
 
 /*

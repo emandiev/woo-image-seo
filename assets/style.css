@@ -4,14 +4,17 @@
 	font-size: 16px;
 	line-height: 1.5em;
 }
+#woo_image_seo_form input, select {
+	margin: 0;
+}
 #woo_image_seo_form fieldset {
 	border: 1px dotted #999999;
 	padding: 25px;
-	margin: 25px 0;
+	margin: 15px 0;
 	font-size: 20px;
 }
 #woo_image_seo_form label {
-	display: inline-block;
+	display: block;
 	font-size: 17px;
 	line-height: 1.5em;
 	position: relative;
@@ -67,7 +70,7 @@
 	color: white;
 	border: none;
 	padding: 5px 10px;
-	margin-top: 40px;
+	margin-top: 20px;
 	box-shadow: 0 1px 1px rgba(0,0,0,.7);
 }
 #woo_image_seo_form input[type="submit"]:hover,
@@ -97,14 +100,25 @@
 	margin-top: 20px;
 	padding: 0;
 }
+#woo_image_seo_form .text-select > span {
+    display: inline-block;
+    min-width: 140px;
+}
+#woo_image_seo_form input[data-custom-text] {
+    width: 460px;
+    max-width: 100%;
+    padding: 0 5px;
+    font-size: 17px;
+    line-height: 1.5;
+}
 #woo_image_seo_form label span {
 	vertical-align: middle;
 }
 #woo_image_seo_form select {
 	font-size: 17px;
 	line-height: 1.5;
-	padding: 3px;
-	width: 140px;
+	padding: 0 5px;
+	width: 150px;
 }
 #post-success {
 	background: #0cad21;
@@ -126,4 +140,8 @@
 }
 .postbox--active {
     box-shadow: 0 0 5px #0073aa;
+}
+
+.postbox .notice {
+	display: none !important;
 }

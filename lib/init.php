@@ -3,17 +3,6 @@
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 /*
-	Lazy but sufficient approach for globally available data
-*/
-define(
-	'WOO_IMAGE_SEO',
-	[
-		'option_name' => 'woo_image_seo',
-		'default_settings' => file_get_contents( __DIR__ . '/default-settings.json' ),
-	]
-);
-
-/*
 	Main function definitions
 */
 require_once __DIR__ . '/functions.php';
