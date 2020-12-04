@@ -1,131 +1,150 @@
 <?php
 /*
-Plugin Name: Woo Image SEO
-Description: Boost your SEO by automatically adding  alt tags and title attributes to all product images. Requires WooCommerce.
-Version: 1.0.2
-Plugin URI: https://wordpress.org/plugins/woo-image-seo/
-Author: Danail Emandiev
-License: GPLv3
-License URI: https://www.gnu.org/licenses/gpl-3.0.html
+	Plugin Name: Woo Image SEO
+	Description: Boost your SEO by automatically adding alt tags and title attributes to all product images. Requires WooCommerce.
+	Version: 1.1.0
+	Plugin URI: https://wordpress.org/plugins/woo-image-seo/
+	Author: Danail Emandiev
+	Author URI: https://emandiev.com
+	License: GPLv3
+	License URI: https://www.gnu.org/licenses/gpl-3.0.html
 */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
+/*
+	Get plugin settings
+	If not found, saves the default settings first
+*/
+function woo_image_seo_get_settings() {
+	$settings = get_option( 'woo_image_seo' );
 
-// Function to ensure that there are plugin settings in the database
-function woo_image_seo_check_for_existing_settings() {
-    
-    // Check for existing settings
-    if ( !get_option( 'woo_image_seo' ) ) {
-        // do this if there are no settings in the database
-        // set default settings var
-        $default_settings = '{"alt":{"enable":1,"force":0,"text":{"1":"[none]","2":"[name]","3":"[none]"}},"title":{"enable":1,"force":1,"text":{"1":"[none]","2":"[name]","3":"[none]"}}}';
-        update_option( 'woo_image_seo', $default_settings );
-    }
-    
+	if ( empty( $settings ) ) {
+		$settings = woo_image_seo_set_default_settings();
+	}
+
+	return json_decode( $settings, true );
 }
 
+/*
+	Set default settings
+	returns the default settings in JSON string
+*/
+function woo_image_seo_set_default_settings() {
+	$default_settings = '{"alt":{"enable":1,"force":0,"text":{"1":"[none]","2":"[name]","3":"[none]"},"custom":{"1":"","2":"","3":""}},"title":{"enable":1,"force":1,"text":{"1":"[none]","2":"[name]","3":"[none]"},"custom":{"1":"","2":"","3":""}}}';
 
-// Add settings page to dashboard
+	update_option( 'woo_image_seo', $default_settings );
+
+	return $default_settings;
+}
+
+/*
+	Add settings page to dashboard
+*/
 function woo_image_seo_add_page() {
-	add_submenu_page( 'woocommerce', 'Woo Image SEO', 'Woo Image SEO', 'manage_options', 'woo_image_seo', 'woo_image_seo_page_callback' );
+	add_submenu_page( 'woocommerce', 'Woo Image SEO', 'Woo Image SEO', 'manage_options', 'woo_image_seo', function() { include 'settings.php'; } );
 }
 
-function woo_image_seo_page_callback() {
-	include 'settings.php';
-}
-
-
-// Add a link in the Installed Plugins page to the Plugin's settings page
+/*
+	Add a link in the Installed Plugins page to the Plugin's settings page
+*/
 function woo_image_seo_add_settings_link( $links ) {
-    array_push( $links, '<a href="admin.php?page=woo_image_seo">Settings</a>' );
-  	return $links;
+	array_push( $links, '<a href="admin.php?page=woo_image_seo">Settings</a>' );
+	return $links;
 }
 
+/*
+	Filter wp_get_attachment_image_attributes
+*/
+function woo_image_seo_change_image_attributes( $attr, $attachment ) {
+	if ( get_post_type() !== 'product' ) {
+		return $attr;
+	}
 
-// Main function - change image attributes
-function woo_image_seo_change_image_attributes($attr, $attachment) {
-    
-    // check if the current post is a product
-	if ( get_post_type() === 'product' ) {
-	    
-	    // check for existing settings or save default to database
-	    woo_image_seo_check_for_existing_settings();
-		
-		// decode JSON settings string
-		$settings = json_decode( get_option( 'woo_image_seo' ), true );
-		
-		// Check which attributes should be handled
-		foreach ( $settings as $settings_key => $settings_value ) {
+	return woo_image_seo_get_image_attributes( $attr );
+}
 
-				// Check if attribute should be changed, two conditions
-				// 1. if the attribute handle is enabled
-				// 2. if there is no attribute set or the attribute has no length or 'force attribute' is enabled
-				if ( $settings_value['enable'] && (!isset($attr[$settings_key]) || strlen($attr[$settings_key]) === 0 || $settings_value['force']) ) {
-					
-					$attr[$settings_key] = ''; // declare var so we can append later
-					
-					// Check how the attribute is built
-					foreach ( $settings_value['text'] as $text_key => $text_value ) {
-						
-						if ( $text_value ) {
-							switch ($text_value) {
-						
-						case '[name]': // Get product title
-							$text_value = get_the_title();
-							break;
-							
-						case '[category]': // Get product categories
-							$product_categories = get_the_terms( get_the_ID(), 'product_cat' );
-							// check if product has a category, it should be an array
-							if ( is_array($product_categories) ) {
-								// if first category is not "Uncategorized", use it
-								if ( $product_categories[0]->name !== 'Uncategorized' ) {
-									$text_value = $product_categories[0]->name;
-								}
-								else if ( isset($product_categories[1]) ) { // try to get another category
-									$text_value = $product_categories[1]->name;
-								}
-							}
-							break;
-							
-						case '[tag]': // Get product tags
-							$product_tags = get_the_terms( get_the_ID(), 'product_tag' );
-							// check if product has a tag
-							if ( is_array($product_tags) ) {
-								$text_value = $product_tags[0]->name;
-							}
-							break;
-							
-						default: // if value is not one of the above
-							$text_value = null;
-							break;
-							
-							}
-							
-							if ($text_value) { // if value is not null/0
-								$attr[$settings_key] .= $text_value . ' ';
-							}
+/*
+	Build custom image attributes
+*/
+function woo_image_seo_get_image_attributes( $attr ) {
+	$settings = woo_image_seo_get_settings();
+
+	// check which attributes should be handled - loops through "alt" and "title"
+	foreach ( $settings as $attribute_name => $attribute_values ) {
+		$should_handle_attr = $attribute_values['enable'] && ( $attribute_values['force'] || empty( $attr[ $attribute_name ] ) );
+
+		if ( $should_handle_attr === false ) {
+			continue;
+		}
+
+		// declare var so we can append later
+		$attr[ $attribute_name ] = '';
+
+		// check how the attribute is built
+		foreach ( $attribute_values['text'] as $text_key => $text_value ) {
+			if ( empty( $text_value ) ) {
+				continue;
+			}
+
+			switch ( $text_value ) {
+				case '[name]':
+					// get product title
+					$text_value = get_the_title();
+					break;
+
+				case '[category]':
+					// get product categories
+					$product_categories = get_the_terms( get_the_ID(), 'product_cat' );
+					// check if product has a category, it should be an array
+					if ( is_array( $product_categories ) ) {
+						// if first category is not "Uncategorized", use it
+						if ( $product_categories[0]->name !== 'Uncategorized' ) {
+							$text_value = $product_categories[0]->name;
+						}
+						else if ( isset($product_categories[1]) ) { // try to get another category
+							$text_value = $product_categories[1]->name;
 						}
 					}
-					
-					// Trim whitespace
-					$attr[$settings_key] = trim($attr[$settings_key]);
-				
-				}
-			
+					break;
+
+				case '[tag]':
+					// get product tags
+					$product_tags = get_the_terms( get_the_ID(), 'product_tag' );
+					// check if product has a tag
+					if ( is_array( $product_tags ) ) {
+						$text_value = $product_tags[0]->name;
+					}
+					break;
+
+				case '[custom]':
+					// custom text
+					$text_value = $attribute_values['custom'][ $text_key ];
+
+				default:
+					// if value is not one of the above
+					$text_value = '';
+					break;
+			}
+
+			// append the proper text
+			if ( ! empty( $text_value ) ) {
+				$attr[ $attribute_name ] .= $text_value . ' ';
+			}
 		}
-		
-		
+
+		// trim whitespace
+		$attr[ $attribute_name ] = trim( $attr[ $attribute_name ] );
 	}
-	
-	// Return the final attribute to front-end
+
+	// return the final attribute to front-end
 	return $attr;
-	
 }
 
-// hooks, filters, actions
-register_activation_hook( __FILE__, 'woo_image_seo_check_for_existing_settings' );
-add_action('admin_menu', 'woo_image_seo_add_page');
-add_filter( "plugin_action_links_".plugin_basename( __FILE__ ), 'woo_image_seo_add_settings_link' );
-add_filter('wp_get_attachment_image_attributes', 'woo_image_seo_change_image_attributes', 20, 2);
+/*
+	Hooks, actions, filters
+*/
+register_activation_hook( __FILE__, 'woo_image_seo_get_settings' );
+add_action( 'admin_menu', 'woo_image_seo_add_page' );
+add_filter( 'plugin_action_links_' . plugin_basename( __FILE__ ), 'woo_image_seo_add_settings_link' );
+add_filter( 'wp_get_attachment_image_attributes', 'woo_image_seo_change_image_attributes', 20, 2 );
