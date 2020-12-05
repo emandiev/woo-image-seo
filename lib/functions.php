@@ -135,10 +135,13 @@ function woo_image_seo_get_image_attributes( $attr ) {
 						// if first category is not "Uncategorized", use it
 						if ( $product_categories[0]->name !== 'Uncategorized' ) {
 							$text_value = $product_categories[0]->name;
-						}
-						else if ( isset($product_categories[1]) ) { // try to get another category
+						} else if ( isset($product_categories[1]) ) { // try to get another category
 							$text_value = $product_categories[1]->name;
+						} else {
+							$text_value = '';
 						}
+					} else {
+						$text_value = '';
 					}
 					break;
 
@@ -148,6 +151,8 @@ function woo_image_seo_get_image_attributes( $attr ) {
 					// check if product has a tag
 					if ( is_array( $product_tags ) ) {
 						$text_value = $product_tags[0]->name;
+					} else {
+						$text_value = '';
 					}
 					break;
 
