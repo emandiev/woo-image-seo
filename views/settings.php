@@ -4,7 +4,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 require_once WOO_IMAGE_SEO['root_dir'] . 'lib/functions.php';
 
-woo_image_seo_save_settings();
+woo_image_seo_maybe_save_settings();
 
 $settings = woo_image_seo_get_settings();
 

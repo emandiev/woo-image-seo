@@ -32,7 +32,7 @@ function woo_image_seo_get_settings() {
 /*
 	Save plugin settings - works only on settings page
 */
-function woo_image_seo_save_settings() {
+function woo_image_seo_maybe_save_settings() {
 	if (
 		strpos( $_SERVER['REQUEST_URI'], '/admin.php?page=woo_image_seo' ) == false
 		||
