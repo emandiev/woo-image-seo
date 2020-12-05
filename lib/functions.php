@@ -159,6 +159,7 @@ function woo_image_seo_get_image_attributes( $attr ) {
 				case '[custom]':
 					// custom text
 					$text_value = $attribute_values['custom'][ $text_key ];
+					break;
 
 				default:
 					// if value is not one of the above
