@@ -43,7 +43,7 @@ jQuery(document).ready(function() {
 					},
 					success: function(data){
 						// Replace the form with the new one
-						jQuery('#woo_image_seo_form .wrap').html(jQuery('#woo_image_seo_form .wrap', data));
+						jQuery('#woo_image_seo_form .wrap').replaceWith(jQuery('#woo_image_seo_form .wrap', data));
 						jQuery('#woo_image_seo_form input').removeAttr('disabled');
 						jQuery('input[type="submit"]').attr('value', 'Save Settings');
 						jQuery('#reset-settings').attr('value', 'Reset to Default');
