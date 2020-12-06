@@ -39,6 +39,7 @@
 
 #woo_image_seo_form label.label--checkbox {
 	padding-left: 35px;
+	margin-right: 5px;
 }
 
 #woo_image_seo_form input[type="checkbox"] {
