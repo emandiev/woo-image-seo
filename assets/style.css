@@ -61,27 +61,21 @@
 	background-color: #eee;
 	transition: background-color .3s;
 }
-#woo_image_seo_form label:hover input[type="checkbox"] ~ .checkmark {
-	background-color: #ccc;
+
+#woo_image_seo_form input[type="checkbox"]:checked ~ .checkmark {
+	background-color: #0073aa;
 }
-body.no-focus #woo_image_seo_form label:hover input[type="checkbox"] ~ .checkmark {
-	background-color: #ccc !important;
-}
-#woo_image_seo_form input[type="checkbox"]:checked ~ .checkmark,
+
 #woo_image_seo_form input[type="checkbox"]:focus ~ .checkmark {
-	background-color: #0073aa !important;
+	background-color: #80b9d5;
 }
+
 body.no-focus #woo_image_seo_form input[type="checkbox"]:focus ~ .checkmark {
-	background-color: #eee !important;
+	background-color: #eee;
 }
-body.no-focus #woo_image_seo_form input[type="checkbox"]:focus:checked ~ .checkmark {
-	background-color: #0073aa !important;
-}
-#woo_image_seo_form input[type="checkbox"]:focus ~ .checkmark {
-	opacity: .5;
-}
-body.no-focus #woo_image_seo_form input[type="checkbox"]:focus ~ .checkmark {
-	opacity: 1;
+
+body.no-focus #woo_image_seo_form input[type="checkbox"]:checked:focus ~ .checkmark {
+	background-color: #0073aa;
 }
 
 #woo_image_seo_form .checkmark:after {
