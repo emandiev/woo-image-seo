@@ -1,4 +1,13 @@
-jQuery(document).ready(function() {
+jQuery(document).ready(function($) {
+
+	var $body = $('body');
+
+	// accessibility
+	$body.on('mousedown', function() {
+		this.classList.add('no-focus');
+	}).on('keydown', function() {
+		this.classList.remove('no-focus');
+	});
 
 	// AJAX form submission
 	jQuery('#woo_image_seo_form').submit(function(e){
