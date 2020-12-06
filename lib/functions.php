@@ -180,3 +180,21 @@ function woo_image_seo_get_image_attributes( $attr ) {
 	// return the final attribute to front-end
 	return $attr;
 }
+
+/*
+	Render a partial template file
+	reduces duplicate code in main template file
+*/
+function woo_image_seo_render_form_row( $name, $type, $settings ) {
+	include WOO_IMAGE_SEO['root_dir'] . 'views/partials/form-rows/' . $name . '.php';
+}
+
+/*
+	Render a fieldset
+	"alt" and "title" fieldsets are almost the same, so this function reduces code duplication
+*/
+function woo_image_seo_render_fieldset( $type ) {
+	$settings = woo_image_seo_get_settings();
+
+	include WOO_IMAGE_SEO['root_dir'] . 'views/partials/fieldset.php';
+}
