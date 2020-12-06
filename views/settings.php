@@ -26,92 +26,93 @@ $settings = woo_image_seo_get_settings();
 					<input type="checkbox" class="hidden" name="alt[force]" value="0" checked>
 
 					<div class="form__row">
-						<label>
+						<label class="label--checkbox">
 							<input type="checkbox" name="alt[enable]" value="1" <?php if ($settings['alt']['enable'] === 1) echo "checked"; ?>> Automatic alt attributes
 							<span class="checkmark"></span>
 						</label>
 					</div><!-- /.form__row -->
 
 					<div class="form__row">
-						<label>
+						<label class="label--checkbox">
 							<input type="checkbox" name="alt[force]" value="1" <?php if ($settings['alt']['force'] === 1) echo "checked"; ?>> Force alt attributes
 							<span class="checkmark"></span>
-							<a href="#force-help" class="dashicons dashicons-editor-help"></a>
 						</label>
+
+						<a href="#force-help" class="dashicons dashicons-editor-help"></a>
 					</div><!-- /.form__row -->
 
 					<div class="form__row">
-						<label class="text-select">
+						<label class="text-select" for="alt[text][1]">
 							<span>Attribute builder:</span>
-
-							<select name="alt[text][1]">
-								<option value="[none]" <?php if ($settings['alt']['text'][1] === '[none]') echo "selected"; ?>>Empty</option>
-
-								<option value="[name]" <?php if ($settings['alt']['text'][1] === '[name]') echo "selected"; ?>>Product Name</option>
-
-								<option value="[category]" <?php if ($settings['alt']['text'][1] === '[category]') echo "selected"; ?>>First Category</option>
-
-								<option value="[tag]" <?php if ($settings['alt']['text'][1] === '[tag]') echo "selected"; ?>>First Tag</option>
-
-								<option value="[custom]" <?php if ($settings['alt']['text'][1] === '[custom]') echo "selected"; ?>>Custom Text 1</option>
-							</select>
-
-							<select name="alt[text][2]">
-								<option value="[none]" <?php if ($settings['alt']['text'][2] === '[none]') echo "selected"; ?>>Empty</option>
-
-								<option value="[name]" <?php if ($settings['alt']['text'][2] === '[name]') echo "selected"; ?>>Product Name</option>
-
-								<option value="[category]" <?php if ($settings['alt']['text'][2] === '[category]') echo "selected"; ?>>First Category</option>
-
-								<option value="[tag]" <?php if ($settings['alt']['text'][2] === '[tag]') echo "selected"; ?>>First Tag</option>
-
-								<option value="[custom]" <?php if ($settings['alt']['text'][2] === '[custom]') echo "selected"; ?>>Custom Text 2</option>
-							</select>
-
-							<select name="alt[text][3]">
-								<option value="[none]" <?php if ($settings['alt']['text'][3] === '[none]') echo "selected"; ?>>Empty</option>
-
-								<option value="[name]" <?php if ($settings['alt']['text'][3] === '[name]') echo "selected"; ?>>Product Name</option>
-
-								<option value="[category]" <?php if ($settings['alt']['text'][3] === '[category]') echo "selected"; ?>>First Category</option>
-
-								<option value="[tag]" <?php if ($settings['alt']['text'][3] === '[tag]') echo "selected"; ?>>First Tag</option>
-
-								<option value="[custom]" <?php if ($settings['alt']['text'][3] === '[custom]') echo "selected"; ?>>Custom Text 3</option>
-							</select>
-
-							<a href="#attribute-builder-help" class="dashicons dashicons-editor-help"></a>
 						</label>
+
+						<select name="alt[text][1]" id="alt[text][1]">
+							<option value="[none]" <?php if ($settings['alt']['text'][1] === '[none]') echo "selected"; ?>>Empty</option>
+
+							<option value="[name]" <?php if ($settings['alt']['text'][1] === '[name]') echo "selected"; ?>>Product Name</option>
+
+							<option value="[category]" <?php if ($settings['alt']['text'][1] === '[category]') echo "selected"; ?>>First Category</option>
+
+							<option value="[tag]" <?php if ($settings['alt']['text'][1] === '[tag]') echo "selected"; ?>>First Tag</option>
+
+							<option value="[custom]" <?php if ($settings['alt']['text'][1] === '[custom]') echo "selected"; ?>>Custom Text 1</option>
+						</select>
+
+						<select name="alt[text][2]">
+							<option value="[none]" <?php if ($settings['alt']['text'][2] === '[none]') echo "selected"; ?>>Empty</option>
+
+							<option value="[name]" <?php if ($settings['alt']['text'][2] === '[name]') echo "selected"; ?>>Product Name</option>
+
+							<option value="[category]" <?php if ($settings['alt']['text'][2] === '[category]') echo "selected"; ?>>First Category</option>
+
+							<option value="[tag]" <?php if ($settings['alt']['text'][2] === '[tag]') echo "selected"; ?>>First Tag</option>
+
+							<option value="[custom]" <?php if ($settings['alt']['text'][2] === '[custom]') echo "selected"; ?>>Custom Text 2</option>
+						</select>
+
+						<select name="alt[text][3]">
+							<option value="[none]" <?php if ($settings['alt']['text'][3] === '[none]') echo "selected"; ?>>Empty</option>
+
+							<option value="[name]" <?php if ($settings['alt']['text'][3] === '[name]') echo "selected"; ?>>Product Name</option>
+
+							<option value="[category]" <?php if ($settings['alt']['text'][3] === '[category]') echo "selected"; ?>>First Category</option>
+
+							<option value="[tag]" <?php if ($settings['alt']['text'][3] === '[tag]') echo "selected"; ?>>First Tag</option>
+
+							<option value="[custom]" <?php if ($settings['alt']['text'][3] === '[custom]') echo "selected"; ?>>Custom Text 3</option>
+						</select>
+
+						<a href="#attribute-builder-help" class="dashicons dashicons-editor-help"></a>
 					</div><!-- /.form__row -->
 
 					<div class="form__row">
 						<label class="text-select">
 							<span>Custom Text 1:</span>
-
-							<input type="text" data-custom-text="1" name="alt[custom][1]" value="<?php echo empty( $settings['alt']['custom'][1] ) ? '' : $settings['alt']['custom'][1] ?>">
-
-							<a href="#attribute-builder-help" class="dashicons dashicons-editor-help"></a>
 						</label>
+
+						<input type="text" data-custom-text="1" name="alt[custom][1]" value="<?php echo empty( $settings['alt']['custom'][1] ) ? '' : $settings['alt']['custom'][1] ?>">
+
+						<a href="#attribute-builder-help" class="dashicons dashicons-editor-help"></a>
 					</div><!-- /.form__row -->
 
 					<div class="form__row">
 						<label class="text-select">
 							<span>Custom Text 2:</span>
-
-							<input type="text" data-custom-text="2" name="alt[custom][2]" value="<?php echo empty( $settings['alt']['custom'][2] ) ? '' : $settings['alt']['custom'][2] ?>">
-
-							<a href="#attribute-builder-help" class="dashicons dashicons-editor-help"></a>
 						</label>
+
+						<input type="text" data-custom-text="2" name="alt[custom][2]" value="<?php echo empty( $settings['alt']['custom'][2] ) ? '' : $settings['alt']['custom'][2] ?>">
+
+						<a href="#attribute-builder-help" class="dashicons dashicons-editor-help"></a>
 					</div><!-- /.form__row -->
 
 					<div class="form__row">
 						<label class="text-select">
 							<span>Custom Text 3:</span>
-
-							<input type="text" data-custom-text="3" name="alt[custom][3]" value="<?php echo empty( $settings['alt']['custom'][3] ) ? '' : $settings['alt']['custom'][3] ?>">
-
-							<a href="#attribute-builder-help" class="dashicons dashicons-editor-help"></a>
 						</label>
+
+						<input type="text" data-custom-text="3" name="alt[custom][3]" value="<?php echo empty( $settings['alt']['custom'][3] ) ? '' : $settings['alt']['custom'][3] ?>">
+
+						<a href="#attribute-builder-help" class="dashicons dashicons-editor-help"></a>
 					</div><!-- /.form__row -->
 				</fieldset>
 
@@ -123,7 +124,7 @@ $settings = woo_image_seo_get_settings();
 					<input type="checkbox" class="hidden" name="title[force]" value="0" checked>
 
 					<div class="form__row">
-						<label>
+						<label class="label--checkbox">
 							<input type="checkbox" name="title[enable]" value="1" <?php if ($settings['title']['enable'] === 1) echo "checked"; ?>> Automatic title attributes
 
 							<span class="checkmark"></span>
@@ -131,87 +132,87 @@ $settings = woo_image_seo_get_settings();
 					</div><!-- /.form__row -->
 
 					<div class="form__row">
-						<label>
+						<label class="label--checkbox">
 							<input type="checkbox" name="title[force]" value="1" <?php if ($settings['title']['force'] === 1) echo "checked"; ?>> Force title attributes (recommended)
 
 							<span class="checkmark"></span>
-
-							<a href="#force-help" class="dashicons dashicons-editor-help"></a>
 						</label>
+
+						<a href="#force-help" class="dashicons dashicons-editor-help"></a>
 					</div><!-- /.form__row -->
 
 					<div class="form__row">
-						<label class="text-select">
+						<label class="text-select" for="title[text][1]">
 							<span>Attribute builder:</span>
-
-							<select name="title[text][1]">
-								<option value="[none]" <?php if ($settings['title']['text'][1] === '[none]') echo "selected"; ?>>Empty</option>
-
-								<option value="[name]" <?php if ($settings['title']['text'][1] === '[name]') echo "selected"; ?>>Product Name</option>
-
-								<option value="[category]" <?php if ($settings['title']['text'][1] === '[category]') echo "selected"; ?>>First Category</option>
-
-								<option value="[tag]" <?php if ($settings['title']['text'][1] === '[tag]') echo "selected"; ?>>First Tag</option>
-
-								<option value="[custom]" <?php if ($settings['title']['text'][1] === '[custom]') echo "selected"; ?>>Custom Text 1</option>
-							</select>
-
-							<select name="title[text][2]">
-								<option value="[none]" <?php if ($settings['title']['text'][2] === '[none]') echo "selected"; ?>>Empty</option>
-
-								<option value="[name]" <?php if ($settings['title']['text'][2] === '[name]') echo "selected"; ?>>Product Name</option>
-
-								<option value="[category]" <?php if ($settings['title']['text'][2] === '[category]') echo "selected"; ?>>First Category</option>
-
-								<option value="[tag]" <?php if ($settings['title']['text'][2] === '[tag]') echo "selected"; ?>>First Tag</option>
-
-								<option value="[custom]" <?php if ($settings['title']['text'][2] === '[custom]') echo "selected"; ?>>Custom Text 2</option>
-							</select>
-
-							<select name="title[text][3]">
-								<option value="[none]" <?php if ($settings['title']['text'][3] === '[none]') echo "selected"; ?>>Empty</option>
-
-								<option value="[name]" <?php if ($settings['title']['text'][3] === '[name]') echo "selected"; ?>>Product Name</option>
-
-								<option value="[category]" <?php if ($settings['title']['text'][3] === '[category]') echo "selected"; ?>>First Category</option>
-
-								<option value="[tag]" <?php if ($settings['title']['text'][3] === '[tag]') echo "selected"; ?>>First Tag</option>
-
-								<option value="[custom]" <?php if ($settings['title']['text'][3] === '[custom]') echo "selected"; ?>>Custom Text 3</option>
-							</select>
-
-							<a href="#attribute-builder-help" class="dashicons dashicons-editor-help"></a>
 						</label>
+
+						<select name="title[text][1]" id="title[text][1]">
+							<option value="[none]" <?php if ($settings['title']['text'][1] === '[none]') echo "selected"; ?>>Empty</option>
+
+							<option value="[name]" <?php if ($settings['title']['text'][1] === '[name]') echo "selected"; ?>>Product Name</option>
+
+							<option value="[category]" <?php if ($settings['title']['text'][1] === '[category]') echo "selected"; ?>>First Category</option>
+
+							<option value="[tag]" <?php if ($settings['title']['text'][1] === '[tag]') echo "selected"; ?>>First Tag</option>
+
+							<option value="[custom]" <?php if ($settings['title']['text'][1] === '[custom]') echo "selected"; ?>>Custom Text 1</option>
+						</select>
+
+						<select name="title[text][2]">
+							<option value="[none]" <?php if ($settings['title']['text'][2] === '[none]') echo "selected"; ?>>Empty</option>
+
+							<option value="[name]" <?php if ($settings['title']['text'][2] === '[name]') echo "selected"; ?>>Product Name</option>
+
+							<option value="[category]" <?php if ($settings['title']['text'][2] === '[category]') echo "selected"; ?>>First Category</option>
+
+							<option value="[tag]" <?php if ($settings['title']['text'][2] === '[tag]') echo "selected"; ?>>First Tag</option>
+
+							<option value="[custom]" <?php if ($settings['title']['text'][2] === '[custom]') echo "selected"; ?>>Custom Text 2</option>
+						</select>
+
+						<select name="title[text][3]">
+							<option value="[none]" <?php if ($settings['title']['text'][3] === '[none]') echo "selected"; ?>>Empty</option>
+
+							<option value="[name]" <?php if ($settings['title']['text'][3] === '[name]') echo "selected"; ?>>Product Name</option>
+
+							<option value="[category]" <?php if ($settings['title']['text'][3] === '[category]') echo "selected"; ?>>First Category</option>
+
+							<option value="[tag]" <?php if ($settings['title']['text'][3] === '[tag]') echo "selected"; ?>>First Tag</option>
+
+							<option value="[custom]" <?php if ($settings['title']['text'][3] === '[custom]') echo "selected"; ?>>Custom Text 3</option>
+						</select>
+
+						<a href="#attribute-builder-help" class="dashicons dashicons-editor-help"></a>
 					</div><!-- /.form__row -->
 
 					<div class="form__row">
 						<label class="text-select">
 							<span>Custom Text 1:</span>
-
-							<input type="text" data-custom-text="1" name="title[custom][1]" value="<?php echo empty( $settings['alt']['custom'][1] ) ? '' : $settings['alt']['custom'][1] ?>">
-
-							<a href="#attribute-builder-help" class="dashicons dashicons-editor-help"></a>
 						</label>
+
+						<input type="text" data-custom-text="1" name="title[custom][1]" value="<?php echo empty( $settings['title']['custom'][1] ) ? '' : $settings['title']['custom'][1] ?>">
+
+						<a href="#attribute-builder-help" class="dashicons dashicons-editor-help"></a>
 					</div><!-- /.form__row -->
 
 					<div class="form__row">
 						<label class="text-select">
 							<span>Custom Text 2:</span>
-
-							<input type="text" data-custom-text="2" name="title[custom][2]" value="<?php echo empty( $settings['alt']['custom'][2] ) ? '' : $settings['alt']['custom'][2] ?>">
-
-							<a href="#attribute-builder-help" class="dashicons dashicons-editor-help"></a>
 						</label>
+
+						<input type="text" data-custom-text="2" name="title[custom][2]" value="<?php echo empty( $settings['title']['custom'][2] ) ? '' : $settings['title']['custom'][2] ?>">
+
+						<a href="#attribute-builder-help" class="dashicons dashicons-editor-help"></a>
 					</div><!-- /.form__row -->
 
 					<div class="form__row">
 						<label class="text-select">
 							<span>Custom Text 3:</span>
-
-							<input type="text" data-custom-text="3" name="title[custom][3]" value="<?php echo empty( $settings['alt']['custom'][3] ) ? '' : $settings['alt']['custom'][3] ?>">
-
-							<a href="#attribute-builder-help" class="dashicons dashicons-editor-help"></a>
 						</label>
+
+						<input type="text" data-custom-text="3" name="title[custom][3]" value="<?php echo empty( $settings['title']['custom'][3] ) ? '' : $settings['title']['custom'][3] ?>">
+
+						<a href="#attribute-builder-help" class="dashicons dashicons-editor-help"></a>
 					</div><!-- /.form__row -->
 				</fieldset>
 			</div>

@@ -4,30 +4,43 @@
 	font-size: 16px;
 	line-height: 1.5em;
 }
-#woo_image_seo_form input, select {
+
+#woo_image_seo_form input,
+#woo_image_seo_form select {
 	margin: 0;
 }
+
 #woo_image_seo_form fieldset {
 	border: 1px dotted #999999;
 	padding: 25px;
 	margin: 15px 0;
+	font-size: 0;
+}
+
+#woo_image_seo_form fieldset legend {
 	font-size: 20px;
 }
+
+#woo_image_seo_form .form__row {
+	margin-bottom: 15px;
+}
+
 #woo_image_seo_form label {
-	display: block;
+	display: inline-block;
 	font-size: 17px;
 	line-height: 1.5em;
 	position: relative;
-	padding-left: 35px;
 	cursor: pointer;
 	-webkit-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
 }
-#woo_image_seo_form label:first-of-type {
-	margin-bottom: 20px;
+
+#woo_image_seo_form label.label--checkbox {
+	padding-left: 35px;
 }
+
 #woo_image_seo_form input[type="checkbox"] {
 	display:none;
 }
@@ -97,30 +110,30 @@
 #woo_image_seo_form input[type=radio]:checked:before {
 	display:none;
 }
-#woo_image_seo_form .text-select {
-	margin-top: 20px;
-	padding: 0;
-}
+
 #woo_image_seo_form .text-select > span {
-    display: inline-block;
-    min-width: 140px;
+	display: inline-block;
+	min-width: 140px;
 }
 #woo_image_seo_form input[data-custom-text] {
-    width: 460px;
-    max-width: 100%;
-    padding: 0 5px;
-    font-size: 17px;
-    line-height: 1.5;
-    transition: box-shadow .3s;
+	width: 460px;
+	max-width: 100%;
+    margin-right: 5px;
+	padding: 0 5px;
+	font-size: 17px;
+	line-height: 1.5;
+	vertical-align: middle;
+	transition: box-shadow .3s;
 }
 #woo_image_seo_form label span {
 	vertical-align: middle;
 }
 #woo_image_seo_form select {
+	width: 150px;
+	margin-right: 5px;
+	padding: 0 5px;
 	font-size: 17px;
 	line-height: 1.5;
-	padding: 0 5px;
-	width: 150px;
 }
 #post-success {
 	background: #0cad21;
@@ -144,14 +157,14 @@
 .postbox--help {
 	display: none;
 	transition: box-shadow .4s;
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 10000;
-    max-height: 80vh;
-    width: 900px;
-    overflow: auto;
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 10000;
+	max-height: 80vh;
+	width: 900px;
+	overflow: auto;
 }
 
 .postbox .notice {
