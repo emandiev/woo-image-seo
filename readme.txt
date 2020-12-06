@@ -2,9 +2,9 @@
 	Contributors: emandiev
 	Tags:  WooCommerce, Woo, Woo SEO, product alt, product seo
 	Requires PHP: 5.4
-	Stable tag: 1.0.2
+	Stable tag: 1.1.0
 	Requires at least: 4.1
-	Tested up to: 5.5
+	Tested up to: 5.6
 	License: GPLv3 or later
 	License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -14,7 +14,8 @@
 
 "Woo Image SEO" will boost your store's SEO by automatically adding "alt" and "title" attributes to your product's images.<br />
 No configuration is required.<br />
-However, you can choose to customize the automatic attributes using the product's title, category or tag in any order.<br />
+However, you can choose to customize the automatic attributes using the attribute builder.<br />
+It lets you build a dynamic attribute from the product's title, category, tag, or custom text in any order.<br />
 This plugin works only with the <a href="https://wordpress.org/plugins/woocommerce/">WooCommerce</a> plugin.<br />
 
 == Installation ==
@@ -83,3 +84,11 @@ The plugin will no longer generate PHP notices.
 * 18/8/2020:
 Improved settings page.
 Prepare for WordPress 5.5
+
+= 1.1.0 =
+* 6/12/2020:
+First major update!
+Added the ability to use your custom texts in the attribute builder.
+Improved settings page styling, help texts.
+Fixed a few minor bugs.
+Added full support for WordPress 5.6
