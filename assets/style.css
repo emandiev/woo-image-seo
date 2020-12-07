@@ -1,3 +1,7 @@
+#woo_image_seo_form .wrap {
+	margin: 0;
+}
+
 .postbox {
 	padding: 10px 20px 20px;
 	margin: 20px 0;
@@ -99,13 +103,13 @@ body.no-focus #woo_image_seo_form input[type="checkbox"]:checked:focus ~ .checkm
 }
 #woo_image_seo_form input[type="submit"],
 #woo_image_seo_form input[type="button"] {
-	cursor: pointer;
+	min-height: 30px;
+	padding: .5em 2em;
+	margin-top: 20px;
 	color: white;
 	border: none;
-	padding: 5px 10px;
-	margin-top: 20px;
-	box-shadow: 0 1px 1px rgba(0,0,0,.7);
 	transition: background .4s;
+	cursor: pointer;
 }
 #woo_image_seo_form input[type="submit"]:hover,
 #woo_image_seo_form input[type="submit"]:focus,
@@ -118,7 +122,6 @@ body.no-focus #woo_image_seo_form input[type="checkbox"]:checked:focus ~ .checkm
 	font-size: 16px;
 	background: #0073aa;
 	margin-right: 20px;
-	width: 125px;
 }
 #reset-settings {
 	font-size: 14px;
@@ -158,13 +161,25 @@ body.no-focus #woo_image_seo_form input[type="checkbox"]:checked:focus ~ .checkm
 	font-size: 17px;
 	line-height: 1.5;
 }
+
 #post-success {
-	background: #0cad21;
+	position: absolute;
+	left: 20px;
+	bottom: 10px;
+	padding: 20px;
+	min-width: 300px;
+	text-align: center;
+	background: #777;
 	color: white;
 	font-size: 20px;
-	padding: 20px;
 	box-shadow: 0 0 1px rgba(0,0,0,.75);
+	user-select: none;
+	transition: background .4s;
 }
+
+/*
+	help triggers
+*/
 #woo_image_seo_form .dashicons-editor-help {
 	vertical-align: middle;
 	cursor: pointer;
@@ -242,4 +257,11 @@ body.no-focus #woo_image_seo_form input[type="checkbox"]:checked:focus ~ .checkm
 
 #help-background span:last-child {
 	top: calc(100% - 20px);
+}
+
+/*
+	helper classes
+*/
+.bg-green {
+	background: #0cad21 !important;
 }

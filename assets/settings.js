@@ -15,24 +15,20 @@ jQuery(document).ready(function($) {
 		var data = jQuery(this).serializeArray();
 
 		jQuery.ajax({
-					type: 'POST',
-					data: data,
-					beforeSend: function() {
-						jQuery('#woo_image_seo_form input').attr('disabled', 'disabled');
-						jQuery('input[type="submit"], input[type="button"]').attr('value', 'Please wait...');
-					},
-					success: function(){
-						jQuery('#woo_image_seo_form input').removeAttr('disabled');
-						jQuery('input[type="submit"]').attr('value', 'Save Settings');
-						jQuery('#reset-settings').attr('value', 'Reset to Default');
-						jQuery('#post-success').text('Settings Saved!').removeClass('hidden');
-						setTimeout(function(){ jQuery('#post-success').addClass('hidden'); }, 3000);
-					},
-					error: function( jqXhr, textStatus, errorThrown ){
-						console.log( errorThrown );
-					}
+			type: 'POST',
+			data: data,
+			beforeSend: function() {
+				jQuery('#post-success').text('Please wait...').fadeIn();
+			},
+			success: function(){
+				jQuery('#woo_image_seo_form input').removeAttr('disabled');
+				jQuery('#post-success').text('Settings Saved!').addClass('bg-green');
+				setTimeout(function(){ jQuery('#post-success').fadeOut(); }, 2000);
+			},
+			error: function( jqXhr, textStatus, errorThrown ){
+				console.log( errorThrown );
+			}
 		});
-		
 	});
 	
 	
@@ -53,15 +49,13 @@ jQuery(document).ready(function($) {
 			type: 'POST',
 			data: defaultSettings,
 			beforeSend: function() {
-				jQuery('input[type="submit"], input[type="button"]').attr('value', 'Please wait...');
+				jQuery('#post-success').text('Please wait...').fadeIn();
 			},
 			success: function(data) {
 				// Replace the form with the new one
 				jQuery('#woo_image_seo_form .wrap').replaceWith(jQuery('#woo_image_seo_form .wrap', data));
-				jQuery('input[type="submit"]').attr('value', 'Save Settings');
-				jQuery('#reset-settings').attr('value', 'Reset to Default');
-				jQuery('#post-success').text('Default settings saved!').removeClass('hidden');
-				setTimeout(function(){ jQuery('#post-success').addClass('hidden'); }, 3000);
+				jQuery('#post-success').text('Settings Saved!').addClass('bg-green');
+				setTimeout(function(){ jQuery('#post-success').fadeOut(); }, 2000);
 			},
 			error: function(jqXhr, textStatus, errorThrown) {
 				console.log(errorThrown);

@@ -23,9 +23,9 @@ woo_image_seo_maybe_save_settings();
 
 			<?php wp_nonce_field( 'nonce' ); ?>
 		</form>
-	</div>
 
-	<div id="post-success" class="hidden">Settings Saved!</div>
+		<div id="post-success" class="hidden bg-gray">Settings Saved!</div>
+	</div>
 
 	<?php include WOO_IMAGE_SEO['root_dir'] . 'views/partials/help-modals.php' ?>
 </div>
