@@ -70,7 +70,7 @@ jQuery(document).ready(function($) {
 
 
 	// smooth scroll
-	jQuery('#woo_image_seo_form a.dashicons.dashicons-editor-help').click(function(event) {
+	jQuery('#woo_image_seo_form').on('click', 'a.dashicons-editor-help', function(event) {
 		event.preventDefault();
 		var $target = jQuery(this.hash);
 		var $helpBackground = jQuery('#help-background');
