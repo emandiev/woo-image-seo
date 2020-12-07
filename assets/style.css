@@ -190,6 +190,12 @@ body.no-focus #woo_image_seo_form input[type="checkbox"]:checked:focus ~ .checkm
 	max-height: 80vh;
 	width: 900px;
 	overflow: auto;
+	pointer-events: none;
+}
+
+.postbox--help img {
+	width: 615px;
+	max-width: 100%;
 }
 
 .postbox .notice {

@@ -11,7 +11,5 @@
 			id="<?php echo $name ?>"
 			value="<?php echo empty( $settings[ $type ]['custom'][ $i ] ) ? '' : $settings[ $type ]['custom'][ $i ] ?>"
 		>
-
-		<a href="#attribute-builder-help" class="dashicons dashicons-editor-help"></a>
 	</div><!-- /.form__row -->
 <?php endfor; ?>
