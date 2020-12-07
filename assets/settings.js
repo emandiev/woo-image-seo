@@ -38,30 +38,33 @@ jQuery(document).ready(function($) {
 	
 	// AJAX Reset Settings
 	jQuery('#reset-settings').click(function() {
+		if (!window.confirm('Reset plugin settings?')) {
+			return;
+		}
+
 		// Prepare the default settings by adding WP NONCE fields
 		var defaultSettings = jQuery('#reset-settings').data('default-settings');
 		defaultSettings['_wpnonce'] = jQuery('[name="_wpnonce"]').val();
 		defaultSettings['_wp_http_referer'] = jQuery('[name="_wp_http_referer"]').val();
 		
 		jQuery.ajax({
-					type: 'POST',
-					data: defaultSettings,
-					beforeSend: function() {
-						jQuery('#woo_image_seo_form input').attr('disabled', 'disabled');
-						jQuery('input[type="submit"], input[type="button"]').attr('value', 'Please wait...');
-					},
-					success: function(data){
-						// Replace the form with the new one
-						jQuery('#woo_image_seo_form .wrap').replaceWith(jQuery('#woo_image_seo_form .wrap', data));
-						jQuery('#woo_image_seo_form input').removeAttr('disabled');
-						jQuery('input[type="submit"]').attr('value', 'Save Settings');
-						jQuery('#reset-settings').attr('value', 'Reset to Default');
-						jQuery('#post-success').text('Default settings applied!').removeClass('hidden');
-						setTimeout(function(){ jQuery('#post-success').addClass('hidden'); }, 3000);
-					},
-					error: function( jqXhr, textStatus, errorThrown ){
-						console.log( errorThrown );
-					}
+			type: 'POST',
+			data: defaultSettings,
+			beforeSend: function() {
+				jQuery('input[type="submit"], input[type="button"]').attr('value', 'Please wait...');
+			},
+			success: function(data) {
+				// Replace the form with the new one
+				jQuery('#woo_image_seo_form .wrap').replaceWith(jQuery('#woo_image_seo_form .wrap', data));
+				jQuery('input[type="submit"]').attr('value', 'Save Settings');
+				jQuery('#reset-settings').attr('value', 'Reset to Default');
+				jQuery('#post-success').text('Default settings saved!').removeClass('hidden');
+				jQuery('#reset-settings').blur();
+				setTimeout(function(){ jQuery('#post-success').addClass('hidden'); }, 3000);
+			},
+			error: function(jqXhr, textStatus, errorThrown) {
+				console.log(errorThrown);
+			}
 		});
 	});
 
