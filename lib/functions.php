@@ -10,7 +10,7 @@ define(
 	[
 		'option_name' => 'woo_image_seo',
 		'root_dir' => dirname( __DIR__ ) . '/',
-		'assets_url' => plugin_dir_url( __DIR__ ) . '/assets/',
+		'assets_url' => plugin_dir_url( __DIR__ ) . 'assets/',
 		'default_settings' => file_get_contents( dirname( __DIR__ ) . '/data/default-settings.json' ),
 	]
 );
