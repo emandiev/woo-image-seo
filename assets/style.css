@@ -203,6 +203,7 @@ body.no-focus #woo_image_seo_form input[type="checkbox"]:checked:focus ~ .checkm
 	display: none !important;
 }
 
+
 #help-background {
 	display: none;
 	position: fixed;
@@ -213,4 +214,17 @@ body.no-focus #woo_image_seo_form input[type="checkbox"]:checked:focus ~ .checkm
 	bottom: 0;
 	background: #000;
 	opacity: .7;
+}
+
+#help-background span {
+    position: absolute;
+    left: 50%;
+    top: 35px;
+    transform: translateX(-50%);
+    font-size: 14px;
+    color: white;
+}
+
+#help-background span:last-child {
+    top: calc(100% - 20px);
 }
