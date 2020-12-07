@@ -180,6 +180,9 @@ body.no-focus #woo_image_seo_form input[type="checkbox"]:checked:focus ~ .checkm
 	color: #0073aa;
 }
 
+/*
+	.postbox--help (help modals)
+*/
 .postbox--help {
 	display: none;
 	transition: box-shadow .4s;
@@ -191,7 +194,11 @@ body.no-focus #woo_image_seo_form input[type="checkbox"]:checked:focus ~ .checkm
 	max-height: 80vh;
 	width: 900px;
 	overflow: auto;
-	pointer-events: none;
+}
+
+.postbox--help h2 {
+	border-bottom: 1px solid #ddd;
+	padding-bottom: 5px;
 }
 
 .postbox--help img {
@@ -199,11 +206,18 @@ body.no-focus #woo_image_seo_form input[type="checkbox"]:checked:focus ~ .checkm
 	max-width: 100%;
 }
 
+.postbox--help hr {
+	margin: 10px 0;
+	border-bottom: 0;
+}
+
 .postbox .notice {
 	display: none !important;
 }
 
-
+/*
+	#help-background
+*/
 #help-background {
 	display: none;
 	position: fixed;
