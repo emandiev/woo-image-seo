@@ -6,9 +6,7 @@ woo_image_seo_maybe_save_settings();
 
 ?>
 
-<style>
-	<?php echo file_get_contents( WOO_IMAGE_SEO['root_dir'] . 'assets/style.css' ); ?>
-</style>
+<link rel="stylesheet" href="<?php echo WOO_IMAGE_SEO['assets_url'] . 'style.css' ?>" type="text/css" media="all">
 
 <div class="wrap">
 	<div class="postbox">
@@ -21,14 +19,7 @@ woo_image_seo_maybe_save_settings();
 				<?php woo_image_seo_render_fieldset( 'title' ) ?>
 			</div>
 
-			<input type="submit" value="Save Settings">
-
-			<input
-				type="button"
-				value="Reset to Default"
-				id="reset-settings"
-				data-default-settings="<?php echo esc_html( WOO_IMAGE_SEO['default_settings'] ) ?>"
-			>
+			<?php include WOO_IMAGE_SEO['root_dir'] . 'views/partials/actions.php' ?>
 
 			<?php wp_nonce_field( 'nonce' ); ?>
 		</form>
