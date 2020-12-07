@@ -17,5 +17,5 @@
 		</select>
 	<?php endfor; ?>
 
-	<a href="#attribute-builder-help" class="dashicons dashicons-editor-help"></a>
+	<a href="#attribute-builder-help" class="dashicons dashicons-editor-help" title="Click to learn about the Attribute Builder"></a>
 </div><!-- /.form__row -->

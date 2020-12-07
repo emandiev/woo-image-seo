@@ -12,5 +12,5 @@
 		<span class="checkmark"></span>
 	</label>
 
-	<a href="#force-help" class="dashicons dashicons-editor-help"></a>
+	<a href="#force-help" class="dashicons dashicons-editor-help" title="Click to learn about the Force Attributes option"></a>
 </div><!-- /.form__row -->
