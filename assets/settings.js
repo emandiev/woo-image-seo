@@ -38,6 +38,8 @@ jQuery(document).ready(function($) {
 	
 	// AJAX Reset Settings
 	jQuery('#reset-settings').click(function() {
+		jQuery('#reset-settings').blur();
+
 		if (!window.confirm('Reset plugin settings?')) {
 			return;
 		}
@@ -59,7 +61,6 @@ jQuery(document).ready(function($) {
 				jQuery('input[type="submit"]').attr('value', 'Save Settings');
 				jQuery('#reset-settings').attr('value', 'Reset to Default');
 				jQuery('#post-success').text('Default settings saved!').removeClass('hidden');
-				jQuery('#reset-settings').blur();
 				setTimeout(function(){ jQuery('#post-success').addClass('hidden'); }, 3000);
 			},
 			error: function(jqXhr, textStatus, errorThrown) {
