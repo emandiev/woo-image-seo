@@ -79,4 +79,23 @@ jQuery(document).ready(function($) {
 		});
 	});
 
+	// AJAX feedback form submission
+	jQuery('#woo_image_seo_feedback').submit(function(event) {
+		event.preventDefault();
+
+		jQuery.ajax({
+			type: 'POST',
+			data: jQuery(this).serializeArray(),
+			beforeSend: function() {
+				jQuery('#woo_image_seo_feedback input[type="submit"]').replaceWith('<strong>Submitting...</strong>');
+			},
+			success: function() {
+				jQuery('#woo_image_seo_feedback .form__body').html('Your message has been sent.<br>Thank you!');
+			},
+			error: function( jqXhr, textStatus, errorThrown ) {
+				console.log( errorThrown );
+			}
+		});
+	});
+
 });

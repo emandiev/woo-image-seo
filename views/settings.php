@@ -2,30 +2,18 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
+woo_image_seo_maybe_send_feedback();
+
 woo_image_seo_maybe_save_settings();
 
 ?>
 
 <link rel="stylesheet" href="<?php echo WOO_IMAGE_SEO['assets_url'] . 'style.css' ?>" type="text/css" media="all">
 
-<div class="wrap">
-	<div class="postbox">
-		<h1>Woo Image SEO</h1>
+<div class="wrap" id="woo_image_seo">
+	<?php include WOO_IMAGE_SEO['root_dir'] . 'views/partials/postbox/settings.php' ?>
 
-		<form action="admin.php?page=woo_image_seo" method="post" id="woo_image_seo_form">
-			<div class="wrap">
-				<?php woo_image_seo_render_fieldset( 'alt' ) ?>
-
-				<?php woo_image_seo_render_fieldset( 'title' ) ?>
-			</div>
-
-			<?php include WOO_IMAGE_SEO['root_dir'] . 'views/partials/actions.php' ?>
-
-			<?php wp_nonce_field( 'nonce' ); ?>
-		</form>
-
-		<div id="post-success" class="hidden bg-gray">Settings Saved!</div>
-	</div>
+	<?php include WOO_IMAGE_SEO['root_dir'] . 'views/partials/postbox/feedback.php' ?>
 
 	<?php include WOO_IMAGE_SEO['root_dir'] . 'views/partials/help-modals.php' ?>
 </div>

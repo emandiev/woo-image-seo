@@ -1,12 +1,29 @@
-#woo_image_seo_form .wrap {
-	margin: 0;
+#woo_image_seo h1,
+#woo_image_seo h2 {
+	margin: 10px 0 20px;
+	padding: 0;
+	font-weight: normal;
 }
 
-.postbox {
+#woo_image_seo p {
+	font-size: 15px;
+	margin: 0 0 1em 0;
+}
+
+#woo_image_seo .postbox {
+	display: inline-block;
 	padding: 10px 20px 20px;
-	margin: 20px 0;
+	margin: 20px 0 0;
 	font-size: 16px;
 	line-height: 1.5em;
+	vertical-align: top;
+}
+
+/*
+	Settings form
+*/
+#woo_image_seo_form .wrap {
+	margin: 0;
 }
 
 #woo_image_seo_form input,
@@ -198,7 +215,7 @@ body.no-focus #woo_image_seo_form input[type="checkbox"]:checked:focus ~ .checkm
 /*
 	.postbox--help (help modals)
 */
-.postbox--help {
+#woo_image_seo .postbox--help {
 	display: none;
 	transition: box-shadow .4s;
 	position: fixed;
@@ -212,22 +229,22 @@ body.no-focus #woo_image_seo_form input[type="checkbox"]:checked:focus ~ .checkm
 	overflow: auto;
 }
 
-.postbox--help h2 {
+#woo_image_seo .postbox--help h2 {
 	border-bottom: 1px solid #ddd;
 	padding-bottom: 5px;
 }
 
-.postbox--help img {
+#woo_image_seo .postbox--help img {
 	width: 615px;
 	max-width: 100%;
 }
 
-.postbox--help hr {
+#woo_image_seo .postbox--help hr {
 	margin: 10px 0;
 	border-bottom: 0;
 }
 
-.postbox .notice {
+#woo_image_seo .postbox .notice {
 	display: none !important;
 }
 
@@ -264,4 +281,33 @@ body.no-focus #woo_image_seo_form input[type="checkbox"]:checked:focus ~ .checkm
 */
 .bg-green {
 	background: #0cad21 !important;
+}
+
+
+/*
+	Feedback form
+*/
+#woo_image_seo_feedback {
+	max-width: 275px;
+	text-align: center;
+}
+#woo_image_seo_feedback img {
+	border-radius: 50%;
+	width: 118px;
+}
+
+#woo_image_seo_feedback input,
+#woo_image_seo_feedback textarea {
+	width: 100%;
+	font-size: 15px;
+	padding: 5px 10px;
+	margin-bottom: 15px;
+}
+
+#woo_image_seo_feedback input[type="submit"] {
+	margin: 0;
+	cursor: pointer;
+}
+#woo_image_seo_feedback input[type="submit"][disabled] {
+	background: #eee;
 }

@@ -54,6 +54,49 @@ function woo_image_seo_maybe_save_settings() {
 }
 
 /*
+	Send an email to the developer - works only on settings page
+*/
+function woo_image_seo_maybe_send_feedback() {
+	if (
+		strpos( $_SERVER['REQUEST_URI'], '/admin.php?page=woo_image_seo' ) == false
+		||
+		empty( $_POST['_wpnonce'] )
+		||
+		wp_verify_nonce( $_POST['_wpnonce'], 'nonce' ) == false
+		||
+		current_user_can( 'administrator' ) == false
+		||
+		empty( $_POST['message'] )
+	) {
+		return;
+	}
+
+	$email = empty( $_POST['email'] ) ? '' : esc_html( $_POST['email'] );
+	$message = esc_html( $_POST['message'] );
+
+	woo_image_seo_send_feedback( $email, $message );
+
+	// amazing decision to use the same endpoint as the settings form,
+	// so we have to die here and avoid saving to DB
+	die;
+}
+
+/*
+	Use native wp_mail to send an email to danail@emandiev.com
+*/
+function woo_image_seo_send_feedback( $email, $message ) {
+	wp_mail(
+		'danail@emandiev.com',
+		'Woo Image SEO Plugin Feedback',
+		'Howdy!<br>Someone just contacted you using the plugin\'s feedback form.<br>Email (optional): ' . $email . '<br>Message: ' . $message,
+		[
+			'From: Woo Image SEO <danail@emandiev.com>',
+			'Content-Type: text/html; charset=UTF-8',
+		]
+	);
+}
+
+/*
 	Set default settings
 	returns the default settings in JSON string
 */
@@ -197,4 +240,12 @@ function woo_image_seo_render_fieldset( $type ) {
 	$settings = woo_image_seo_get_settings();
 
 	include WOO_IMAGE_SEO['root_dir'] . 'views/partials/fieldset.php';
+}
+
+add_action('wp_mail_failed', 'log_mailer_errors', 10, 1);
+function log_mailer_errors( $wp_error ){
+  $fn = ABSPATH . '/mail.log'; // say you've got a mail.log file in your server root
+  $fp = fopen($fn, 'a');
+  fputs($fp, "Mailer Error: " . $wp_error->get_error_message() ."\n");
+  fclose($fp);
 }
