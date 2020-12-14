@@ -11,11 +11,17 @@ woo_image_seo_maybe_save_settings();
 <link rel="stylesheet" href="<?php echo WOO_IMAGE_SEO['assets_url'] . 'style.css' ?>" type="text/css" media="all">
 
 <div class="wrap" id="woo_image_seo">
-	<?php include WOO_IMAGE_SEO['root_dir'] . 'views/partials/postbox/settings.php' ?>
+	<div class="wrap__inner">
+		<?php include WOO_IMAGE_SEO['root_dir'] . 'views/partials/postbox/settings.php' ?>
 
-	<?php include WOO_IMAGE_SEO['root_dir'] . 'views/partials/postbox/feedback.php' ?>
+		<?php include WOO_IMAGE_SEO['root_dir'] . 'views/partials/help-modals.php' ?>
+	</div><!-- /.wrap__inner -->
 
-	<?php include WOO_IMAGE_SEO['root_dir'] . 'views/partials/help-modals.php' ?>
+	<div class="wrap__inner">
+		<?php include WOO_IMAGE_SEO['root_dir'] . 'views/partials/postbox/feedback.php' ?>
+
+		<?php include WOO_IMAGE_SEO['root_dir'] . 'views/partials/postbox/support.php' ?>
+	</div><!-- /.wrap__inner -->
 </div>
 
 <script src="<?php echo WOO_IMAGE_SEO['assets_url'] . 'settings.js' ?>"></script>

@@ -1,3 +1,9 @@
+#woo_image_seo:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
 #woo_image_seo h1,
 #woo_image_seo h2 {
 	margin: 10px 0 20px;
@@ -5,18 +11,31 @@
 	font-weight: normal;
 }
 
+#woo_image_seo h2 {
+	text-align: center;
+}
+
 #woo_image_seo p {
 	font-size: 15px;
-	margin: 0 0 1em 0;
+	margin: 0 0 .86em 0;
 }
 
 #woo_image_seo .postbox {
 	display: inline-block;
 	padding: 10px 20px 20px;
-	margin: 20px 0 0;
+	margin: 10px 0 0;
 	font-size: 16px;
 	line-height: 1.5em;
 	vertical-align: top;
+}
+
+#woo_image_seo .wrap__inner {
+	float: left;
+	margin-right: 10px;
+}
+
+#woo_image_seo .wrap__inner:last-child {
+	max-width: 317px;
 }
 
 /*
@@ -310,4 +329,44 @@ body.no-focus #woo_image_seo_form input[type="checkbox"]:checked:focus ~ .checkm
 }
 #woo_image_seo_feedback input[type="submit"][disabled] {
 	background: #eee;
+}
+
+/*
+	Support box
+*/
+.postbox--support span {
+	display: block;
+	text-align: center;
+}
+
+.form--donate {
+	text-align: center;
+	margin-bottom: .86em;
+}
+
+.form--donate input[type="image"]:hover {
+	opacity: .7;
+}
+
+.postbox--support .fa {
+	padding: 6px;
+	font-size: 22px !important;
+	width: 22px;
+	text-align: center;
+	text-decoration: none;
+	margin: 5px 2px;
+	border-radius: 50%;
+	color: white !important;
+}
+
+.postbox--support .fa:hover {
+	opacity: .7;
+}
+
+.postbox--support .fa-facebook {
+	background: #3B5998;
+}
+
+.postbox--support .fa-twitter {
+	background: #55ACEE;
 }
