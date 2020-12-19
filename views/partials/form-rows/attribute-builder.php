@@ -1,3 +1,8 @@
+<?php
+
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+
+?>
 <div class="form__row">
 	<label class="text-select" for="<?php echo $type ?>[text][1]">
 		<span>Attribute builder:</span>

@@ -1,3 +1,8 @@
+<?php
+
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+
+?>
 <div id="help-background">
 	<span>Click anywhere to close overlay</span>
 

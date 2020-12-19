@@ -1,3 +1,8 @@
+<?php
+
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+
+?>
 <div class="postbox">
 	<h1>Woo Image SEO Global Settings</h1>
 

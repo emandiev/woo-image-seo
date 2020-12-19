@@ -1,3 +1,8 @@
+<?php
+
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+
+?>
 <div class="form__actions">
 	<input type="submit" value="Save Settings">
 

@@ -1,3 +1,8 @@
+<?php
+
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+
+?>
 <div class="form__row">
 	<input type="checkbox" class="hidden" name="<?php echo $type ?>[force]" value="0" checked>
 

@@ -1,3 +1,8 @@
+<?php
+
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+
+?>
 <div class="postbox">
 	<form action="admin.php?page=woo_image_seo" method="post" id="woo_image_seo_feedback">
 		<div class="form__head">
