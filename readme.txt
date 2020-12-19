@@ -86,7 +86,7 @@ Improved settings page.
 Prepare for WordPress 5.5
 
 = 1.1.0 =
-* 6/12/2020:
+* 19/12/2020:
 First major update!
 Added the ability to use your custom texts in the attribute builder.
 Improved settings page styling, help texts.
