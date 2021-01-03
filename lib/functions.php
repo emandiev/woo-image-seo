@@ -241,11 +241,3 @@ function woo_image_seo_render_fieldset( $type ) {
 
 	include WOO_IMAGE_SEO['root_dir'] . 'views/partials/fieldset.php';
 }
-
-add_action('wp_mail_failed', 'log_mailer_errors', 10, 1);
-function log_mailer_errors( $wp_error ){
-  $fn = ABSPATH . '/mail.log'; // say you've got a mail.log file in your server root
-  $fp = fopen($fn, 'a');
-  fputs($fp, "Mailer Error: " . $wp_error->get_error_message() ."\n");
-  fclose($fp);
-}
