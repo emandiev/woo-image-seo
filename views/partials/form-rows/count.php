@@ -34,4 +34,6 @@ $name = $type . '[count]';
 
 		<span class="checkmark"></span>
 	</label>
+
+	<a href="#count-help" class="dashicons dashicons-editor-help" title="Click to learn about the Add Image Number option"></a>
 </div><!-- /.form__row -->

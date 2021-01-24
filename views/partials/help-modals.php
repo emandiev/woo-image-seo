@@ -40,3 +40,19 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 	For example, the following configuration will result in "Amazing Avengers Shirt Movie-Inspired Clothing Free Shipping":<br>
 	<img src="<?php echo WOO_IMAGE_SEO['assets_url'] . 'attribute-builder-help-2.png' ?>">
 </div>
+
+<div id="count-help" class="postbox postbox--help">
+	<h2>Add image number</h2>
+	<strong>If the setting is enabled:</strong><br>
+	The plugin will add the current image's number (index) at the end of the generated attribute.<br>
+	This is useful if you wish to avoid duplicate attributes on the page.<br>
+	Note that the first image won't be affected.<br>
+	<hr>
+	Example:<br>
+	Let's say we have a product with four images called "Amazing Avengers Shirt" and the Attribute Builder is configured to use the Product Name.<br>
+	<img src="<?php echo WOO_IMAGE_SEO['assets_url'] . 'attribute-builder-default.png' ?>"><br>
+	The first image will have the attribute "Amazing Avengers Shirt".<br>
+	The second image will have the attribute "Amazing Avengers Shirt 2".<br>
+	The third image will have the attribute "Amazing Avengers Shirt 3".<br>
+	The fourth image will have the attribute "Amazing Avengers Shirt 4".<br>
+</div>
