@@ -15,4 +15,6 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 	<?php woo_image_seo_render_form_row( 'attribute-builder', $type, $settings ) ?>
 
 	<?php woo_image_seo_render_form_row( 'custom-texts', $type, $settings ) ?>
+
+	<?php woo_image_seo_render_form_row( 'count', $type, $settings ) ?>
 </fieldset>

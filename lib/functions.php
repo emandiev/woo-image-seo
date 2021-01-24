@@ -17,7 +17,6 @@ define(
 
 /*
 	Helper variable used to count the number of images for a given product
-	By default, the plugin will add a number on all images after the first one
 	The goal is to have unique attributes for all images
 	Array key 'id' holds the lastly affected product's id
 	Array key 'image_count' holds the currently affected image's index (starts with 1)
@@ -246,7 +245,7 @@ function woo_image_seo_get_image_attributes( $attr ) {
 		$attr[ $attribute_name ] = trim( $attr[ $attribute_name ] );
 
 		// (optional) add number for products with more than one image
-		if ( $woo_image_seo_product_info['count'] > 1 ) {
+		if ( ! empty( $attribute_values['count'] ) && $woo_image_seo_product_info['count'] > 1 ) {
 			$attr[ $attribute_name ] .= ' ' . $woo_image_seo_product_info['count'];
 		}
 	}
