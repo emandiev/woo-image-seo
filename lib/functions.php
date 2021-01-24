@@ -16,6 +16,18 @@ define(
 );
 
 /*
+	Helper variable used to count the number of images for a given product
+	By default, the plugin will add a number on all images after the first one
+	The goal is to have unique attributes for all images
+	Array key 'id' holds the lastly affected product's id
+	Array key 'image_count' holds the currently affected image's index (starts with 1)
+*/
+$woo_image_seo_woo_image_seo_product_info = [
+	'id' => 0,
+	'image_count' => 0,
+];
+
+/*
 	Get plugin settings
 	If not found, saves the default settings first
 */
@@ -146,6 +158,20 @@ function woo_image_seo_change_image_attributes( $attr, $attachment ) {
 */
 function woo_image_seo_get_image_attributes( $attr ) {
 	$settings = woo_image_seo_get_settings();
+	$product_id = get_the_ID();
+
+	// helper global to count number of images for current product
+	global $woo_image_seo_product_info;
+
+	// modify the global to either add to the image count or reset it
+	if ( $woo_image_seo_product_info['id'] === $product_id ) {
+		$woo_image_seo_product_info['count']++;
+	} else {
+		$woo_image_seo_product_info = [
+			'id' => $product_id,
+			'count' => 1,
+		];
+	}
 
 	// check which attributes should be handled - loops through "alt" and "title"
 	foreach ( $settings as $attribute_name => $attribute_values ) {
@@ -218,6 +244,11 @@ function woo_image_seo_get_image_attributes( $attr ) {
 
 		// trim whitespace
 		$attr[ $attribute_name ] = trim( $attr[ $attribute_name ] );
+
+		// (optional) add number for products with more than one image
+		if ( $woo_image_seo_product_info['count'] > 1 ) {
+			$attr[ $attribute_name ] .= ' ' . $woo_image_seo_product_info['count'];
+		}
 	}
 
 	// return the final attribute to front-end
