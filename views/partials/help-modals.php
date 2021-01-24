@@ -22,7 +22,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 	Example:<br>
 	You upload an image with the file name "pic3.jpg".<br>
 	WordPress will automatically set a title attribute of "pic3".<br>
-	<img src="<?php echo WOO_IMAGE_SEO['assets_url'] . 'force-help.png' ?>">
+	<img src="<?php echo WOO_IMAGE_SEO['assets_url'] . 'force-help.png?version=' . WOO_IMAGE_SEO['version'] ?>">
 </div>
 
 <div id="attribute-builder-help" class="postbox postbox--help">
@@ -33,12 +33,12 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 	Let's say we have a product called "Amazing Avengers Shirt", with main category "Movie-Inspired Clothing".<br>
 	By default, the plugin will build the image attribute using only the Product Name.<br>
 	If you want to include the product's category, you can use the following configuration:<br>
-	<img src="<?php echo WOO_IMAGE_SEO['assets_url'] . 'attribute-builder-help-1.png' ?>"><br>
+	<img src="<?php echo WOO_IMAGE_SEO['assets_url'] . 'attribute-builder-help-1.png?version=' . WOO_IMAGE_SEO['version'] ?>"><br>
 	This will result in the attribute "Amazing Avengers Shirt Movie-Inspired Clothing".<br>
 	<hr>
 	The Custom Text option allows you to enter your own texts.<br>
 	For example, the following configuration will result in "Amazing Avengers Shirt Movie-Inspired Clothing Free Shipping":<br>
-	<img src="<?php echo WOO_IMAGE_SEO['assets_url'] . 'attribute-builder-help-2.png' ?>">
+	<img src="<?php echo WOO_IMAGE_SEO['assets_url'] . 'attribute-builder-help-2.png?version=' . WOO_IMAGE_SEO['version'] ?>">
 </div>
 
 <div id="count-help" class="postbox postbox--help">
@@ -50,7 +50,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 	<hr>
 	Example:<br>
 	Let's say we have a product with four images called "Amazing Avengers Shirt" and the Attribute Builder is configured to use the Product Name.<br>
-	<img src="<?php echo WOO_IMAGE_SEO['assets_url'] . 'attribute-builder-default.png' ?>"><br>
+	<img src="<?php echo WOO_IMAGE_SEO['assets_url'] . 'attribute-builder-default.png?version=' . WOO_IMAGE_SEO['version'] ?>"><br>
 	The first image will have the attribute "Amazing Avengers Shirt".<br>
 	The second image will have the attribute "Amazing Avengers Shirt 2".<br>
 	The third image will have the attribute "Amazing Avengers Shirt 3".<br>
