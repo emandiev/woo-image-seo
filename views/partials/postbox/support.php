@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 	<h2>Support the plugin</h2>
 
 	<p>
-		If you are happy with the plugin's results, please consider donating. This will allow me to continue developing the plugin.
+		Please consider donating. This will allow me to continue developing the plugin.
 	</p>
 
 	<form action="https://www.paypal.com/donate" method="post" target="_blank" class="form--donate">
@@ -21,18 +21,8 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 		<input type="hidden" name="currency_code" value="USD" />
 
-		<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+		<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" title="Donate with PayPal" alt="Donate with PayPal button" />
 
 		<img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
 	</form>
-
-	<p>
-		A social media share is also appreciated. Thank you!
-	</p>
-
-	<span>
-		<a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwordpress.org%2Fplugins%2Fwoo-image-seo%2F" class="fa fa-facebook"></a>
-
-		<a target="_blank" href="https://twitter.com/intent/tweet?text=Boost your sales with Woo Image SEO! https%3A%2F%2Fwordpress.org%2Fplugins%2Fwoo-image-seo%2F" class="fa fa-twitter"></a>
-	</span>
 </div><!-- /.postbox -->

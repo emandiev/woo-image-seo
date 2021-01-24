@@ -20,6 +20,8 @@ woo_image_seo_maybe_save_settings();
 	<div class="wrap__inner">
 		<?php include WOO_IMAGE_SEO['root_dir'] . 'views/partials/postbox/feedback.php' ?>
 
+		<?php include WOO_IMAGE_SEO['root_dir'] . 'views/partials/postbox/share.php' ?>
+
 		<?php include WOO_IMAGE_SEO['root_dir'] . 'views/partials/postbox/support.php' ?>
 	</div><!-- /.wrap__inner -->
 </div>

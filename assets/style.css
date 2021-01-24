@@ -13,17 +13,18 @@
 
 #woo_image_seo h2 {
 	text-align: center;
+	margin-bottom: 15px;
 }
 
 #woo_image_seo p {
 	font-size: 15px;
-	margin: 0 0 .86em 0;
+	margin: 0 0 14px 0;
 }
 
 #woo_image_seo .postbox {
 	display: inline-block;
 	padding: 10px 20px 20px;
-	margin: 10px 0 0;
+	margin: 5px 0 0;
 	font-size: 16px;
 	line-height: 1.5em;
 	vertical-align: top;
@@ -31,7 +32,7 @@
 
 #woo_image_seo .wrap__inner {
 	float: left;
-	margin-right: 10px;
+	margin-right: 5px;
 }
 
 #woo_image_seo .wrap__inner:last-child {
@@ -325,6 +326,7 @@ body.no-focus #woo_image_seo_form input[type="checkbox"]:checked:focus ~ .checkm
 
 #woo_image_seo_feedback input,
 #woo_image_seo_feedback textarea {
+	display: block;
 	width: 100%;
 	font-size: 15px;
 	line-height: 1.5;
@@ -342,23 +344,14 @@ body.no-focus #woo_image_seo_form input[type="checkbox"]:checked:focus ~ .checkm
 }
 
 /*
-	Support box
+	Share box
 */
-.postbox--support span {
+.postbox--share span {
 	display: block;
 	text-align: center;
 }
 
-.form--donate {
-	text-align: center;
-	margin-bottom: .86em;
-}
-
-.form--donate input[type="image"]:hover {
-	opacity: .7;
-}
-
-.postbox--support .fa {
+.postbox--share .fa {
 	padding: 6px;
 	font-size: 22px !important;
 	width: 22px;
@@ -369,14 +362,42 @@ body.no-focus #woo_image_seo_form input[type="checkbox"]:checked:focus ~ .checkm
 	color: white !important;
 }
 
-.postbox--support .fa:hover {
+.postbox--share .fa:hover {
 	opacity: .7;
 }
 
-.postbox--support .fa-facebook {
+.postbox--share .fa-facebook {
 	background: #3B5998;
 }
 
-.postbox--support .fa-twitter {
+.postbox--share .fa-twitter {
 	background: #55ACEE;
+}
+
+.postbox--share .fa-linkedin {
+	background: #0077b5;
+}
+
+.postbox--share .fa-pinterest {
+	background: #e60023;
+}
+
+.postbox--share .fa-vk {
+	background: #2787f5;
+}
+
+.postbox--share .fa-tumblr {
+	background: #001835;
+}
+
+/*
+	Support box
+*/
+.form--donate {
+	min-height: 27px;
+	text-align: center;
+}
+
+.form--donate input[type="image"]:hover {
+	opacity: .7;
 }
