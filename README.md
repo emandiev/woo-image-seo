@@ -31,3 +31,9 @@ Added the ability to use your custom texts in the attribute builder.
 Improved settings page styling, help texts.
 Fixed a few minor bugs.
 Added full support for WordPress 5.6
+
+= 1.2.0 =
+* 01/24/2021:
+Added the ability to append image numbers (indexes) to attributes.
+Added more social share links.
+Improved settings page styling.

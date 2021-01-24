@@ -2,7 +2,7 @@
 	Contributors: emandiev
 	Tags:  WooCommerce, Woo, Woo SEO, product alt, product seo
 	Requires PHP: 5.4
-	Stable tag: 1.1.0
+	Stable tag: 1.2.0
 	Requires at least: 4.1
 	Tested up to: 5.6
 	License: GPLv3 or later
@@ -92,3 +92,9 @@ Added the ability to use your custom texts in the attribute builder.
 Improved settings page styling, help texts.
 Fixed a few minor bugs.
 Added full support for WordPress 5.6
+
+= 1.2.0 =
+* 01/24/2021:
+Added the ability to append image numbers (indexes) to attributes.
+Added more social share links.
+Improved settings page styling.
