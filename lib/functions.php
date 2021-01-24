@@ -198,7 +198,7 @@ function woo_image_seo_get_image_attributes( $attr ) {
 
 				case '[category]':
 					// get product categories
-					$product_categories = get_the_terms( get_the_ID(), 'product_cat' );
+					$product_categories = get_the_terms( $product_id, 'product_cat' );
 					// check if product has a category, it should be an array
 					if ( is_array( $product_categories ) ) {
 						// if first category is not "Uncategorized", use it
@@ -216,7 +216,7 @@ function woo_image_seo_get_image_attributes( $attr ) {
 
 				case '[tag]':
 					// get product tags
-					$product_tags = get_the_terms( get_the_ID(), 'product_tag' );
+					$product_tags = get_the_terms( $product_id, 'product_tag' );
 					// check if product has a tag
 					if ( is_array( $product_tags ) ) {
 						$text_value = $product_tags[0]->name;
