@@ -22,7 +22,7 @@ define(
 	Array key 'id' holds the lastly affected product's id
 	Array key 'image_count' holds the currently affected image's index (starts with 1)
 */
-$woo_image_seo_woo_image_seo_product_info = [
+$woo_image_seo_product_info = [
 	'id' => 0,
 	'image_count' => 0,
 ];
