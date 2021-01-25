@@ -37,3 +37,7 @@ Added full support for WordPress 5.6
 Added the ability to append image numbers (indexes) to attributes.  
 Added more social share links.  
 Improved settings page styling.
+
+= 1.2.1 =
+* 01/25/2021:  
+Fix PHP notice

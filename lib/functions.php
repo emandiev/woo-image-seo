@@ -12,7 +12,7 @@ define(
 		'root_dir' => dirname( __DIR__ ) . '/',
 		'assets_url' => plugin_dir_url( __DIR__ ) . 'assets/',
 		'default_settings' => file_get_contents( dirname( __DIR__ ) . '/data/default-settings.json' ),
-		'version' => '1.2.0',
+		'version' => '1.2.1',
 	]
 );
 
