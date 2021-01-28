@@ -6,7 +6,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 <?php for ( $i = 1; $i < 4; $i++ ) : $name = $type .'[custom][' . $i . ']'; ?>
 	<div class="form__row">
 		<label class="text-select" for="<?php echo $name ?>">
-			<span>Custom Text <?php echo $i ?>:</span>
+			<span><?php _e( 'Custom Text', 'woo-image-seo' ) ?> <?php echo $i ?></span>
 		</label>
 
 		<input

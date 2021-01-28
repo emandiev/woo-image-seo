@@ -4,11 +4,14 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 ?>
 <div class="form__actions">
-	<input type="submit" value="Save Settings">
+	<input
+		type="submit"
+		value="<?php _e( 'Save Settings', 'woo-image-seo' ) ?>"
+	>
 
 	<input
 		type="button"
-		value="Reset to Default"
+		value="<?php _e( 'Reset to Default', 'woo-image-seo' ) ?>"
 		id="reset-settings"
 		data-default-settings="<?php echo esc_html( WOO_IMAGE_SEO['default_settings'] ) ?>"
 	>

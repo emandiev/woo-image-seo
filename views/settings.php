@@ -8,7 +8,12 @@ woo_image_seo_maybe_save_settings();
 
 ?>
 
-<link rel="stylesheet" href="<?php echo WOO_IMAGE_SEO['assets_url'] . 'style.css?version=' . WOO_IMAGE_SEO['version'] ?>" type="text/css" media="all">
+<link
+	rel="stylesheet"
+	href="<?php echo WOO_IMAGE_SEO['assets_url'] . 'style.css?version=' . WOO_IMAGE_SEO['version'] ?>"
+	type="text/css"
+	media="all"
+>
 
 <div class="wrap" id="woo_image_seo">
 	<div class="wrap__inner">
@@ -26,4 +31,6 @@ woo_image_seo_maybe_save_settings();
 	</div><!-- /.wrap__inner -->
 </div>
 
-<script src="<?php echo WOO_IMAGE_SEO['assets_url'] . 'settings.js?version=' . WOO_IMAGE_SEO['version'] ?>"></script>
+<script
+	src="<?php echo WOO_IMAGE_SEO['assets_url'] . 'settings.js?version=' . WOO_IMAGE_SEO['version'] ?>"
+></script>

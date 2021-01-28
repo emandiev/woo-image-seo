@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 ?>
 <fieldset>
 	<legend>
-		<?php echo ucfirst( $type ) ?> attributes
+		<?php _e( ucfirst( $type ) . ' attributes' ) ?>
 	</legend>
 
 	<?php woo_image_seo_render_form_row( 'enable', $type, $settings ) ?>

@@ -8,6 +8,7 @@
 	Author URI: https://emandiev.com
 	License: GPLv3
 	License URI: https://www.gnu.org/licenses/gpl-3.0.html
+	Text Domain: woo-image-seo
 */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly

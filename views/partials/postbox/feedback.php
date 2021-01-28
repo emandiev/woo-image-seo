@@ -4,25 +4,38 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 ?>
 <div class="postbox">
-	<form action="admin.php?page=woo_image_seo" method="post" id="woo_image_seo_feedback">
+	<form
+		action="admin.php?page=woo_image_seo"
+		method="post"
+		id="woo_image_seo_feedback"
+	>
 		<div class="form__head">
-			<h2>Contact the plugin developer</h2>
+			<h2><?php _e( 'Contact the plugin developer', 'woo-image-seo' ) ?></h2>
 
 			<img src="<?php echo WOO_IMAGE_SEO['assets_url'] . 'howdy.jpg?version=' . WOO_IMAGE_SEO['version'] ?>" alt="">
 		</div><!-- /.form__head -->
 
 		<div class="form__body">
 			<p>
-				Howdy!
+				<?php _e( 'Howdy!', 'woo-image-seo' ) ?>
 			</p>
 
 			<p>
-				Feel free to contact me with any questions or feedback.
+				<?php _e( 'Feel free to contact me with any questions or feedback.', 'woo-image-seo' ) ?>
 			</p>
 
-			<input type="email" name="email" placeholder="your email (optional)">
+			<input
+				type="email"
+				name="email"
+				placeholder="<?php _e( 'your email', 'woo-image-seo' ) ?> ( <?php _e( 'optional', 'woo-image-seo' ) ?>)"
+			>
 
-			<textarea name="message" rows="5" placeholder="your message (required)" required></textarea>
+			<textarea
+				name="message"
+				rows="5"
+				placeholder="<?php _e( 'your message', 'woo-image-seo' ) ?> ( <?php _e( 'required', 'woo-image-seo' ) ?>)"
+				required
+			></textarea>
 
 			<input type="submit">
 		</div><!-- /.form__body -->

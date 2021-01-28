@@ -25,7 +25,7 @@ $name = $type . '[enable]';
 			id="<?php echo $name ?>"
 			value="1"
 			<?php checked( $settings[ $type ]['enable'] ) ?>
-		> Automatic <?php echo $type ?> attributes
+		><?php _e( 'Automatic ' . $type . ' attributes', 'woo-image-seo' ) ?>
 
 		<span class="checkmark"></span>
 	</label>

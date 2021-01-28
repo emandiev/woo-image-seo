@@ -30,10 +30,14 @@ $name = $type . '[count]';
 			?>
 				checked
 			<?php endif; ?>
-		> Add image number to <?php echo $type ?> attributes
+		><?php _e( 'Add image number to ' . $type . ' attributes', 'woo-image-seo' ) ?>
 
 		<span class="checkmark"></span>
 	</label>
 
-	<a href="#count-help" class="dashicons dashicons-editor-help" title="Click to learn about the Add Image Number option"></a>
+	<a
+		href="#count-help"
+		class="dashicons dashicons-editor-help"
+		title="<?php _e( 'Click to learn about the Add Image Number option', 'woo-image-seo' ) ?>"
+	></a>
 </div><!-- /.form__row -->
