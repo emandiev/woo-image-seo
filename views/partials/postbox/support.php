@@ -9,7 +9,8 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 	<h2><?php _e( 'Support the plugin', 'woo-image-seo' ) ?></h2>
 
 	<p>
-		<?php _e( 'Please consider donating. This will allow me to continue developing the plugin.', 'woo-image-seo' ) ?>
+		<?php _e( 'Donations are greatly appreciated.', 'woo-image-seo' ) ?><br>
+		<?php _e( 'Thank you!', 'woo-image-seo' ) ?>
 	</p>
 
 	<form
@@ -44,20 +45,11 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 		<input
 			type="image"
-			src="https://www
-			paypalobjects.com/en_US/i/btn/btn_donate_SM.gif"
+			src="<?php echo WOO_IMAGE_SEO['assets_url'] . 'paypal-donate.png?version=' . WOO_IMAGE_SEO['version'] ?>"
 			border="0"
 			name="submit"
 			title="<?php _e( 'Donate with PayPal', 'woo-image-seo' ) ?>"
 			alt="<?php _e( 'Donate with PayPal button', 'woo-image-seo' ) ?>"
-		/>
-
-		<img
-			src="https://www.paypal.com/en_US/i/scr/pixel.gif"
-			alt=""
-			border="0"
-			width="1"
-			height="1"
 		/>
 	</form>
 </div><!-- /.postbox -->

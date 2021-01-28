@@ -1,42 +1,48 @@
 #woo_image_seo:after {
-	content: '';
-	display: block;
-	clear: both;
+content: '';
+display: block;
+clear: both;
 }
 
 #woo_image_seo h1,
 #woo_image_seo h2 {
-	margin: 10px 0 20px;
-	padding: 0;
-	font-weight: normal;
+margin: 10px 0 20px;
+padding: 0;
+font-weight: normal;
 }
 
 #woo_image_seo h2 {
-	text-align: center;
-	margin-bottom: 15px;
+text-align: center;
+margin-bottom: 15px;
 }
 
 #woo_image_seo p {
-	font-size: 15px;
-	margin: 0 0 14px 0;
+font-size: 15px;
+margin: 0 0 14px 0;
 }
 
 #woo_image_seo .postbox {
-	display: inline-block;
-	padding: 10px 20px 20px;
-	margin: 5px 0 0;
-	font-size: 16px;
-	line-height: 1.5em;
-	vertical-align: top;
+display: inline-block;
+padding: 10px 20px 20px;
+margin: 5px 0 0;
+font-size: 16px;
+line-height: 1.5em;
+vertical-align: top;
 }
 
 #woo_image_seo .wrap__inner {
-	float: left;
-	margin-right: 5px;
+float: left;
+margin-right: 5px;
 }
 
 #woo_image_seo .wrap__inner:last-child {
-	max-width: 317px;
+width: 275px;
+margin-right: 0;
+}
+
+#woo_image_seo .wrap__inner:last-child .postbox {
+width: 100%;
+text-align: center;
 }
 
 /*
@@ -316,7 +322,6 @@ body.no-focus #woo_image_seo_form input[type="checkbox"]:checked:focus ~ .checkm
 	Feedback form
 */
 #woo_image_seo_feedback {
-	max-width: 275px;
 	text-align: center;
 }
 #woo_image_seo_feedback img {
@@ -396,6 +401,11 @@ body.no-focus #woo_image_seo_form input[type="checkbox"]:checked:focus ~ .checkm
 .form--donate {
 	min-height: 27px;
 	text-align: center;
+}
+
+.form--donate input[type="image"] {
+	height: 80px;
+	margin-bottom: .5px;
 }
 
 .form--donate input[type="image"]:hover {

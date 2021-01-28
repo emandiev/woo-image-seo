@@ -10,10 +10,6 @@ $socials = woo_image_seo_get_socials();
 <div class="postbox postbox--share">
 	<h2><?php _e( 'Share the plugin', 'woo-image-seo' ) ?></h2>
 
-	<p>
-		<?php _e( 'More users means more feedback and improvements. Thank you!', 'woo-image-seo' ) ?>
-	</p>
-
 	<span>
 		<?php foreach ( $socials as $social ) : ?>
 			<a
