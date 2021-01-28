@@ -45,8 +45,8 @@ Adding appropriate alt attributes will improve your SEO. Better ranking should l
 
 The plugin will use each product's title (name) to add alt and title attributes to the product's images.
 Example:
-You have a product called "Amazing Avengers Shirt".
-The plugin's images will get alt="Amazing Avengers Shirt" and title="Amazing Avengers Shirt".
+You have a product called "Amazing Shirt".
+The plugin's images will get alt="Amazing Shirt" and title="Amazing Shirt".
 
 You can also enable/disable the generation of each attribute and choose whether to allow for user-specified attributes by going to WooCommerce -> Woo Image SEO.
 You can also customize the way this plugin creates attributes.

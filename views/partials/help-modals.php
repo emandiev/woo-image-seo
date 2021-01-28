@@ -31,14 +31,14 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 	<?php _e( 'You can use the three dropdown fields to include the product\'s name, first category, first tag, or a custom text in any order.', 'woo-image-seo' ) ?><br>
 	<hr>
 	<strong><?php _e( 'Example', 'woo-image-seo' ) ?>:</strong><br>
-	<?php _e( 'Let\'s say we have a product called "Amazing Avengers Shirt", with main category "Movie-Inspired Clothing".', 'woo-image-seo' ) ?><br>
+	<?php _e( 'Let\'s say we have a product called "Amazing Shirt", with main category "Movie-Inspired Clothing".', 'woo-image-seo' ) ?><br>
 	<?php _e( 'By default, the plugin will build the image attribute using only the Product Name.', 'woo-image-seo' ) ?><br>
 	<?php _e( 'If you want to include the product\'s category, you can use the following configuration', 'woo-image-seo' ) ?>:<br>
 	<img src="<?php echo WOO_IMAGE_SEO['assets_url'] . 'attribute-builder-help-1.png?version=' . WOO_IMAGE_SEO['version'] ?>"><br>
-	<?php _e( 'This will result in the attribute "Amazing Avengers Shirt Movie-Inspired Clothing".', 'woo-image-seo' ) ?><br>
+	<?php _e( 'This will result in the attribute "Amazing Shirt Movie-Inspired Clothing".', 'woo-image-seo' ) ?><br>
 	<hr>
 	<?php _e( 'The Custom Text option allows you to enter your own texts.', 'woo-image-seo' ) ?><br>
-	<?php _e( 'For example, the following configuration will result in "Amazing Avengers Shirt Movie-Inspired Clothing Free Shipping"', 'woo-image-seo' ) ?>:<br>
+	<?php _e( 'For example, the following configuration will result in "Amazing Shirt Movie-Inspired Clothing Free Shipping"', 'woo-image-seo' ) ?>:<br>
 	<img src="<?php echo WOO_IMAGE_SEO['assets_url'] . 'attribute-builder-help-2.png?version=' . WOO_IMAGE_SEO['version'] ?>">
 </div>
 
@@ -50,10 +50,10 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 	<?php _e( 'Note that the first image won\'t be affected.', 'woo-image-seo' ) ?><br>
 	<hr>
 	<strong><?php _e( 'Example', 'woo-image-seo' ) ?>:</strong><br>
-	<?php _e( 'Let\'s say we have a product with four images called "Amazing Avengers Shirt" and the Attribute Builder is configured to use the Product Name.', 'woo-image-seo' ) ?><br>
+	<?php _e( 'Let\'s say we have a product with four images called "Amazing Shirt" and the Attribute Builder is configured to use the Product Name.', 'woo-image-seo' ) ?><br>
 	<img src="<?php echo WOO_IMAGE_SEO['assets_url'] . 'attribute-builder-default.png?version=' . WOO_IMAGE_SEO['version'] ?>"><br>
-	<?php _e( 'The first image will have the attribute "Amazing Avengers Shirt".', 'woo-image-seo' ) ?><br>
-	<?php _e( 'The second image will have the attribute "Amazing Avengers Shirt 2".', 'woo-image-seo' ) ?><br>
-	<?php _e( 'The third image will have the attribute "Amazing Avengers Shirt 3".', 'woo-image-seo' ) ?><br>
-	<?php _e( 'The fourth image will have the attribute "Amazing Avengers Shirt 4".', 'woo-image-seo' ) ?><br>
+	<?php _e( 'The first image will have the attribute "Amazing Shirt".', 'woo-image-seo' ) ?><br>
+	<?php _e( 'The second image will have the attribute "Amazing Shirt 2".', 'woo-image-seo' ) ?><br>
+	<?php _e( 'The third image will have the attribute "Amazing Shirt 3".', 'woo-image-seo' ) ?><br>
+	<?php _e( 'The fourth image will have the attribute "Amazing Shirt 4".', 'woo-image-seo' ) ?><br>
 </div>
