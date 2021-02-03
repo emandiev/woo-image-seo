@@ -4,15 +4,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Woo Image SEO 1.2.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/woo-image-seo\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2021-01-28T19:22:24+00:00\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"X-Generator: WP-CLI 2.4.0\n"
+"PO-Revision-Date: 2021-02-03 20:15+0200\n"
+"X-Generator: Poedit 2.4.2\n"
 "X-Domain: woo-image-seo\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ru_RU\n"
 
 #. Plugin Name of the plugin
 msgid "Woo Image SEO"
@@ -96,8 +97,7 @@ msgstr "рекомендуемые"
 msgid "Click to learn about the Force Attributes option"
 msgstr "Нажмите, чтобы узнать о параметрах Форсировать атрибуты"
 
-#: views/partials/help-modals.php:7
-#: views/partials/help-modals.php:9
+#: views/partials/help-modals.php:7 views/partials/help-modals.php:9
 msgid "Click anywhere to close overlay"
 msgstr "Щелкните в любом месте, чтобы закрыть наложение"
 
@@ -117,8 +117,7 @@ msgstr "Плагин будет устанавливать атрибут тол
 msgid "This is useful if you wish to set your own attributes for individual images."
 msgstr "Это полезно, если вы хотите установить свои собственные атрибуты для отдельных изображений."
 
-#: views/partials/help-modals.php:18
-#: views/partials/help-modals.php:47
+#: views/partials/help-modals.php:18 views/partials/help-modals.php:47
 msgid "If the setting is enabled"
 msgstr "Если настройка включена"
 
@@ -130,8 +129,7 @@ msgstr "Плагин установит атрибут для всех изоб�
 msgid "This is especially useful for the \"title\" attribute because WordPress generates title attributes automatically using the file name."
 msgstr "Это особенно полезно для атрибута «title», поскольку WordPress автоматически генерирует атрибуты заголовка, используя имя файла."
 
-#: views/partials/help-modals.php:22
-#: views/partials/help-modals.php:33
+#: views/partials/help-modals.php:22 views/partials/help-modals.php:33
 #: views/partials/help-modals.php:52
 msgid "Example"
 msgstr "Пример"
@@ -174,7 +172,7 @@ msgstr "Параметр «Пользовательский текст» поз�
 
 #: views/partials/help-modals.php:41
 msgid "For example, the following configuration will result in \"Amazing Shirt Movie-Inspired Clothing Free Shipping\""
-msgstr "Например, следующая конфигурация приведет к "Бесплатная доставка Удивительная рубашка Одежда из кинофильмов""
+msgstr "Например, следующая конфигурация приведет к «Бесплатная доставка Удивительная рубашка Одежда из кинофильмов»"
 
 #: views/partials/help-modals.php:46
 msgid "Add image number"
