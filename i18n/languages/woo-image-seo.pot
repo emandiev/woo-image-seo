@@ -145,7 +145,7 @@ msgid "WordPress will automatically set a title attribute of \"pic3\"."
 msgstr ""
 
 #: views/partials/help-modals.php:30
-msgid "The attribute builder let's you change how the image attributes are generated."
+msgid "The attribute builder lets you change how the image attributes are generated."
 msgstr ""
 
 #: views/partials/help-modals.php:31

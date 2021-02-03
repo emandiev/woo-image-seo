@@ -27,7 +27,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 <div id="attribute-builder-help" class="postbox postbox--help">
 	<h2><?php _e( 'Attribute builder', 'woo-image-seo' ) ?></h2>
-	<?php _e( 'The attribute builder let\'s you change how the image attributes are generated.', 'woo-image-seo' ) ?><br>
+	<?php _e( 'The attribute builder lets you change how the image attributes are generated.', 'woo-image-seo' ) ?><br>
 	<?php _e( 'You can use the three dropdown fields to include the product\'s name, first category, first tag, or a custom text in any order.', 'woo-image-seo' ) ?><br>
 	<hr>
 	<strong><?php _e( 'Example', 'woo-image-seo' ) ?>:</strong><br>
