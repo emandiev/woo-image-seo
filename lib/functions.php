@@ -279,3 +279,10 @@ function woo_image_seo_render_fieldset( $type ) {
 function woo_image_seo_get_socials() {
 	return require_once WOO_IMAGE_SEO['root_dir'] . 'data/socials.php';
 }
+
+/*
+	Load the translations
+*/
+function woo_image_seo_load_textdomain() {
+	load_plugin_textdomain( 'woo-image-seo', false, 'woo-image-seo/i18n/languages' ); 
+}
