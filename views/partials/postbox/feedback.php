@@ -37,7 +37,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 				required
 			></textarea>
 
-			<input type="submit">
+			<input type="submit" value="<?php _e( 'Submit', 'woo-image-seo' ) ?>">
 		</div><!-- /.form__body -->
 
 		<?php wp_nonce_field( 'nonce' ); ?>

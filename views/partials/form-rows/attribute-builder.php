@@ -26,7 +26,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 			<option
 				value="[category]"
 				<?php selected( $settings[ $type ]['text'][ $i ], '[category]' ) ?>
-			><?php _e( 'First Category', 'woo-iamge-seo' ) ?></option>
+			><?php _e( 'First Category', 'woo-image-seo' ) ?></option>
 
 			<option
 				value="[tag]"

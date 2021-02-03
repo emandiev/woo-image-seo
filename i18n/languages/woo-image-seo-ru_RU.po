@@ -8,7 +8,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2021-01-28T19:22:24+00:00\n"
-"PO-Revision-Date: 2021-02-03 20:15+0200\n"
+"PO-Revision-Date: 2021-02-03 21:16+0200\n"
 "X-Generator: Poedit 2.4.2\n"
 "X-Domain: woo-image-seo\n"
 "Last-Translator: \n"
@@ -60,6 +60,10 @@ msgstr "Пустой"
 msgid "Product Name"
 msgstr "Название продукта"
 
+#: views/partials/form-rows/attribute-builder.php:29
+msgid "First Category"
+msgstr "Первая категория"
+
 #: views/partials/form-rows/attribute-builder.php:34
 msgid "First Tag"
 msgstr "Первый тег"
@@ -74,20 +78,20 @@ msgid "Click to learn about the Attribute Builder"
 msgstr "Нажмите, чтобы узнать о Kонструкторе атрибутов"
 
 #: views/partials/form-rows/count.php:33
-msgid "Add image number to "
-msgstr "Добавить номер изображения в "
+msgid "Add image number to %s attributes"
+msgstr "Добавить номер изображения в %s атрибуты"
 
 #: views/partials/form-rows/count.php:41
 msgid "Click to learn about the Add Image Number option"
 msgstr "Нажмите, чтобы узнать о параметре Добавить номер изображения"
 
 #: views/partials/form-rows/enable.php:28
-msgid "Automatic "
-msgstr "Автоматический "
+msgid "Automatic %s attributes"
+msgstr "Автоматический %s атрибуты"
 
 #: views/partials/form-rows/force.php:5
-msgid "Force "
-msgstr "Форсировать "
+msgid "Force %s attributes"
+msgstr "Принудительно установить %s атрибуты"
 
 #: views/partials/form-rows/force.php:8
 msgid "recommended"
@@ -95,7 +99,7 @@ msgstr "рекомендуемые"
 
 #: views/partials/form-rows/force.php:35
 msgid "Click to learn about the Force Attributes option"
-msgstr "Нажмите, чтобы узнать о параметрах Форсировать атрибуты"
+msgstr "Нажмите, чтобы узнать о параметрах Принудительно установить атрибуты"
 
 #: views/partials/help-modals.php:7 views/partials/help-modals.php:9
 msgid "Click anywhere to close overlay"
@@ -212,7 +216,7 @@ msgstr "Четвертое изображение будет иметь атри
 
 #: views/partials/postbox/feedback.php:13
 msgid "Contact the plugin developer"
-msgstr "Свяжитесь с разработчиком плагина"
+msgstr "Свяжитесь с разработчиком"
 
 #: views/partials/postbox/feedback.php:20
 msgid "Howdy!"
@@ -237,6 +241,10 @@ msgstr "ваше сообщение"
 #: views/partials/postbox/feedback.php:36
 msgid "required"
 msgstr "требуется"
+
+#: views/partials/postbox/feedback.php:40
+msgid "Submit"
+msgstr "Отправить"
 
 #: views/partials/postbox/settings.php:7
 msgid "Global Settings"

@@ -2,7 +2,7 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
-$label = __( 'Force ' . $type . ' attributes', 'woo-image-seo' );
+$label = sprintf( __( 'Force %s attributes', 'woo-image-seo' ), $type );
 
 if ( $type === 'title' ) {
 	$label .= ' (' . __( 'recommended', 'woo-image-seo' ) . ')';
