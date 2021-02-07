@@ -33,11 +33,12 @@ $name = $type . '[count]';
 		><?php printf( __( 'Add image number to %s attributes', 'woo-image-seo' ), $type ) ?>
 
 		<span class="checkmark"></span>
+
+		<a
+			href="#count-help"
+			class="dashicons dashicons-editor-help"
+			title="<?php _e( 'Click to learn about the Add Image Number option', 'woo-image-seo' ) ?>"
+		></a>
 	</label>
 
-	<a
-		href="#count-help"
-		class="dashicons dashicons-editor-help"
-		title="<?php _e( 'Click to learn about the Add Image Number option', 'woo-image-seo' ) ?>"
-	></a>
 </div><!-- /.form__row -->

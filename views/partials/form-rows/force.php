@@ -27,11 +27,11 @@ if ( $type === 'title' ) {
 		><?php echo $label ?>
 
 		<span class="checkmark"></span>
-	</label>
 
-	<a
-		href="#force-help"
-		class="dashicons dashicons-editor-help"
-		title="<?php _e( 'Click to learn about the Force Attributes option', 'woo-image-seo' ) ?>"
-	></a>
+		<a
+			href="#force-help"
+			class="dashicons dashicons-editor-help"
+			title="<?php _e( 'Click to learn about the Force Attributes option', 'woo-image-seo' ) ?>"
+		></a>
+	</label>
 </div><!-- /.form__row -->

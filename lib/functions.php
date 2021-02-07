@@ -3,20 +3,6 @@
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 /*
-	Lazy but sufficient approach for globally available data
-*/
-define(
-	'WOO_IMAGE_SEO',
-	[
-		'option_name' => 'woo_image_seo',
-		'root_dir' => dirname( __DIR__ ) . '/',
-		'assets_url' => plugin_dir_url( __DIR__ ) . 'assets/',
-		'default_settings' => file_get_contents( dirname( __DIR__ ) . '/data/default-settings.json' ),
-		'version' => '1.2.1',
-	]
-);
-
-/*
 	Helper variable used to count the number of images for a given product
 	The goal is to have unique attributes for all images
 	Array key 'id' holds the lastly affected product's id
@@ -286,3 +272,50 @@ function woo_image_seo_get_socials() {
 function woo_image_seo_load_textdomain() {
 	load_plugin_textdomain( 'woo-image-seo', false, 'woo-image-seo/i18n/languages' ); 
 }
+
+/*
+	Helper function to get relative i18n asset path
+*/
+function woo_image_seo_get_i18n_asset_url( $file_extension ) {
+	return WOO_IMAGE_SEO['root_url'] . 'i18n/assets/' . $file_extension . '/' . WOO_IMAGE_SEO['site_locale'] . '.' . $file_extension;
+}
+
+/*
+	Load locale-specific assets
+*/
+function woo_image_seo_i18n_locale_enqueue() {
+	// load css file if found
+	$css_url = woo_image_seo_get_i18n_asset_url( 'css' );
+	if ( woo_image_seo_file_exists( $css_url ) ) {
+		wp_enqueue_style( 'woo-image-seo-i18n', $css_url, [], WOO_IMAGE_SEO['version'] );
+	}
+
+	// load js if provided
+	$js_url = woo_image_seo_get_i18n_asset_url( 'js' );
+	if ( woo_image_seo_file_exists( $js_url ) ) {
+		wp_enqueue_script( 'woo-image-seo-i18n', $js_url, [], WOO_IMAGE_SEO['version'] );
+	}
+}
+
+/*
+	Try to get locale-specific image URL
+	Fallback to default version
+	Also adds version parameter to avoid cache
+*/
+function woo_image_seo_i18n_image_url( $file_name ) {
+	$default_url = WOO_IMAGE_SEO['assets_url'] . $file_name;
+	$locale_url = str_replace( '/assets/', '/i18n/assets/images/', WOO_IMAGE_SEO['assets_url'] ) . WOO_IMAGE_SEO['site_locale'] . '/' . $file_name;
+
+	return ( woo_image_seo_file_exists( $locale_url ) ? $locale_url : $default_url ) . '?version=' . WOO_IMAGE_SEO['version'];
+}
+
+function woo_image_seo_file_exists( $url ) {
+	$headers = get_headers( $url );
+
+	if ( empty( $headers ) ) {
+		return false;
+	}
+
+	return substr( $headers[0], 9, 3 ) === '200';
+}
+

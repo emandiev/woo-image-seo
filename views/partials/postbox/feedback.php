@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 		<div class="form__head">
 			<h2><?php _e( 'Contact the plugin developer', 'woo-image-seo' ) ?></h2>
 
-			<img src="<?php echo WOO_IMAGE_SEO['assets_url'] . 'howdy.jpg?version=' . WOO_IMAGE_SEO['version'] ?>" alt="">
+			<img src="<?php echo woo_image_seo_i18n_image_url( 'howdy.jpg' ) ?>" alt="">
 		</div><!-- /.form__head -->
 
 		<div class="form__body">
