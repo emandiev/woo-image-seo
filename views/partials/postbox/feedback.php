@@ -15,7 +15,11 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 			<img src="<?php echo woo_image_seo_i18n_image_url( 'howdy.jpg' ) ?>" alt="">
 		</div><!-- /.form__head -->
 
-		<div class="form__body">
+		<div
+			class="form__body"
+			data-sent="<?php _e( 'Your message has been sent.', 'woo-image-seo' ) ?>"
+			data-thanks="<?php _e( 'Thank you!', 'woo-image-seo' ) ?>"
+		>
 			<p>
 				<?php _e( 'Howdy!', 'woo-image-seo' ) ?>
 			</p>
@@ -37,7 +41,11 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 				required
 			></textarea>
 
-			<input type="submit" value="<?php _e( 'Submit', 'woo-image-seo' ) ?>">
+			<input
+				type="submit"
+				value="<?php _e( 'Submit', 'woo-image-seo' ) ?>"
+				data-submitting="<?php _e( 'Submitting...', 'woo-image-seo' ) ?>"
+			>
 		</div><!-- /.form__body -->
 
 		<?php wp_nonce_field( 'nonce' ); ?>

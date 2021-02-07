@@ -26,5 +26,6 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 		id="post-success"
 		class="hidden bg-gray"
 		data-saved="<?php _e( 'Settings Saved', 'woo-image-seo' ) ?>"
+		data-saving="<?php _e( 'Saving...', 'woo-image-seo' ) ?>"
 	></div>
 </div>

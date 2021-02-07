@@ -18,11 +18,11 @@ jQuery(document).ready(function($) {
 			type: 'POST',
 			data: data,
 			beforeSend: function() {
-				jQuery('#post-success').text('Please wait...').fadeIn();
+				jQuery('#post-success').text(jQuery('#post-success').data('saving')).fadeIn();
 			},
 			success: function(){
 				jQuery('#woo_image_seo_form input').removeAttr('disabled');
-				jQuery('#post-success').text('Settings Saved!').addClass('bg-green');
+				jQuery('#post-success').text(jQuery('#post-success').data('saved')).addClass('bg-green');
 				setTimeout(function(){ jQuery('#post-success').fadeOut(); }, 2000);
 			},
 			error: function( jqXhr, textStatus, errorThrown ){
@@ -36,7 +36,7 @@ jQuery(document).ready(function($) {
 	jQuery('#reset-settings').click(function() {
 		jQuery('#reset-settings').blur();
 
-		if (!window.confirm('Reset plugin settings?')) {
+		if (!window.confirm(jQuery('#reset-settings').data('confirm'))) {
 			return;
 		}
 
@@ -49,12 +49,12 @@ jQuery(document).ready(function($) {
 			type: 'POST',
 			data: defaultSettings,
 			beforeSend: function() {
-				jQuery('#post-success').text('Please wait...').fadeIn();
+				jQuery('#post-success').text(jQuery('#post-success').data('saving')).fadeIn();
 			},
 			success: function(data) {
 				// Replace the form with the new one
 				jQuery('#woo_image_seo_form .wrap').replaceWith(jQuery('#woo_image_seo_form .wrap', data));
-				jQuery('#post-success').text('Settings Saved!').addClass('bg-green');
+				jQuery('#post-success').text(jQuery('#post-success').data('saved')).addClass('bg-green');
 				setTimeout(function(){ jQuery('#post-success').fadeOut(); }, 2000);
 			},
 			error: function(jqXhr, textStatus, errorThrown) {
@@ -88,10 +88,14 @@ jQuery(document).ready(function($) {
 			type: 'POST',
 			data: jQuery(this).serializeArray(),
 			beforeSend: function() {
-				jQuery('#woo_image_seo_feedback input[type="submit"]').replaceWith('<strong>Submitting...</strong>');
+				jQuery('#woo_image_seo_feedback input[type="submit"]')
+					.replaceWith('<strong>' + jQuery('#woo_image_seo_feedback input[type="submit"]').data('submitting') + '</strong>');
 			},
 			success: function() {
-				jQuery('#woo_image_seo_feedback .form__body').html('Your message has been sent.<br>Thank you!');
+				jQuery('#woo_image_seo_feedback .form__body')
+				.html(
+					jQuery('#woo_image_seo_feedback .form__body').data('sent') + '<br>' + jQuery('#woo_image_seo_feedback .form__body').data('thanks')
+				);
 			},
 			error: function( jqXhr, textStatus, errorThrown ) {
 				console.log( errorThrown );
