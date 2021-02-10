@@ -31,13 +31,14 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 			<input
 				type="email"
 				name="email"
-				placeholder="<?php _e( 'your email', 'woo-image-seo' ) ?> ( <?php _e( 'optional', 'woo-image-seo' ) ?>)"
+				placeholder="<?php _e( 'your email', 'woo-image-seo' ) ?>"
+				required
 			>
 
 			<textarea
 				name="message"
 				rows="5"
-				placeholder="<?php _e( 'your message', 'woo-image-seo' ) ?> ( <?php _e( 'required', 'woo-image-seo' ) ?>)"
+				placeholder="<?php _e( 'your message', 'woo-image-seo' ) ?>"
 				required
 			></textarea>
 
