@@ -30,7 +30,10 @@ $name = $type . '[count]';
 			?>
 				checked
 			<?php endif; ?>
-		><?php printf( __( 'Add image number to %s attributes', 'woo-image-seo' ), $type ) ?>
+		><?php
+			/* translators: %s is one of the following: "alt" or "title" */
+			printf( __( 'Add image number to %s attributes', 'woo-image-seo' ), $type )
+		?>
 
 		<span class="checkmark"></span>
 

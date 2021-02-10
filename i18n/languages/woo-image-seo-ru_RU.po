@@ -35,7 +35,7 @@ msgstr "Данаил Эмандиев"
 msgid "https://emandiev.com"
 msgstr "https://emandiev.com"
 
-#: lib/functions.php:141
+#: lib/functions.php:127
 msgid "Settings"
 msgstr "Настройки"
 
@@ -47,53 +47,60 @@ msgstr "Сохранить настройки"
 msgid "Reset to Default"
 msgstr "Сбросить настройки"
 
+#: views/partials/actions.php:17
+msgid "Reset plugin settings?"
+msgstr "Сбросить настройки плагина?"
+
 #: views/partials/form-rows/attribute-builder.php:8
 #: views/partials/help-modals.php:29
 msgid "Attribute builder"
 msgstr "Конструктор атрибутов"
 
-#: views/partials/form-rows/attribute-builder.php:19
+#: views/partials/form-rows/attribute-builder.php:13
+msgid "Click to learn about the Attribute Builder"
+msgstr "Нажмите, чтобы узнать о Kонструкторе атрибутов"
+
+#: views/partials/form-rows/attribute-builder.php:27
 msgid "Empty"
 msgstr "Пустой"
 
-#: views/partials/form-rows/attribute-builder.php:24
+#: views/partials/form-rows/attribute-builder.php:32
 msgid "Product Name"
 msgstr "Название продукта"
 
-#: views/partials/form-rows/attribute-builder.php:29
+#: views/partials/form-rows/attribute-builder.php:37
 msgid "First Category"
 msgstr "Первая категория"
 
-#: views/partials/form-rows/attribute-builder.php:34
+#: views/partials/form-rows/attribute-builder.php:42
 msgid "First Tag"
 msgstr "Первый тег"
 
-#: views/partials/form-rows/attribute-builder.php:39
+#: views/partials/form-rows/attribute-builder.php:47
 #: views/partials/form-rows/custom-texts.php:9
 msgid "Custom Text"
 msgstr "Пользовательский текст"
 
-#: views/partials/form-rows/attribute-builder.php:46
-msgid "Click to learn about the Attribute Builder"
-msgstr "Нажмите, чтобы узнать о Kонструкторе атрибутов"
-
-#: views/partials/form-rows/count.php:33
+#. translators: %s is one of the following: "alt" or "title"
+#: views/partials/form-rows/count.php:35
 msgid "Add image number to %s attributes"
 msgstr "Добавить номер изображения в %s атрибуты"
 
-#: views/partials/form-rows/count.php:41
+#: views/partials/form-rows/count.php:43
 msgid "Click to learn about the Add Image Number option"
 msgstr "Нажмите, чтобы узнать о параметре Добавить номер изображения"
 
-#: views/partials/form-rows/enable.php:28
+#. translators: %s is one of the following: "alt" or "title"
+#: views/partials/form-rows/enable.php:30
 msgid "Automatic %s attributes"
 msgstr "Автоматический %s атрибуты"
 
-#: views/partials/form-rows/force.php:5
+#. translators: %s is one of the following: "alt" or "title"
+#: views/partials/form-rows/force.php:6
 msgid "Force %s attributes"
 msgstr "Принудительно установить %s атрибуты"
 
-#: views/partials/form-rows/force.php:8
+#: views/partials/form-rows/force.php:9
 msgid "recommended"
 msgstr "рекомендуемые"
 
@@ -101,7 +108,8 @@ msgstr "рекомендуемые"
 msgid "Click to learn about the Force Attributes option"
 msgstr "Нажмите, чтобы узнать о параметрах Принудительно установить атрибуты"
 
-#: views/partials/help-modals.php:7 views/partials/help-modals.php:9
+#: views/partials/help-modals.php:7
+#: views/partials/help-modals.php:9
 msgid "Click anywhere to close overlay"
 msgstr "Щелкните в любом месте, чтобы закрыть наложение"
 
@@ -121,7 +129,8 @@ msgstr "Плагин будет устанавливать атрибут тол
 msgid "This is useful if you wish to set your own attributes for individual images."
 msgstr "Это полезно, если вы хотите установить свои собственные атрибуты для отдельных изображений."
 
-#: views/partials/help-modals.php:18 views/partials/help-modals.php:47
+#: views/partials/help-modals.php:18
+#: views/partials/help-modals.php:47
 msgid "If the setting is enabled"
 msgstr "Если настройка включена"
 
@@ -133,7 +142,8 @@ msgstr "Плагин установит атрибут для всех изоб�
 msgid "This is especially useful for the \"title\" attribute because WordPress generates title attributes automatically using the file name."
 msgstr "Это особенно полезно для атрибута «title», поскольку WordPress автоматически генерирует атрибуты заголовка, используя имя файла."
 
-#: views/partials/help-modals.php:22 views/partials/help-modals.php:33
+#: views/partials/help-modals.php:22
+#: views/partials/help-modals.php:33
 #: views/partials/help-modals.php:52
 msgid "Example"
 msgstr "Пример"
@@ -219,32 +229,37 @@ msgid "Contact the plugin developer"
 msgstr "Свяжитесь с разработчиком"
 
 #: views/partials/postbox/feedback.php:20
+msgid "Your message has been sent."
+msgstr "Ваше сообщение было отправлено."
+
+#: views/partials/postbox/feedback.php:21
+#: views/partials/postbox/support.php:13
+msgid "Thank you!"
+msgstr "Спасибо!"
+
+#: views/partials/postbox/feedback.php:24
 msgid "Howdy!"
 msgstr "Привет!"
 
-#: views/partials/postbox/feedback.php:24
+#: views/partials/postbox/feedback.php:28
 msgid "Feel free to contact me with any questions or feedback."
 msgstr "Не стесняйтесь обращаться ко мне с любыми вопросами или отзывами."
 
-#: views/partials/postbox/feedback.php:30
+#: views/partials/postbox/feedback.php:34
 msgid "your email"
 msgstr "ваша электронная почта"
 
-#: views/partials/postbox/feedback.php:30
-msgid "optional"
-msgstr "необязательный"
-
-#: views/partials/postbox/feedback.php:36
+#: views/partials/postbox/feedback.php:41
 msgid "your message"
 msgstr "ваше сообщение"
 
-#: views/partials/postbox/feedback.php:36
-msgid "required"
-msgstr "требуется"
-
-#: views/partials/postbox/feedback.php:40
+#: views/partials/postbox/feedback.php:47
 msgid "Submit"
 msgstr "Отправить"
+
+#: views/partials/postbox/feedback.php:48
+msgid "Submitting..."
+msgstr "Отправка..."
 
 #: views/partials/postbox/settings.php:7
 msgid "Global Settings"
@@ -253,6 +268,10 @@ msgstr "Глобальные настройки"
 #: views/partials/postbox/settings.php:28
 msgid "Settings Saved"
 msgstr "Настройки сохранены"
+
+#: views/partials/postbox/settings.php:29
+msgid "Saving..."
+msgstr "Сохранение..."
 
 #: views/partials/postbox/share.php:11
 msgid "Share the plugin"
@@ -269,10 +288,6 @@ msgstr "Поддержите плагин"
 #: views/partials/postbox/support.php:12
 msgid "Donations are greatly appreciated."
 msgstr "Пожертвования с благодарностью."
-
-#: views/partials/postbox/support.php:13
-msgid "Thank you!"
-msgstr "Спасибо!"
 
 #: views/partials/postbox/support.php:51
 msgid "Donate with PayPal"

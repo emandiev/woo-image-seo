@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2021-02-03T19:06:36+00:00\n"
+"POT-Creation-Date: 2021-02-10T17:17:28+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.4.0\n"
 "X-Domain: woo-image-seo\n"
@@ -34,7 +34,7 @@ msgstr ""
 msgid "https://emandiev.com"
 msgstr ""
 
-#: lib/functions.php:141
+#: lib/functions.php:127
 msgid "Settings"
 msgstr ""
 
@@ -46,53 +46,60 @@ msgstr ""
 msgid "Reset to Default"
 msgstr ""
 
+#: views/partials/actions.php:17
+msgid "Reset plugin settings?"
+msgstr ""
+
 #: views/partials/form-rows/attribute-builder.php:8
 #: views/partials/help-modals.php:29
 msgid "Attribute builder"
 msgstr ""
 
-#: views/partials/form-rows/attribute-builder.php:19
+#: views/partials/form-rows/attribute-builder.php:13
+msgid "Click to learn about the Attribute Builder"
+msgstr ""
+
+#: views/partials/form-rows/attribute-builder.php:27
 msgid "Empty"
 msgstr ""
 
-#: views/partials/form-rows/attribute-builder.php:24
+#: views/partials/form-rows/attribute-builder.php:32
 msgid "Product Name"
 msgstr ""
 
-#: views/partials/form-rows/attribute-builder.php:29
+#: views/partials/form-rows/attribute-builder.php:37
 msgid "First Category"
 msgstr ""
 
-#: views/partials/form-rows/attribute-builder.php:34
+#: views/partials/form-rows/attribute-builder.php:42
 msgid "First Tag"
 msgstr ""
 
-#: views/partials/form-rows/attribute-builder.php:39
+#: views/partials/form-rows/attribute-builder.php:47
 #: views/partials/form-rows/custom-texts.php:9
 msgid "Custom Text"
 msgstr ""
 
-#: views/partials/form-rows/attribute-builder.php:46
-msgid "Click to learn about the Attribute Builder"
-msgstr ""
-
-#: views/partials/form-rows/count.php:33
+#. translators: %s is one of the following: "alt" or "title"
+#: views/partials/form-rows/count.php:35
 msgid "Add image number to %s attributes"
 msgstr ""
 
-#: views/partials/form-rows/count.php:41
+#: views/partials/form-rows/count.php:43
 msgid "Click to learn about the Add Image Number option"
 msgstr ""
 
-#: views/partials/form-rows/enable.php:28
+#. translators: %s is one of the following: "alt" or "title"
+#: views/partials/form-rows/enable.php:30
 msgid "Automatic %s attributes"
 msgstr ""
 
-#: views/partials/form-rows/force.php:5
+#. translators: %s is one of the following: "alt" or "title"
+#: views/partials/form-rows/force.php:6
 msgid "Force %s attributes"
 msgstr ""
 
-#: views/partials/form-rows/force.php:8
+#: views/partials/form-rows/force.php:9
 msgid "recommended"
 msgstr ""
 
@@ -221,31 +228,36 @@ msgid "Contact the plugin developer"
 msgstr ""
 
 #: views/partials/postbox/feedback.php:20
-msgid "Howdy!"
+msgid "Your message has been sent."
+msgstr ""
+
+#: views/partials/postbox/feedback.php:21
+#: views/partials/postbox/support.php:13
+msgid "Thank you!"
 msgstr ""
 
 #: views/partials/postbox/feedback.php:24
+msgid "Howdy!"
+msgstr ""
+
+#: views/partials/postbox/feedback.php:28
 msgid "Feel free to contact me with any questions or feedback."
 msgstr ""
 
-#: views/partials/postbox/feedback.php:30
+#: views/partials/postbox/feedback.php:34
 msgid "your email"
 msgstr ""
 
-#: views/partials/postbox/feedback.php:30
-msgid "optional"
-msgstr ""
-
-#: views/partials/postbox/feedback.php:36
+#: views/partials/postbox/feedback.php:41
 msgid "your message"
 msgstr ""
 
-#: views/partials/postbox/feedback.php:36
-msgid "required"
+#: views/partials/postbox/feedback.php:47
+msgid "Submit"
 msgstr ""
 
-#: views/partials/postbox/feedback.php:40
-msgid "Submit"
+#: views/partials/postbox/feedback.php:48
+msgid "Submitting..."
 msgstr ""
 
 #: views/partials/postbox/settings.php:7
@@ -254,6 +266,10 @@ msgstr ""
 
 #: views/partials/postbox/settings.php:28
 msgid "Settings Saved"
+msgstr ""
+
+#: views/partials/postbox/settings.php:29
+msgid "Saving..."
 msgstr ""
 
 #: views/partials/postbox/share.php:11
@@ -270,10 +286,6 @@ msgstr ""
 
 #: views/partials/postbox/support.php:12
 msgid "Donations are greatly appreciated."
-msgstr ""
-
-#: views/partials/postbox/support.php:13
-msgid "Thank you!"
 msgstr ""
 
 #: views/partials/postbox/support.php:51

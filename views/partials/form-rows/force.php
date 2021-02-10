@@ -2,6 +2,7 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
+/* translators: %s is one of the following: "alt" or "title" */
 $label = sprintf( __( 'Force %s attributes', 'woo-image-seo' ), $type );
 
 if ( $type === 'title' ) {
