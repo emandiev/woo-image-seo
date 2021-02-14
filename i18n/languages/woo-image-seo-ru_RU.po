@@ -224,6 +224,11 @@ msgstr "Третье изображение будет иметь атрибут
 msgid "The fourth image will have the attribute \"Amazing Shirt 4\"."
 msgstr "Четвертое изображение будет иметь атрибут «Удивительная рубашка 4»."
 
+#: views/partials/help-modals.php:62
+#: views/partials/postbox/support.php:41
+msgid "Crypto donation"
+msgstr "Пожертвование криптовалюты"
+
 #: views/partials/postbox/feedback.php:13
 msgid "Contact the plugin developer"
 msgstr "Свяжитесь с разработчиком"
@@ -289,10 +294,10 @@ msgstr "Поддержите плагин"
 msgid "Donations are greatly appreciated."
 msgstr "Пожертвования с благодарностью."
 
-#: views/partials/postbox/support.php:51
-msgid "Donate with PayPal"
-msgstr "Пожертвовать через PayPal"
+#: views/partials/postbox/support.php:23
+msgid "Credit Card donation"
+msgstr "Пожертвование кредитной карты"
 
-#: views/partials/postbox/support.php:52
-msgid "Donate with PayPal button"
-msgstr "Пожертвовать с помощью кнопки PayPal"
+#: views/partials/postbox/support.php:32
+msgid "PayPal donation"
+msgstr "Пожертвование PayPal"
