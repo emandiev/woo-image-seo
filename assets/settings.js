@@ -65,7 +65,7 @@ jQuery(document).ready(function($) {
 
 
 	// smooth scroll
-	jQuery('#woo_image_seo_form').on('click', 'a.dashicons-editor-help', function(event) {
+	jQuery('#woo_image_seo').on('click', 'a.dashicons-editor-help, a.help-trigger', function(event) {
 		event.preventDefault();
 		event.stopPropagation();
 		var $target = jQuery(this.hash);

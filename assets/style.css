@@ -161,7 +161,7 @@ body.no-focus #woo_image_seo_form input[type="checkbox"]:checked:focus ~ .checkm
 #woo_image_seo_form input[type="button"] {
 	min-height: 30px;
 	padding: .5em 2em;
-	margin-top: 20px;
+	margin-top: 21px;
 	color: white;
 	border: none;
 	transition: background .4s;
@@ -403,16 +403,25 @@ body.no-focus #woo_image_seo_form input[type="checkbox"]:checked:focus ~ .checkm
 /*
 	Support box
 */
-.form--donate {
-	min-height: 27px;
-	text-align: center;
+.postbox--support ul {
+	margin: 0;
 }
 
-.form--donate input[type="image"] {
-	height: 80px;
-	margin-bottom: .5px;
+.postbox--support li {
+	margin-bottom: 5px;
 }
 
-.form--donate input[type="image"]:hover {
-	opacity: .7;
+.postbox--support a:hover {
+	opacity: .5;
+}
+
+#crypto-donation .cc {
+	float: left;
+	font-size: 2em;
+	line-height: 1.5em;
+	margin-right: 15px;
+}
+
+#crypto-donation strong {
+	display: block;
 }

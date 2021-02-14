@@ -13,43 +13,32 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 		<?php _e( 'Thank you!', 'woo-image-seo' ) ?>
 	</p>
 
-	<form
-		action="https://www.paypal.com/donate"
-		method="post"
-		target="_blank"
-		class="form--donate"
-	>
-		<input
-			type="hidden"
-			name="cmd"
-			value="_donations"
-		/>
+	<ul>
+		<li>
+			<i class="fa fa-credit-card-alt"></i>
 
-		<input
-			type="hidden"
-			name="business"
-			value="danail@emandiev.com"
-		/>
+			<a
+				href="https://www.paypal.com/donate?hosted_button_id=HESX9A8QRXV38"
+				target="_blank"
+			><?php _e( 'Credit Card donation', 'woo-image-seo' ) ?></a>
+		</li>
 
-		<input
-			type="hidden"
-			name="item_name"
-			value="Support Woo Image SEO plugin development"
-		/>
+		<li>
+			<i class="fa fa-paypal"></i>
 
-		<input
-			type="hidden"
-			name="currency_code"
-			value="USD"
-		/>
+			<a
+				href="https://www.paypal.com/donate?hosted_button_id=HESX9A8QRXV38"
+				target="_blank"
+			><?php _e( 'PayPal donation', 'woo-image-seo' ) ?></a>
+		</li>
 
-		<input
-			type="image"
-			src="<?php echo WOO_IMAGE_SEO['assets_url'] . 'paypal-donate.png?version=' . WOO_IMAGE_SEO['version'] ?>"
-			border="0"
-			name="submit"
-			title="<?php _e( 'Donate with PayPal', 'woo-image-seo' ) ?>"
-			alt="<?php _e( 'Donate with PayPal button', 'woo-image-seo' ) ?>"
-		/>
-	</form>
+		<li>
+			<i class="fa fa-bitcoin"></i>
+
+			<a
+				href="#crypto-donation"
+				class="help-trigger"
+			><?php _e( 'Crypto donation', 'woo-image-seo' ) ?></a>
+		</li>
+	</ul>
 </div><!-- /.postbox -->
