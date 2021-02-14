@@ -89,4 +89,10 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 		<strong>Binance Coin (BNB)</strong>
 		<code>bnb1dhs3f2nmqq72z04jjxrhw7r6hy9y2p2lprvhr5</code>
 	</p>
+	<hr>
+	<i class="cc ZEC"></i>
+	<p>
+		<strong>Zcash (ZEC)</strong>
+		<code>zs1mzsjmwzqsushayak9e00tzyeurr7z64dn09z2tf647zy7dpfkuz97xa5020qyhl4q3ltcqxj5gl</code>
+	</p>
 </div>
