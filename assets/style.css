@@ -1,48 +1,50 @@
 #woo_image_seo:after {
-content: '';
-display: block;
-clear: both;
+	content: '';
+	display: block;
+	clear: both;
 }
 
 #woo_image_seo h1,
 #woo_image_seo h2 {
-margin: 10px 0 20px;
-padding: 0;
-font-weight: normal;
+	margin: 10px 0 20px;
+	padding: 0;
+	font-weight: normal;
 }
 
 #woo_image_seo h2 {
-text-align: center;
-margin-bottom: 15px;
+	margin-bottom: 15px;
+	text-align: center;
+	font-size: 21px;
 }
 
 #woo_image_seo p {
-font-size: 15px;
-margin: 0 0 14px 0;
+	font-size: 15px;
+	line-height: 21px;
+	margin: 0 0 14px 0;
 }
 
 #woo_image_seo .postbox {
-display: inline-block;
-padding: 10px 20px 20px;
-margin: 5px 0 0;
-font-size: 16px;
-line-height: 1.5em;
-vertical-align: top;
+	display: inline-block;
+	padding: 10px 20px 20px;
+	margin: 5px 0 0;
+	font-size: 16px;
+	line-height: 1.5em;
+	vertical-align: top;
 }
 
 #woo_image_seo .wrap__inner {
-float: left;
-margin-right: 5px;
+	float: left;
+	margin-right: 5px;
 }
 
 #woo_image_seo .wrap__inner:last-child {
-width: 275px;
-margin-right: 0;
+	width: 275px;
+	margin-right: 0;
 }
 
 #woo_image_seo .wrap__inner:last-child .postbox {
-width: 100%;
-text-align: center;
+	width: 100%;
+	text-align: center;
 }
 
 /*
@@ -239,7 +241,7 @@ body.no-focus #woo_image_seo_form input[type="checkbox"]:checked:focus ~ .checkm
 #woo_image_seo_form .dashicons-editor-help {
 	vertical-align: middle;
 	cursor: pointer;
-	color: #333;
+	color: #444;
 	transition: transform .3s;
 }
 #woo_image_seo_form .dashicons-editor-help:hover,
@@ -329,6 +331,11 @@ body.no-focus #woo_image_seo_form input[type="checkbox"]:checked:focus ~ .checkm
 #woo_image_seo_feedback {
 	text-align: center;
 }
+
+#woo_image_seo_feedback .form__head {
+	min-height: 163px;
+}
+
 #woo_image_seo_feedback img {
 	border-radius: 50%;
 	width: 118px;
@@ -344,10 +351,22 @@ body.no-focus #woo_image_seo_form input[type="checkbox"]:checked:focus ~ .checkm
 	margin-bottom: 15px;
 }
 
+#woo_image_seo_feedback textarea {
+	height: 114px;
+}
+
 #woo_image_seo_feedback input[type="submit"] {
 	margin: 0;
 	cursor: pointer;
 	padding: .25em;
+	appearance: none;
+	border: 0;
+	background: #555;
+	color: #fff;
+	transition: background .3s;
+}
+#woo_image_seo_feedback input[type="submit"]:hover {
+	background: #008baa;
 }
 #woo_image_seo_feedback input[type="submit"][disabled] {
 	background: #eee;
@@ -370,6 +389,7 @@ body.no-focus #woo_image_seo_form input[type="checkbox"]:checked:focus ~ .checkm
 	margin: 5px 2px;
 	border-radius: 50%;
 	color: white !important;
+	transition: opacity .3s;
 }
 
 .postbox--share .fa:hover {
@@ -408,11 +428,14 @@ body.no-focus #woo_image_seo_form input[type="checkbox"]:checked:focus ~ .checkm
 }
 
 .postbox--support li {
-	margin-bottom: 5px;
+	margin-bottom: 8px;
 }
 
+.postbox--support a {
+	transition: opacity .3s;
+}
 .postbox--support a:hover {
-	opacity: .5;
+	opacity: .7;
 }
 
 #crypto-donation .cc {
