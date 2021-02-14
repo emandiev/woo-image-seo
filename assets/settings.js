@@ -10,7 +10,7 @@ jQuery(document).ready(function($) {
 	});
 
 	// AJAX form submission
-	jQuery('#woo_image_seo_form').submit(function(e){
+	jQuery('#woo_image_seo_form').on('submit', function(e){
 		e.preventDefault();
 		var data = jQuery(this).serializeArray();
 
@@ -33,7 +33,7 @@ jQuery(document).ready(function($) {
 	
 	
 	// AJAX Reset Settings
-	jQuery('#reset-settings').click(function() {
+	jQuery('#reset-settings').on('click', function() {
 		jQuery('#reset-settings').blur();
 
 		if (!window.confirm(jQuery('#reset-settings').data('confirm'))) {
@@ -81,7 +81,7 @@ jQuery(document).ready(function($) {
 	});
 
 	// AJAX feedback form submission
-	jQuery('#woo_image_seo_feedback').submit(function(event) {
+	jQuery('#woo_image_seo_feedback').on('submit', function(event) {
 		event.preventDefault();
 
 		jQuery.ajax({
