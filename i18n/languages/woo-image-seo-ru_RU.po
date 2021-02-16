@@ -8,7 +8,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2021-01-28T19:22:24+00:00\n"
-"PO-Revision-Date: 2021-02-03 21:16+0200\n"
+"PO-Revision-Date: 2021-02-16 22:13+0200\n"
 "X-Generator: Poedit 2.4.2\n"
 "X-Domain: woo-image-seo\n"
 "Last-Translator: \n"
@@ -108,8 +108,7 @@ msgstr "рекомендуемые"
 msgid "Click to learn about the Force Attributes option"
 msgstr "Нажмите, чтобы узнать о параметрах Принудительно установить атрибуты"
 
-#: views/partials/help-modals.php:7
-#: views/partials/help-modals.php:9
+#: views/partials/help-modals.php:7 views/partials/help-modals.php:9
 msgid "Click anywhere to close overlay"
 msgstr "Щелкните в любом месте, чтобы закрыть наложение"
 
@@ -129,8 +128,7 @@ msgstr "Плагин будет устанавливать атрибут тол
 msgid "This is useful if you wish to set your own attributes for individual images."
 msgstr "Это полезно, если вы хотите установить свои собственные атрибуты для отдельных изображений."
 
-#: views/partials/help-modals.php:18
-#: views/partials/help-modals.php:47
+#: views/partials/help-modals.php:18 views/partials/help-modals.php:47
 msgid "If the setting is enabled"
 msgstr "Если настройка включена"
 
@@ -142,8 +140,7 @@ msgstr "Плагин установит атрибут для всех изоб�
 msgid "This is especially useful for the \"title\" attribute because WordPress generates title attributes automatically using the file name."
 msgstr "Это особенно полезно для атрибута «title», поскольку WordPress автоматически генерирует атрибуты заголовка, используя имя файла."
 
-#: views/partials/help-modals.php:22
-#: views/partials/help-modals.php:33
+#: views/partials/help-modals.php:22 views/partials/help-modals.php:33
 #: views/partials/help-modals.php:52
 msgid "Example"
 msgstr "Пример"
@@ -224,8 +221,7 @@ msgstr "Третье изображение будет иметь атрибут
 msgid "The fourth image will have the attribute \"Amazing Shirt 4\"."
 msgstr "Четвертое изображение будет иметь атрибут «Удивительная рубашка 4»."
 
-#: views/partials/help-modals.php:62
-#: views/partials/postbox/support.php:41
+#: views/partials/help-modals.php:62 views/partials/postbox/support.php:41
 msgid "Crypto donation"
 msgstr "Пожертвование криптовалюты"
 
@@ -237,8 +233,7 @@ msgstr "Связаться с автором"
 msgid "Your message has been sent."
 msgstr "Ваше сообщение было отправлено."
 
-#: views/partials/postbox/feedback.php:21
-#: views/partials/postbox/support.php:13
+#: views/partials/postbox/feedback.php:21 views/partials/postbox/support.php:13
 msgid "Thank you!"
 msgstr "Спасибо!"
 
