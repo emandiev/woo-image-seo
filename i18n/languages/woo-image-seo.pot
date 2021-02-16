@@ -59,23 +59,23 @@ msgstr ""
 msgid "Click to learn about the Attribute Builder"
 msgstr ""
 
-#: views/partials/form-rows/attribute-builder.php:27
+#: views/partials/form-rows/attribute-builder.php:28
 msgid "Empty"
 msgstr ""
 
-#: views/partials/form-rows/attribute-builder.php:32
+#: views/partials/form-rows/attribute-builder.php:33
 msgid "Product Name"
 msgstr ""
 
-#: views/partials/form-rows/attribute-builder.php:37
+#: views/partials/form-rows/attribute-builder.php:38
 msgid "First Category"
 msgstr ""
 
-#: views/partials/form-rows/attribute-builder.php:42
+#: views/partials/form-rows/attribute-builder.php:43
 msgid "First Tag"
 msgstr ""
 
-#: views/partials/form-rows/attribute-builder.php:47
+#: views/partials/form-rows/attribute-builder.php:48
 #: views/partials/form-rows/custom-texts.php:9
 msgid "Custom Text"
 msgstr ""

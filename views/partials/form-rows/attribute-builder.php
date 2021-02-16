@@ -23,8 +23,9 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 			>
 				<option
 					value="[none]"
+					class="wis-c-999"
 					<?php selected( $settings[ $type ]['text'][ $i ], '[none]' ) ?>
-				><?php _e( 'Empty', 'woo-image-seo' ) ?></option>
+				>&#x3C;<?php _e( 'Empty', 'woo-image-seo' ) ?>&#x3E;</option>
 
 				<option
 					value="[name]"

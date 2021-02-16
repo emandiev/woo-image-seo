@@ -219,6 +219,10 @@ body.no-focus #woo_image_seo_form input[type="checkbox"]:checked:focus ~ .checkm
 	line-height: 1.5;
 }
 
+.wis-c-999 {
+	color: #999 !important;
+}
+
 #post-success {
 	position: absolute;
 	left: 20px;

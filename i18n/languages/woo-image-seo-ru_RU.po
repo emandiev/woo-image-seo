@@ -60,23 +60,23 @@ msgstr "Конструктор атрибутов"
 msgid "Click to learn about the Attribute Builder"
 msgstr "Нажмите, чтобы узнать о Kонструкторе атрибутов"
 
-#: views/partials/form-rows/attribute-builder.php:27
+#: views/partials/form-rows/attribute-builder.php:28
 msgid "Empty"
 msgstr "Пустой"
 
-#: views/partials/form-rows/attribute-builder.php:32
+#: views/partials/form-rows/attribute-builder.php:33
 msgid "Product Name"
 msgstr "Название продукта"
 
-#: views/partials/form-rows/attribute-builder.php:37
+#: views/partials/form-rows/attribute-builder.php:38
 msgid "First Category"
 msgstr "Первая категория"
 
-#: views/partials/form-rows/attribute-builder.php:42
+#: views/partials/form-rows/attribute-builder.php:43
 msgid "First Tag"
 msgstr "Первый тег"
 
-#: views/partials/form-rows/attribute-builder.php:47
+#: views/partials/form-rows/attribute-builder.php:48
 #: views/partials/form-rows/custom-texts.php:9
 msgid "Custom Text"
 msgstr "Пользовательский текст"
@@ -230,8 +230,8 @@ msgid "Crypto donation"
 msgstr "Пожертвование криптовалюты"
 
 #: views/partials/postbox/feedback.php:13
-msgid "Contact the plugin developer"
-msgstr "Свяжитесь с разработчиком"
+msgid "Contact the author"
+msgstr "Связаться с автором"
 
 #: views/partials/postbox/feedback.php:20
 msgid "Your message has been sent."
