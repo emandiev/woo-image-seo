@@ -8,7 +8,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2021-01-28T19:22:24+00:00\n"
-"PO-Revision-Date: 2021-02-03 21:16+0200\n"
+"PO-Revision-Date: 2021-02-16 22:15+0200\n"
 "X-Generator: Poedit 2.4.2\n"
 "X-Domain: woo-image-seo\n"
 "Last-Translator: \n"
@@ -25,11 +25,11 @@ msgstr ""
 
 #. Description of the plugin
 msgid "Boost your SEO by automatically adding alt tags and title attributes to all product images. Requires WooCommerce."
-msgstr "Улучшить SEO вашего магазина, автоматически добавив атрибуты alt и title к изображениям вашего продукта."
+msgstr "Подобрете оптимизацията за търсачки като добавите автоматични alt и title атрибути на всички продуктови изображения. Изисква WooCommerce."
 
 #. Author of the plugin
 msgid "Danail Emandiev"
-msgstr "Данаил Эмандиев"
+msgstr "Данаил Емандиев"
 
 #. Author URI of the plugin
 msgid "https://emandiev.com"
@@ -41,201 +41,201 @@ msgstr "Настройки"
 
 #: views/partials/actions.php:9
 msgid "Save Settings"
-msgstr "Сохранить настройки"
+msgstr "Запази настройки"
 
 #: views/partials/actions.php:14
 msgid "Reset to Default"
-msgstr "Сбросить настройки"
+msgstr "Възстанови фабричните настройки"
 
 #: views/partials/actions.php:17
 msgid "Reset plugin settings?"
-msgstr "Сбросить настройки плагина?"
+msgstr "Възстанови настройките на плъгина?"
 
 #: views/partials/form-rows/attribute-builder.php:8
 #: views/partials/help-modals.php:29
 msgid "Attribute builder"
-msgstr "Конструктор атрибутов"
+msgstr "Конструктор на атрибути"
 
 #: views/partials/form-rows/attribute-builder.php:13
 msgid "Click to learn about the Attribute Builder"
-msgstr "Нажмите, чтобы узнать о Kонструкторе атрибутов"
+msgstr "Кликни за да разбереш повече за Конструктора на Атрибути"
 
-#: views/partials/form-rows/attribute-builder.php:27
+#: views/partials/form-rows/attribute-builder.php:28
 msgid "Empty"
-msgstr "Пустой"
+msgstr "Празно"
 
-#: views/partials/form-rows/attribute-builder.php:32
+#: views/partials/form-rows/attribute-builder.php:33
 msgid "Product Name"
-msgstr "Название продукта"
+msgstr "Име на продукт"
 
-#: views/partials/form-rows/attribute-builder.php:37
+#: views/partials/form-rows/attribute-builder.php:38
 msgid "First Category"
-msgstr "Первая категория"
+msgstr "Първа категория"
 
-#: views/partials/form-rows/attribute-builder.php:42
+#: views/partials/form-rows/attribute-builder.php:43
 msgid "First Tag"
-msgstr "Первый тег"
+msgstr "Първи етикет"
 
-#: views/partials/form-rows/attribute-builder.php:47
+#: views/partials/form-rows/attribute-builder.php:48
 #: views/partials/form-rows/custom-texts.php:9
 msgid "Custom Text"
-msgstr "Пользовательский текст"
+msgstr "Персонализиран текст"
 
 #. translators: %s is one of the following: "alt" or "title"
 #: views/partials/form-rows/count.php:35
 msgid "Add image number to %s attributes"
-msgstr "Добавить номер изображения в %s атрибуты"
+msgstr "Добави номер на изображение в %s атрибути"
 
 #: views/partials/form-rows/count.php:43
 msgid "Click to learn about the Add Image Number option"
-msgstr "Нажмите, чтобы узнать о параметре Добавить номер изображения"
+msgstr "Кликни за да разбереш повече за опцията \"Добави номер на изображение\""
 
 #. translators: %s is one of the following: "alt" or "title"
 #: views/partials/form-rows/enable.php:30
 msgid "Automatic %s attributes"
-msgstr "Автоматический %s атрибуты"
+msgstr "Автоматични %s атрибути"
 
 #. translators: %s is one of the following: "alt" or "title"
 #: views/partials/form-rows/force.php:6
 msgid "Force %s attributes"
-msgstr "Принудительно установить %s атрибуты"
+msgstr "Форсирай %s атрибути"
 
 #: views/partials/form-rows/force.php:9
 msgid "recommended"
-msgstr "рекомендуемые"
+msgstr "препоръчително"
 
 #: views/partials/form-rows/force.php:35
 msgid "Click to learn about the Force Attributes option"
-msgstr "Нажмите, чтобы узнать о параметрах Принудительно установить атрибуты"
+msgstr "Кликни за да разбереш повече за опцията \"Форсирай Атрибути\""
 
-#: views/partials/help-modals.php:7
-#: views/partials/help-modals.php:9
+#: views/partials/help-modals.php:7 views/partials/help-modals.php:9
 msgid "Click anywhere to close overlay"
-msgstr "Щелкните в любом месте, чтобы закрыть наложение"
+msgstr "Кликни където и да е за да затвориш прозореца"
 
 #: views/partials/help-modals.php:13
 msgid "Force attributes"
-msgstr "Принудительно установить атрибуты"
+msgstr "Форсирай атрибути"
 
 #: views/partials/help-modals.php:14
 msgid "If the setting is disabled"
-msgstr "Если настройка отключена"
+msgstr "Ако опцията е спряна"
 
 #: views/partials/help-modals.php:15
 msgid "The plugin will only set the attribute to images that don't have one."
-msgstr "Плагин будет устанавливать атрибут только для изображений, у которых его нет."
+msgstr "Плъгинът ще сложи атрибути само на изображения без вече зададени атрибути."
 
 #: views/partials/help-modals.php:16
 msgid "This is useful if you wish to set your own attributes for individual images."
-msgstr "Это полезно, если вы хотите установить свои собственные атрибуты для отдельных изображений."
+msgstr "Това е полезно ако искаш да зададеш ръчно атрибути на индивидуални изображения."
 
-#: views/partials/help-modals.php:18
-#: views/partials/help-modals.php:47
+#: views/partials/help-modals.php:18 views/partials/help-modals.php:47
 msgid "If the setting is enabled"
-msgstr "Если настройка включена"
+msgstr "Ако опцията е включена"
 
 #: views/partials/help-modals.php:19
 msgid "The plugin will set the attribute to all images, even if they already have one."
-msgstr "Плагин установит атрибут для всех изображений, даже если они уже есть."
+msgstr "Плъгинът ще сложи атрибути на всички изображения, дори и вече да имат зададени."
 
 #: views/partials/help-modals.php:20
 msgid "This is especially useful for the \"title\" attribute because WordPress generates title attributes automatically using the file name."
-msgstr "Это особенно полезно для атрибута «title», поскольку WordPress автоматически генерирует атрибуты заголовка, используя имя файла."
+msgstr "Това е изключително полезно за \"title\" атрибутите защото WordPress генерира \"title\" атрибути автоматично използвайки името на файла."
 
-#: views/partials/help-modals.php:22
-#: views/partials/help-modals.php:33
+#: views/partials/help-modals.php:22 views/partials/help-modals.php:33
 #: views/partials/help-modals.php:52
 msgid "Example"
 msgstr "Пример"
 
 #: views/partials/help-modals.php:23
 msgid "You upload an image with the file name \"pic3.jpg\"."
-msgstr "Вы загружаете изображение с именем файла «pic3.jpg»."
+msgstr "Качваш изображение с име на файл \"pic3.jpg\"."
 
 #: views/partials/help-modals.php:24
 msgid "WordPress will automatically set a title attribute of \"pic3\"."
-msgstr "WordPress автоматически установит атрибут заголовка «pic3»."
+msgstr "WordPress автоматични слага \"pic3\" като \"title\" атрибут."
 
 #: views/partials/help-modals.php:30
 msgid "The attribute builder lets you change how the image attributes are generated."
-msgstr "Конструктор атрибутов позволяет вам настроить способ создания атрибутов изображения."
+msgstr "Конструктора на атрибути позволява контрол над начина по който се генерират атрибутите."
 
 #: views/partials/help-modals.php:31
 msgid "You can use the three dropdown fields to include the product's name, first category, first tag, or a custom text in any order."
-msgstr "Вы можете использовать три раскрывающихся поля, чтобы включить название продукта, первую категорию, первый тег или произвольный текст в любом порядке."
+msgstr "Можеш да използваш трите падащи менюта за да добавиш името на продукта, първата категория, първият етикет или персонализиран текст в какъвто и да е ред."
 
 #: views/partials/help-modals.php:34
 msgid "Let's say we have a product called \"Amazing Shirt\", with main category \"Movie-Inspired Clothing\"."
-msgstr "Допустим, у нас есть продукт под названием «Удивительная рубашка» с основной категорией «Одежда из кинофильмов»."
+msgstr "Да кажем, че имаме продукт с име \"Невероятна Тениска\" и основна категория \"Дрехи Вдъхновени от Филми\"."
 
 #: views/partials/help-modals.php:35
 msgid "By default, the plugin will build the image attribute using only the Product Name."
-msgstr "По умолчанию плагин создает атрибут изображения, используя только название продукта."
+msgstr "Стандартните настройки на плъгина са да създаде атрибутите използвайки името на продукта."
 
 #: views/partials/help-modals.php:36
 msgid "If you want to include the product's category, you can use the following configuration"
-msgstr "Если вы хотите включить категорию продукта, вы можете использовать следующую конфигурацию"
+msgstr "Ако искаш да използваш категорията на продукта, можеш да използваш следната конфигурация"
 
 #: views/partials/help-modals.php:38
 msgid "This will result in the attribute \"Amazing Shirt Movie-Inspired Clothing\"."
-msgstr "Это приведет к появлению атрибута «Удивительная рубашка Одежда из кинофильмов»."
+msgstr "Това ще генерира атрибутът \"Невероятна Тениска Дрехи Вдъхновени от Филми\"."
 
 #: views/partials/help-modals.php:40
 msgid "The Custom Text option allows you to enter your own texts."
-msgstr "Параметр «Пользовательский текст» позволяет вводить собственные тексты."
+msgstr "Опцията за Персонализиран текст позволява да въведеш свой текст."
 
 #: views/partials/help-modals.php:41
 msgid "For example, the following configuration will result in \"Amazing Shirt Movie-Inspired Clothing Free Shipping\""
-msgstr "Например, следующая конфигурация приведет к «Бесплатная доставка Удивительная рубашка Одежда из кинофильмов»"
+msgstr "Например, следната конфигурация ще генерира атрибут \"Невероятна Тениска Дрехи Вдъхновени от Филми Безплатна Доставка\""
 
 #: views/partials/help-modals.php:46
 msgid "Add image number"
-msgstr "Добавить номер изображения"
+msgstr "Добави номер на изображение"
 
 #: views/partials/help-modals.php:48
 msgid "The plugin will add the current image's number (index) at the end of the attribute."
-msgstr "Плагин добавит порядковый номер (индекс) текущего изображения в конец атрибута."
+msgstr "Плъгинът ще добави текущия номер (поредност) на изображението в края на атрибута."
 
 #: views/partials/help-modals.php:49
 msgid "This is useful if you wish to avoid duplicate attributes on the page."
-msgstr "Это полезно, если вы хотите избежать дублирования атрибутов на странице."
+msgstr "Това е полезно ако искаш да избегнеш повтарящи се атрибути на страницата."
 
 #: views/partials/help-modals.php:50
 msgid "Note that the first image won't be affected."
-msgstr "Обратите внимание, что первое изображение не будет иметь цифры 1."
+msgstr "Имай предвид, че първото изображение няма да бъде афектирано."
 
 #: views/partials/help-modals.php:53
 msgid "Let's say we have a product with four images called \"Amazing Shirt\" and the Attribute Builder is configured to use the Product Name."
-msgstr "Допустим, у нас есть продукт с четырьмя изображениями под названием «Удивительная рубашка», а конструктор атрибутов настроен на использование имени продукта."
+msgstr "Да кажем, че имаме продукт с име \"Невероятна Тениска\" и четири изображения, а Конструкторът на Атрибути е настроен да използва Име на родукт."
 
 #: views/partials/help-modals.php:55
 msgid "The first image will have the attribute \"Amazing Shirt\"."
-msgstr "Первое изображение будет иметь атрибут «Удивительная рубашка»."
+msgstr "Първото изображение ще има атрибут \"Невероятна Тениска\"."
 
 #: views/partials/help-modals.php:56
 msgid "The second image will have the attribute \"Amazing Shirt 2\"."
-msgstr "Второе изображение будет иметь атрибут «Удивительная рубашка 2»."
+msgstr "Второто изображение ще има атрибут \"Невероятна Тениска 2\"."
 
 #: views/partials/help-modals.php:57
 msgid "The third image will have the attribute \"Amazing Shirt 3\"."
-msgstr "Третье изображение будет иметь атрибут «Удивительная рубашка 3»."
+msgstr "Третото изображение ще има атрибут \"Невероятна Тениска 3\"."
 
 #: views/partials/help-modals.php:58
 msgid "The fourth image will have the attribute \"Amazing Shirt 4\"."
-msgstr "Четвертое изображение будет иметь атрибут «Удивительная рубашка 4»."
+msgstr "Четвъртото изображение ще има атрибут \"Невероятна Тениска 4\"."
+
+#: views/partials/help-modals.php:62 views/partials/postbox/support.php:41
+msgid "Crypto donation"
+msgstr "Крипто дарение"
 
 #: views/partials/postbox/feedback.php:13
-msgid "Contact the plugin developer"
-msgstr "Свяжитесь с разработчиком"
+msgid "Contact the author"
+msgstr "Свържи се с автора"
 
 #: views/partials/postbox/feedback.php:20
 msgid "Your message has been sent."
-msgstr "Ваше сообщение было отправлено."
+msgstr "Съобщението е изпратено."
 
-#: views/partials/postbox/feedback.php:21
-#: views/partials/postbox/support.php:13
+#: views/partials/postbox/feedback.php:21 views/partials/postbox/support.php:13
 msgid "Thank you!"
-msgstr "Спасибо!"
+msgstr "Благодаря!"
 
 #: views/partials/postbox/feedback.php:24
 msgid "Howdy!"
@@ -243,56 +243,56 @@ msgstr "Привет!"
 
 #: views/partials/postbox/feedback.php:28
 msgid "Feel free to contact me with any questions or feedback."
-msgstr "Не стесняйтесь обращаться ко мне с любыми вопросами или отзывами."
+msgstr "Чувствайте се свободни да се свържете с мен за въпроси и мнения."
 
 #: views/partials/postbox/feedback.php:34
 msgid "your email"
-msgstr "ваша электронная почта"
+msgstr "твоят имейл"
 
 #: views/partials/postbox/feedback.php:41
 msgid "your message"
-msgstr "ваше сообщение"
+msgstr "твоето съобщение"
 
 #: views/partials/postbox/feedback.php:47
 msgid "Submit"
-msgstr "Отправить"
+msgstr "Изпрати"
 
 #: views/partials/postbox/feedback.php:48
 msgid "Submitting..."
-msgstr "Отправка..."
+msgstr "Изпраща се..."
 
 #: views/partials/postbox/settings.php:7
 msgid "Global Settings"
-msgstr "Глобальные настройки"
+msgstr "Глобални Настройки"
 
 #: views/partials/postbox/settings.php:28
 msgid "Settings Saved"
-msgstr "Настройки сохранены"
+msgstr "Настройките са запазени"
 
 #: views/partials/postbox/settings.php:29
 msgid "Saving..."
-msgstr "Сохранение..."
+msgstr "Запазване..."
 
 #: views/partials/postbox/share.php:11
 msgid "Share the plugin"
-msgstr "Поделитесь плагином"
+msgstr "Сподели плъгина"
 
 #: views/partials/postbox/share.php:17
 msgid "Share on"
-msgstr "Поделиться через"
+msgstr "Сподели чрез"
 
 #: views/partials/postbox/support.php:9
 msgid "Support the plugin"
-msgstr "Поддержите плагин"
+msgstr "Помогни на плъгина"
 
 #: views/partials/postbox/support.php:12
 msgid "Donations are greatly appreciated."
-msgstr "Пожертвования с благодарностью."
+msgstr "Оценявам всички дарения."
 
-#: views/partials/postbox/support.php:51
-msgid "Donate with PayPal"
-msgstr "Пожертвовать через PayPal"
+#: views/partials/postbox/support.php:23
+msgid "Credit Card donation"
+msgstr "Дарение чрез кредитна карта"
 
-#: views/partials/postbox/support.php:52
-msgid "Donate with PayPal button"
-msgstr "Пожертвовать с помощью кнопки PayPal"
+#: views/partials/postbox/support.php:32
+msgid "PayPal donation"
+msgstr "Дарение чрез PayPal"
