@@ -79,7 +79,7 @@ msgstr "Първи етикет"
 #: views/partials/form-rows/attribute-builder.php:48
 #: views/partials/form-rows/custom-texts.php:9
 msgid "Custom Text"
-msgstr "Персонализиран текст"
+msgstr "Свободен текст"
 
 #. translators: %s is one of the following: "alt" or "title"
 #: views/partials/form-rows/count.php:35
@@ -159,7 +159,7 @@ msgstr "Конструктора на атрибути позволява кон
 
 #: views/partials/help-modals.php:31
 msgid "You can use the three dropdown fields to include the product's name, first category, first tag, or a custom text in any order."
-msgstr "Можеш да използваш трите падащи менюта за да добавиш името на продукта, първата категория, първият етикет или персонализиран текст в какъвто и да е ред."
+msgstr "Можеш да използваш трите падащи менюта за да добавиш името на продукта, първата категория, първият етикет или свободен текст в какъвто и да е ред."
 
 #: views/partials/help-modals.php:34
 msgid "Let's say we have a product called \"Amazing Shirt\", with main category \"Movie-Inspired Clothing\"."
@@ -179,7 +179,7 @@ msgstr "Това ще генерира атрибутът \"Невероятна
 
 #: views/partials/help-modals.php:40
 msgid "The Custom Text option allows you to enter your own texts."
-msgstr "Опцията за Персонализиран текст позволява да въведеш свой текст."
+msgstr "Опцията за Свободен текст позволява да въведеш свой текст."
 
 #: views/partials/help-modals.php:41
 msgid "For example, the following configuration will result in \"Amazing Shirt Movie-Inspired Clothing Free Shipping\""
@@ -243,7 +243,7 @@ msgstr "Привет!"
 
 #: views/partials/postbox/feedback.php:28
 msgid "Feel free to contact me with any questions or feedback."
-msgstr "Чувствайте се свободни да се свържете с мен за въпроси и мнения."
+msgstr "Не се колебайте да се свържете с мен относно въпроси и препоръки."
 
 #: views/partials/postbox/feedback.php:34
 msgid "your email"
