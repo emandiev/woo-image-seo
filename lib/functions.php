@@ -319,3 +319,9 @@ function woo_image_seo_file_exists( $url ) {
 	return substr( $headers[0], 9, 3 ) === '200';
 }
 
+/*
+	Modify the Media Library popup to help users understand how the plugin works
+*/
+function woo_image_seo_add_info_on_media_popup() {
+	include_once WOO_IMAGE_SEO['views_dir'] . 'media-popup.php';
+}
