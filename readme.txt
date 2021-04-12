@@ -2,7 +2,7 @@
 	Contributors: emandiev
 	Tags:  WooCommerce, Woo, Woo SEO, product alt, product seo
 	Requires PHP: 5.4
-	Stable tag: 1.2.0
+	Stable tag: 1.2.2
 	Requires at least: 4.1
 	Tested up to: 5.6
 	License: GPLv3 or later
@@ -102,3 +102,12 @@ Improved settings page styling.
 = 1.2.1 =
 * 01/25/2021:
 Fix PHP notice
+
+= 1.2.2 =
+* 04/12/2021:
+Remove deprecated jQuery code.
+Add WooCommerce version reqirements.
+Add Russian translation.
+Add Bulgarian translation.
+Add help text in media library modal.
+Improve settings page styling.

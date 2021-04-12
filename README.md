@@ -41,3 +41,12 @@ Improved settings page styling.
 = 1.2.1 =
 * 01/25/2021:  
 Fix PHP notice
+
+= 1.2.2 =
+* 04/12/2021:
+Remove deprecated jQuery code.
+Add WooCommerce version reqirements.
+Add Russian translation.
+Add Bulgarian translation.
+Add help text in media library modal.
+Improve settings page styling.
