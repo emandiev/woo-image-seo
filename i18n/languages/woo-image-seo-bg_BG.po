@@ -39,6 +39,22 @@ msgstr "https://emandiev.com"
 msgid "Settings"
 msgstr "Настройки"
 
+#: views/media-popup.php:6
+msgid "Why are the image attributes not updated?"
+msgstr "Защо атрибутите не са променени?"
+
+#: views/media-popup.php:12
+msgid "Woo Image SEO will not change the image attributes permanently. Instead, they are generated dynamically each time an image is displayed. Your image will have different alt and title attributes depending on the product that is using it."
+msgstr "Woo Image SEO не променя атрибутите на изображенията перманентно. Вместо това, атрибутите се генерират динамично всеки път когато дадено изображение се показва. Вашите изображения ще имат различни alt и title атрибути в зависимост от продукта който ги използва."
+
+#: views/media-popup.php:15
+msgid "For example, let's imagine that we have one image used for two different products - \"Product 1\" and \"Product 2\". If we visit the page of \"Product 1\", the image will have an alt attribute of \"Product 1\". If we open the page of \"Product 2\", then the image will have an alt attribute of \"Product 2\"."
+msgstr "Например, да си представим, че имаме едно изображение, което се използва за два различни продукта - \"Продукт 1\" и \"Продукт 2\". Ако посетим страницата на \"Продукт 1\", изоражението ще има alt атрибут \"Продукт 1\". Ако посетим страницата на \"Продукт 2\", изображението ще има за alt атрибут текстът \"Продукт 2\"."
+
+#: views/media-popup.php:17
+msgid "If you disable the plugin, the automatic attributes will disappear."
+msgstr "Ако спрете плъгина, автоматичните атрибути ще изчезнат."
+
 #: views/partials/actions.php:9
 msgid "Save Settings"
 msgstr "Запази настройки"
