@@ -2,7 +2,7 @@
 	Contributors: emandiev
 	Tags:  WooCommerce, Woo, Woo SEO, product alt, product seo
 	Requires PHP: 5.4
-	Stable tag: 1.2.2
+	Stable tag: 1.2.3
 	Requires at least: 4.1
 	Tested up to: 5.6
 	License: GPLv3 or later
@@ -32,7 +32,7 @@ The WooCommerce plugin by Automattic.
 
 = What are image "alt" tags or attributes? =
 
-Alt text, also known as "alt attributes" or "alt tags,” are used in HTML to describe the contents of an image.
+Alt text, also known as "alt attributes" or "alt tags", are used in HTML to describe the contents of an image.
 Adding alternative text to photos is a principle of web accessibility. Visually impaired users using screen readers will be read an alt attribute to better understand an on-page image.
 Alt tags will be displayed in place of an image if an image file cannot be loaded.
 Alt tags provide better image context/descriptions to search engine crawlers, helping them to index an image properly.
@@ -106,8 +106,13 @@ Fix PHP notice
 = 1.2.2 =
 * 04/12/2021:
 Remove deprecated jQuery code.
-Add WooCommerce version reqirements.
+Add WooCommerce version requirements.
 Add Russian translation.
 Add Bulgarian translation.
 Add help text in media library modal.
 Improve settings page styling.
+
+= 1.2.3 =
+* 05/18/2021:
+Fix possible JS errors in admin dashboard.
+Ensure WooCommerce 5.3 compatibility.

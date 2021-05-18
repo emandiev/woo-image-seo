@@ -43,10 +43,15 @@ Improved settings page styling.
 Fix PHP notice
 
 = 1.2.2 =
-* 04/12/2021:
-Remove deprecated jQuery code.
-Add WooCommerce version reqirements.
-Add Russian translation.
-Add Bulgarian translation.
-Add help text in media library modal.
-Improve settings page styling.
+* 04/12/2021:  
+Remove deprecated jQuery code.  
+Add WooCommerce version requirements.  
+Add Russian translation.  
+Add Bulgarian translation.  
+Add help text in media library modal.  
+Improve settings page styling.  
+
+= 1.2.3 =
+* 05/18/2021:  
+Fix possible JS errors in admin dashboard.  
+Ensure WooCommerce 5.3 compatibility.
