@@ -289,12 +289,6 @@ function woo_image_seo_i18n_locale_enqueue() {
 	if ( woo_image_seo_file_exists( $css_url ) ) {
 		wp_enqueue_style( 'woo-image-seo-i18n', $css_url, [], WOO_IMAGE_SEO['version'] );
 	}
-
-	// load js if provided
-	$js_url = woo_image_seo_get_i18n_asset_url( 'js' );
-	if ( woo_image_seo_file_exists( $js_url ) ) {
-		wp_enqueue_script( 'woo-image-seo-i18n', $js_url, [], WOO_IMAGE_SEO['version'] );
-	}
 }
 
 /*
