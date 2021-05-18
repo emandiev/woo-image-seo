@@ -20,11 +20,13 @@
 
 <script>
     jQuery(window).load(function() {
-        wp.media.frame.on('edit:attachment', function() {
-        	if (jQuery('.media-modal-content .attachment-info .settings').length) {
-	        	jQuery('.media-modal-content .attachment-info .settings').prepend(jQuery('#wis-custom-gallery-markup').html());
-        	}
-        });
+        if (wp && wp.media && wp.media.frame) {
+            wp.media.frame.on('edit:attachment', function() {
+                if (jQuery('.media-modal-content .attachment-info .settings').length) {
+                    jQuery('.media-modal-content .attachment-info .settings').prepend(jQuery('#wis-custom-gallery-markup').html());
+                }
+            });
+        }
 
         jQuery('body').on('click', 'a[href="#wis-media-library-help-link"]', function(event) {
         	event.preventDefault();
