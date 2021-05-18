@@ -101,7 +101,7 @@ function woo_image_seo_send_feedback( $email, $message ) {
 function woo_image_seo_set_default_settings() {
 	update_option( 'woo_image_seo', WOO_IMAGE_SEO['default_settings'] );
 
-	return $default_settings;
+	return WOO_IMAGE_SEO['default_settings'];
 }
 
 /*
