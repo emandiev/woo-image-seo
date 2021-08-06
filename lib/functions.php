@@ -303,14 +303,25 @@ function woo_image_seo_i18n_image_url( $file_name ) {
 	return ( woo_image_seo_file_exists( $locale_url ) ? $locale_url : $default_url ) . '?version=' . WOO_IMAGE_SEO['version'];
 }
 
+/**
+ * Check if URL exists
+ * Best used along with a fallback URL
+ * curl -> get_headers -> false
+ * @param $url
+ * @return bool
+ */
 function woo_image_seo_file_exists( $url ) {
-	$headers = get_headers( $url );
+    if ( extension_loaded( 'curl' ) ) {
+        return curl_init( $url ) !== false;
+    } elseif ( ini_get( 'allow_url_fopen' ) ) {
+        $headers = get_headers( $url );
 
-	if ( empty( $headers ) ) {
-		return false;
-	}
+        if ( ! empty( $headers ) ) {
+            return substr( $headers[0], 9, 3 ) === '200';
+        }
+    }
 
-	return substr( $headers[0], 9, 3 ) === '200';
+    return false;
 }
 
 /*
