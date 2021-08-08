@@ -234,10 +234,20 @@ function woo_image_seo_i18n_locale_enqueue() {
 	Also adds version parameter to avoid cache
 */
 function woo_image_seo_i18n_image_url( $file_name ) {
-	$default_url = WOO_IMAGE_SEO['assets_url'] . $file_name;
-	$locale_url = str_replace( '/assets/', '/i18n/assets/images/', WOO_IMAGE_SEO['assets_url'] ) . WOO_IMAGE_SEO['site_locale'] . '/' . $file_name;
+    $default_url = WOO_IMAGE_SEO['assets_url'] . $file_name;
+	$locale_url = str_replace(
+	    '/assets/',
+        '/i18n/assets/images/',
+        WOO_IMAGE_SEO['assets_url']
+        ) . WOO_IMAGE_SEO['site_locale'] . '/' . $file_name;
 
-	return ( woo_image_seo_file_exists( $locale_url ) ? $locale_url : $default_url ) . '?version=' . WOO_IMAGE_SEO['version'];
+	if ( woo_image_seo_file_exists( $locale_url ) ) {
+        $result = $locale_url;
+    } else {
+	    $result = $default_url;
+    }
+
+	return ( $result . '?version=' . WOO_IMAGE_SEO['version'] );
 }
 
 /**
@@ -248,17 +258,28 @@ function woo_image_seo_i18n_image_url( $file_name ) {
  * @return bool
  */
 function woo_image_seo_file_exists( $url ) {
+    $status_code = 404;
+
     if ( extension_loaded( 'curl' ) ) {
-        return curl_init( $url ) !== false;
+        $curl = curl_init( $url );
+
+        curl_setopt( $curl, CURLOPT_RETURNTRANSFER, 1 );
+        curl_setopt( $curl, CURLOPT_SSL_VERIFYPEER, 0 );
+
+        curl_exec( $curl );
+
+        $status_code = (curl_getinfo( $curl ))['http_code'];
+
+        curl_close($curl);
     } elseif ( ini_get( 'allow_url_fopen' ) ) {
         $headers = get_headers( $url );
 
         if ( ! empty( $headers ) ) {
-            return substr( $headers[0], 9, 3 ) === '200';
+            $status_code = substr( $headers[0], 9, 3 );
         }
     }
 
-    return false;
+    return (int) $status_code === 200;
 }
 
 /*
