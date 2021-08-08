@@ -1,3 +1,8 @@
+<?php
+
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+
+?>
 <script type="text/html" id="wis-custom-gallery-markup">
 	<span class="setting has-description">
 		<span class="name">Woo Image SEO</span>

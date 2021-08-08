@@ -1,5 +1,7 @@
 <?php
 
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+
 add_action( 'wp_ajax_woo_image_seo_save_settings', function() {
     check_ajax_referer( 'woo_image_seo_save_settings' );
 
