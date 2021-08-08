@@ -65,7 +65,7 @@ function woo_image_seo_add_settings_link( $links ) {
 	Filter wp_get_attachment_image_attributes
 */
 function woo_image_seo_change_image_attributes( $attr, $attachment ) {
-	if ( get_post_type() !== 'product' ) {
+	if ( is_admin() || get_post_type() !== 'product' ) {
 		return $attr;
 	}
 
@@ -94,7 +94,7 @@ function woo_image_seo_get_image_attributes( $attr ) {
 
 	// check which attributes should be handled - loops through "alt" and "title"
 	foreach ( $settings as $attribute_name => $attribute_values ) {
-		$should_handle_attr = $attribute_values['enable'] && ( $attribute_values['force'] || empty( $attr[ $attribute_name ] ) );
+		$should_handle_attr = ! empty( $attribute_values['enable'] ) && ( $attribute_values['force'] || empty( $attr[ $attribute_name ] ) );
 
 		if ( $should_handle_attr === false ) {
 			continue;
