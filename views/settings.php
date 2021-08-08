@@ -2,10 +2,6 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
-woo_image_seo_maybe_send_feedback();
-
-woo_image_seo_maybe_save_settings();
-
 ?>
 
 <link
@@ -38,6 +34,4 @@ woo_image_seo_maybe_save_settings();
 	</div><!-- /.wrap__inner -->
 </div>
 
-<script
-	src="<?php echo WOO_IMAGE_SEO['assets_url'] . 'settings.js?version=' . WOO_IMAGE_SEO['version'] ?>"
-></script>
+<script src="<?php echo WOO_IMAGE_SEO['assets_url'] . 'settings.js?version=' . WOO_IMAGE_SEO['version'] ?>"></script>

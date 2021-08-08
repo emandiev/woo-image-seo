@@ -1,106 +1,138 @@
 jQuery(document).ready(function($) {
+	// @var reloadMarkup modifies the back-end logic to render the "form-settings" partial
+	function ajaxSaveForm(data, reloadMarkup) {
+		reloadMarkup = typeof reloadMarkup !== 'undefined';
 
-	var $body = $('body');
+		if (reloadMarkup) {
+			data['reload-form'] = true;
+		}
 
-	// accessibility
-	$body.on('mousedown', function() {
+		jQuery.ajax({
+			type: 'POST',
+			url: window.ajaxurl,
+			data: data,
+			beforeSend: successMessageSaving,
+			success: function (response) {
+				successMessageSaved()
+
+				if (reloadMarkup) {
+					jQuery('#woo_image_seo_form').html(response)
+				}
+			},
+			error: ajaxErrorHandle
+		})
+	}
+
+	function successMessageSaving() {
+		var $successMessage = jQuery('#post-success');
+
+		$successMessage.text($successMessage.data('saving')).fadeIn()
+	}
+
+	function successMessageSaved() {
+		var $successMessage = jQuery('#post-success');
+
+		$successMessage.text($successMessage.data('saved')).addClass('bg-green')
+
+		window.setTimeout(function () {
+			$successMessage.fadeOut()
+		}, 2000)
+	}
+
+	function ajaxErrorHandle(jqXhr, textStatus, errorThrown) {
+		console.log(errorThrown)
+
+		var $successMessage = jQuery('#post-success');
+
+		$successMessage.text('ERROR!')
+
+		window.setTimeout(function () {
+			$successMessage.fadeOut()
+		}, 2000)
+	}
+
+	function settingsFormSubmitHandle(event) {
+		event.preventDefault()
+
+		ajaxSaveForm(jQuery(this).serialize())
+	}
+
+	function settingsFormResetHandle() {
+		var $resetSettingsButton = $(this);
+
+		$resetSettingsButton.blur()
+
+		if (!window.confirm($resetSettingsButton.data('confirm'))) {
+			return
+		}
+
+		// Prepare the default settings by adding WP NONCE fields
+		var defaultSettings = $resetSettingsButton.data('default-settings');
+		defaultSettings['action'] = saveAction;
+		defaultSettings['_wpnonce'] = saveActionNonce;
+		defaultSettings['_wp_http_referer'] = saveActionReferer;
+
+		ajaxSaveForm(defaultSettings, true)
+	}
+
+	function feedbackFormSubmitHandle(event) {
+		event.preventDefault()
+
+		var $feedbackSubmit = jQuery(this).find('input[type="submit"]');
+		var $feedbackFormBody = jQuery(this).find('.form__body');
+
+		jQuery.ajax({
+			type: 'POST',
+			url: window.ajaxurl,
+			data: jQuery(this).serialize(),
+			beforeSend: function() {
+				$feedbackSubmit.replaceWith(`<strong>${$feedbackSubmit.data('submitting')}</strong>`)
+			},
+			success: function() {
+				$feedbackFormBody.html(`${$feedbackFormBody.data('sent')}<br>${$feedbackFormBody.data('thanks')}`)
+			},
+			error: ajaxErrorHandle
+		})
+	}
+
+	function helpIconClickHandle(event) {
+		event.preventDefault()
+		event.stopPropagation()
+
+		var $target = jQuery(this.hash)
+		var $helpBackground = jQuery('#help-background')
+
+		$helpBackground.fadeIn()
+		$target.fadeIn()
+
+		$helpBackground.click(function() {
+			$helpBackground.fadeOut()
+			$target.fadeOut()
+		})
+	}
+
+	var saveAction = jQuery('#woo_image_seo_form [name="action"]').val();
+	var saveActionNonce = jQuery('#woo_image_seo_form [name="_wpnonce"]').val();
+	var saveActionReferer = jQuery('#woo_image_seo_form [name="_wp_http_referer"]').val();
+
+	var $wrapper = jQuery('#woo_image_seo');
+
+	// save settings on form submit
+	$wrapper.on('submit', '#woo_image_seo_form', settingsFormSubmitHandle);
+
+	// reset settings on button click
+	$wrapper.on('click', '#reset-settings', settingsFormResetHandle);
+
+	// submit feedback form
+	$wrapper.on('submit', '#woo_image_seo_feedback', feedbackFormSubmitHandle);
+
+	// show help modal on icon click
+	$wrapper.on('click', 'a.dashicons-editor-help, a.help-trigger', helpIconClickHandle)
+
+	// add helper classes for better accessibility
+	$('body').on('mousedown', function() {
 		this.classList.add('no-focus');
 	}).on('keydown', function() {
 		this.classList.remove('no-focus');
 	});
-
-	// AJAX form submission
-	jQuery('#woo_image_seo_form').on('submit', function(e){
-		e.preventDefault();
-		var data = jQuery(this).serializeArray();
-
-		jQuery.ajax({
-			type: 'POST',
-			data: data,
-			beforeSend: function() {
-				jQuery('#post-success').text(jQuery('#post-success').data('saving')).fadeIn();
-			},
-			success: function(){
-				jQuery('#woo_image_seo_form input').removeAttr('disabled');
-				jQuery('#post-success').text(jQuery('#post-success').data('saved')).addClass('bg-green');
-				setTimeout(function(){ jQuery('#post-success').fadeOut(); }, 2000);
-			},
-			error: function( jqXhr, textStatus, errorThrown ){
-				console.log( errorThrown );
-			}
-		});
-	});
-	
-	
-	// AJAX Reset Settings
-	jQuery('#reset-settings').on('click', function() {
-		jQuery('#reset-settings').blur();
-
-		if (!window.confirm(jQuery('#reset-settings').data('confirm'))) {
-			return;
-		}
-
-		// Prepare the default settings by adding WP NONCE fields
-		var defaultSettings = jQuery('#reset-settings').data('default-settings');
-		defaultSettings['_wpnonce'] = jQuery('[name="_wpnonce"]').val();
-		defaultSettings['_wp_http_referer'] = jQuery('[name="_wp_http_referer"]').val();
-		
-		jQuery.ajax({
-			type: 'POST',
-			data: defaultSettings,
-			beforeSend: function() {
-				jQuery('#post-success').text(jQuery('#post-success').data('saving')).fadeIn();
-			},
-			success: function(data) {
-				// Replace the form with the new one
-				jQuery('#woo_image_seo_form .wrap').replaceWith(jQuery('#woo_image_seo_form .wrap', data));
-				jQuery('#post-success').text(jQuery('#post-success').data('saved')).addClass('bg-green');
-				setTimeout(function(){ jQuery('#post-success').fadeOut(); }, 2000);
-			},
-			error: function(jqXhr, textStatus, errorThrown) {
-				console.log(errorThrown);
-			}
-		});
-	});
-
-
-	// smooth scroll
-	jQuery('#woo_image_seo').on('click', 'a.dashicons-editor-help, a.help-trigger', function(event) {
-		event.preventDefault();
-		event.stopPropagation();
-		var $target = jQuery(this.hash);
-		var $helpBackground = jQuery('#help-background');
-
-		$helpBackground.fadeIn();
-		$target.fadeIn();
-
-		$helpBackground.click(function() {
-			$helpBackground.fadeOut();
-			$target.fadeOut();
-		});
-	});
-
-	// AJAX feedback form submission
-	jQuery('#woo_image_seo_feedback').on('submit', function(event) {
-		event.preventDefault();
-
-		jQuery.ajax({
-			type: 'POST',
-			data: jQuery(this).serializeArray(),
-			beforeSend: function() {
-				jQuery('#woo_image_seo_feedback input[type="submit"]')
-					.replaceWith('<strong>' + jQuery('#woo_image_seo_feedback input[type="submit"]').data('submitting') + '</strong>');
-			},
-			success: function() {
-				jQuery('#woo_image_seo_feedback .form__body')
-				.html(
-					jQuery('#woo_image_seo_feedback .form__body').data('sent') + '<br>' + jQuery('#woo_image_seo_feedback .form__body').data('thanks')
-				);
-			},
-			error: function( jqXhr, textStatus, errorThrown ) {
-				console.log( errorThrown );
-			}
-		});
-	});
-
-});
+})

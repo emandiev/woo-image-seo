@@ -4,11 +4,13 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 ?>
 <div class="postbox">
-	<form
-		action="admin.php?page=woo_image_seo"
-		method="post"
-		id="woo_image_seo_feedback"
-	>
+	<form id="woo_image_seo_feedback">
+        <input
+            type="hidden"
+            name="action"
+            value="woo_image_seo_send_feedback"
+        >
+
 		<div class="form__head">
 			<h2><?php _e( 'Contact the author', 'woo-image-seo' ) ?></h2>
 
@@ -49,6 +51,6 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 			>
 		</div><!-- /.form__body -->
 
-		<?php wp_nonce_field( 'nonce' ); ?>
+		<?php wp_nonce_field( 'woo_image_seo_send_feedback' ); ?>
 	</form>
 </div><!-- /.postbox -->

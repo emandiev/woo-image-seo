@@ -28,73 +28,6 @@ function woo_image_seo_get_settings() {
 }
 
 /*
-	Save plugin settings - works only on settings page
-*/
-function woo_image_seo_maybe_save_settings() {
-	if (
-		strpos( $_SERVER['REQUEST_URI'], '/admin.php?page=woo_image_seo' ) == false
-		||
-		empty( $_POST['_wpnonce'] )
-		||
-		wp_verify_nonce( $_POST['_wpnonce'], 'nonce' ) == false
-		||
-		current_user_can( 'administrator' ) == false
-	) {
-		return;
-	}
-
-	// Clean the $_POST variable from NONCE elements
-	unset( $_POST['_wpnonce'] );
-	unset( $_POST['_wp_http_referer'] );
-
-	// save $_POST in JSON format
-	update_option( 'woo_image_seo', json_encode( $_POST, JSON_NUMERIC_CHECK ) );
-}
-
-/*
-	Send an email to the developer - works only on settings page
-*/
-function woo_image_seo_maybe_send_feedback() {
-	if (
-		strpos( $_SERVER['REQUEST_URI'], '/admin.php?page=woo_image_seo' ) == false
-		||
-		empty( $_POST['_wpnonce'] )
-		||
-		wp_verify_nonce( $_POST['_wpnonce'], 'nonce' ) == false
-		||
-		current_user_can( 'administrator' ) == false
-		||
-		empty( $_POST['message'] )
-	) {
-		return;
-	}
-
-	$email = empty( $_POST['email'] ) ? '' : esc_html( $_POST['email'] );
-	$message = esc_html( $_POST['message'] );
-
-	woo_image_seo_send_feedback( $email, $message );
-
-	// amazing decision to use the same endpoint as the settings form,
-	// so we have to die here and avoid saving to DB
-	die;
-}
-
-/*
-	Use native wp_mail to send an email to danail@emandiev.com
-*/
-function woo_image_seo_send_feedback( $email, $message ) {
-	wp_mail(
-		'danail@emandiev.com',
-		'Woo Image SEO Plugin Feedback',
-		'Howdy!<br>Someone just contacted you using the plugin\'s feedback form.<br>Email (optional): ' . $email . '<br>Message: ' . $message,
-		[
-			'From: Woo Image SEO <danail@emandiev.com>',
-			'Content-Type: text/html; charset=UTF-8',
-		]
-	);
-}
-
-/*
 	Set default settings
 	returns the default settings in JSON string
 */
@@ -329,4 +262,12 @@ function woo_image_seo_file_exists( $url ) {
 */
 function woo_image_seo_add_info_on_media_popup() {
 	include_once WOO_IMAGE_SEO['views_dir'] . 'media-popup.php';
+}
+
+/**
+ * Load all files containing AJAX actions
+ */
+function woo_image_seo_load_ajax_actions() {
+    require_once WOO_IMAGE_SEO['root_dir'] . 'lib/ajax-actions/save-settings.php';
+    require_once WOO_IMAGE_SEO['root_dir'] . 'lib/ajax-actions/send-feedback.php';
 }
