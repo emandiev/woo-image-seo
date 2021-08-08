@@ -25,7 +25,7 @@ function woo_image_seo_render_fieldset( $type ) {
  * @param string $file_extension
  */
 function woo_image_seo_i18n_maybe_load_locale_admin_asset( $file_extension ) {
-    if ( woo_image_seo_i18n_has_key( $file_extension ) ) {
+    if ( ! woo_image_seo_i18n_has_key( $file_extension ) ) {
         return;
     }
 

@@ -4,20 +4,6 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 ?>
 
-<link
-	rel="stylesheet"
-	href="<?php echo WOO_IMAGE_SEO['assets_url'] . 'style.css?version=' . WOO_IMAGE_SEO['version'] ?>"
-	type="text/css"
-	media="all"
->
-
-<link
-	rel="stylesheet"
-	href="<?php echo WOO_IMAGE_SEO['assets_url'] . 'cryptocoins.css?version=' . WOO_IMAGE_SEO['version'] ?>"
-	type="text/css"
-	media="all"
->
-
 <div class="wrap" id="woo_image_seo">
 	<div class="wrap__inner">
 		<?php require_once WOO_IMAGE_SEO['root_dir'] . 'views/partials/postbox/settings.php' ?>

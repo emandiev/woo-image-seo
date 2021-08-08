@@ -33,8 +33,22 @@ add_action( 'admin_menu', function() {
  * Enqueue admin scripts
  */
 add_action( 'admin_enqueue_scripts', function() {
+    if ( strpos( $_SERVER['REQUEST_URI'], 'admin.php?page=woo_image_seo' ) === false ) {
+        return;
+    }
+
+    wp_enqueue_style(
+        'woo-image-seo-settings-page',
+        WOO_IMAGE_SEO['assets_url'] . 'style.css?version=' . WOO_IMAGE_SEO['version']
+    );
+
+    wp_enqueue_style(
+        'woo-image-seo-cryptocoins',
+        WOO_IMAGE_SEO['assets_url'] . 'cryptocoins.css?version=' . WOO_IMAGE_SEO['version']
+    );
+
     wp_enqueue_script(
-        'woo-image-soe-settings-page-js',
+        'woo-image-soe-settings-page',
         WOO_IMAGE_SEO['assets_url'] . 'settings.js?version=' . WOO_IMAGE_SEO['version']
     );
 
