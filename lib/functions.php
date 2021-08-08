@@ -69,7 +69,7 @@ function woo_image_seo_add_settings_link( $links ) {
 	Filter wp_get_attachment_image_attributes
 */
 function woo_image_seo_change_image_attributes( $attr, $attachment ) {
-	if ( is_admin() || get_post_type() !== 'product' ) {
+	if ( get_post_type() !== 'product' ) {
 		return $attr;
 	}
 
