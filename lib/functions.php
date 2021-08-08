@@ -57,8 +57,11 @@ function woo_image_seo_add_page() {
 	Add a link in the Installed Plugins page to the Plugin's settings page
 */
 function woo_image_seo_add_settings_link( $links ) {
-	array_push( $links, '<a href="admin.php?page=woo_image_seo">' . __( 'Settings', 'woo-image-seo' ) . '</a>' );
-	return $links;
+    $settings_link = [
+        'settings' =>'<a href="' . admin_url() . 'admin.php?page=woo_image_seo">' . __( 'Settings', 'woo-image-seo' ) . '</a>'
+    ];
+
+    return array_merge( $settings_link, $links );
 }
 
 /*
