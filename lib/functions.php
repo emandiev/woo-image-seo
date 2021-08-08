@@ -270,7 +270,7 @@ function woo_image_seo_file_exists( $url ) {
 
         $status_code = (curl_getinfo( $curl ))['http_code'];
 
-        curl_close($curl);
+        curl_close( $curl );
     } elseif ( ini_get( 'allow_url_fopen' ) ) {
         $headers = get_headers( $url );
 
