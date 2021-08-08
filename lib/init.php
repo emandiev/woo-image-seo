@@ -28,10 +28,12 @@ require_once __DIR__ . '/functions.php';
 	Hooks, actions, filters
 */
 register_activation_hook( 'woo-image-seo/woo-image-seo.php', 'woo_image_seo_get_settings' );
-add_action( 'admin_menu', 'woo_image_seo_add_page' );
-add_action( 'init', 'woo_image_seo_load_textdomain' );
-add_action( 'init', 'woo_image_seo_load_ajax_actions' );
-add_action( 'admin_enqueue_scripts', 'woo_image_seo_i18n_locale_enqueue' );
-add_filter( 'plugin_action_links_woo-image-seo/woo-image-seo.php', 'woo_image_seo_add_settings_link' );
-add_filter( 'wp_get_attachment_image_attributes', 'woo_image_seo_change_image_attributes', 20, 2 );
-add_action( 'print_media_templates', 'woo_image_seo_add_info_on_media_popup', 20, 2 );
+
+add_action( 'init', 'woo_image_seo_load_textdomain', PHP_INT_MAX );
+add_action( 'init', 'woo_image_seo_load_ajax_actions', PHP_INT_MAX );
+add_action( 'admin_menu', 'woo_image_seo_add_page', PHP_INT_MAX );
+add_action( 'admin_enqueue_scripts', 'woo_image_seo_i18n_locale_enqueue', PHP_INT_MAX );
+add_action( 'print_media_templates', 'woo_image_seo_add_info_on_media_popup', PHP_INT_MAX, 2 );
+
+add_filter( 'plugin_action_links_woo-image-seo/woo-image-seo.php', 'woo_image_seo_add_settings_link', PHP_INT_MAX );
+add_filter( 'wp_get_attachment_image_attributes', 'woo_image_seo_change_image_attributes', PHP_INT_MAX, 2 );

@@ -49,7 +49,8 @@ function woo_image_seo_add_page() {
 		'woo_image_seo',
 		function() {
 			include WOO_IMAGE_SEO['root_dir'] . '/views/settings.php';
-		}
+		},
+        PHP_INT_MAX
 	);
 }
 
