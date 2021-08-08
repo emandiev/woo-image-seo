@@ -18,7 +18,7 @@ add_action( 'wp_ajax_woo_image_seo_save_settings', function() {
 
     if ( $return_markup ) {
         ob_start();
-        include WOO_IMAGE_SEO['views_dir'] . 'partials/form-settings.php';
+        require_once WOO_IMAGE_SEO['views_dir'] . 'partials/form-settings.php';
         wp_send_json( ob_get_clean() );
     }
 

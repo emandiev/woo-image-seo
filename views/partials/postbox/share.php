@@ -2,7 +2,7 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
-$socials = woo_image_seo_get_socials();
+$socials = require_once WOO_IMAGE_SEO['root_dir'] . 'data/socials.php';
 
 ?>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">

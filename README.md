@@ -33,25 +33,31 @@ Fixed a few minor bugs.
 Added full support for WordPress 5.6
 
 = 1.2.0 =
-* 01/24/2021:  
+* 24/1/2021:  
 Added the ability to append image numbers (indexes) to attributes.  
 Added more social share links.  
-Improved settings page styling.
+Improved settings page styling.  
 
 = 1.2.1 =
-* 01/25/2021:  
+* 25/1/2021:  
 Fix PHP notice
 
 = 1.2.2 =
-* 04/12/2021:  
+* 12/4/2021:  
 Remove deprecated jQuery code.  
 Add WooCommerce version requirements.  
 Add Russian translation.  
 Add Bulgarian translation.  
 Add help text in media library modal.  
-Improve settings page styling.  
+Improve settings page styling.
 
 = 1.2.3 =
-* 05/18/2021:  
+* 18/5/2021:  
 Fix possible JS errors in admin dashboard.  
 Ensure WooCommerce 5.3 compatibility.
+
+= 1.2.4 =
+* 8/8/2021:  
+Fix possible issues.  
+Add support for WordPress 5.8 and WooCommerce 5.5.  
+Improve performance.

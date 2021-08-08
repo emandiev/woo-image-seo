@@ -17,7 +17,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
         <?php woo_image_seo_render_fieldset( 'title' ) ?>
     </div>
 
-    <?php include WOO_IMAGE_SEO['views_dir'] . 'partials/actions.php' ?>
+    <?php require_once WOO_IMAGE_SEO['views_dir'] . 'partials/actions.php' ?>
 
     <?php wp_nonce_field( 'woo_image_seo_save_settings' ) ?>
 </form>

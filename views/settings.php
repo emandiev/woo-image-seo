@@ -20,18 +20,16 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 <div class="wrap" id="woo_image_seo">
 	<div class="wrap__inner">
-		<?php include WOO_IMAGE_SEO['root_dir'] . 'views/partials/postbox/settings.php' ?>
+		<?php require_once WOO_IMAGE_SEO['root_dir'] . 'views/partials/postbox/settings.php' ?>
 
-		<?php include WOO_IMAGE_SEO['root_dir'] . 'views/partials/help-modals.php' ?>
+		<?php require_once WOO_IMAGE_SEO['root_dir'] . 'views/partials/help-modals.php' ?>
 	</div><!-- /.wrap__inner -->
 
 	<div class="wrap__inner">
-		<?php include WOO_IMAGE_SEO['root_dir'] . 'views/partials/postbox/feedback.php' ?>
+		<?php require_once WOO_IMAGE_SEO['root_dir'] . 'views/partials/postbox/feedback.php' ?>
 
-		<?php include WOO_IMAGE_SEO['root_dir'] . 'views/partials/postbox/share.php' ?>
+		<?php require_once WOO_IMAGE_SEO['root_dir'] . 'views/partials/postbox/share.php' ?>
 
-		<?php include WOO_IMAGE_SEO['root_dir'] . 'views/partials/postbox/support.php' ?>
+		<?php require_once WOO_IMAGE_SEO['root_dir'] . 'views/partials/postbox/support.php' ?>
 	</div><!-- /.wrap__inner -->
 </div>
-
-<script src="<?php echo WOO_IMAGE_SEO['assets_url'] . 'settings.js?version=' . WOO_IMAGE_SEO['version'] ?>"></script>

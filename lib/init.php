@@ -2,40 +2,33 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
-/*
-	Lazy but sufficient approach for globally available data
-*/
+$dirname = dirname( __DIR__ );
+$plugin_dir_url = plugin_dir_url( __DIR__ );
+
 define(
 	'WOO_IMAGE_SEO',
 	[
 		'option_name' => 'woo_image_seo',
-		'root_dir' => dirname( __DIR__ ) . '/',
-		'views_dir' => dirname( __DIR__ ) . '/views/',
-		'root_url' => plugin_dir_url( __DIR__ ) . '',
-		'assets_url' => plugin_dir_url( __DIR__ ) . 'assets/',
-		'default_settings' => file_get_contents( dirname( __DIR__ ) . '/data/default-settings.json' ),
-		'version' => '1.2.3',
+		'root_dir' => $dirname . '/',
+		'views_dir' => $dirname . '/views/',
+		'root_url' => $plugin_dir_url . '',
+		'assets_url' => $plugin_dir_url . 'assets/',
+		'default_settings' => '{"alt":{"enable":1,"force":0,"count":0,"text":{"1":"[name]","2":"[none]","3":"[none]"},"custom":{"1":"","2":"","3":""}},"title":{"enable":1,"force":1,"count":0,"text":{"1":"[name]","2":"[none]","3":"[none]"},"custom":{"1":"","2":"","3":""}}}',
+		'version' => '1.2.4',
 		'site_locale' => get_locale(),
+        'i18n' => [
+            'bg_BG' => ['css', 'howdy.jpg'],
+            'ru_RU' => ['css', 'howdy.jpg'],
+        ],
 	]
 );
 
-/*
-	Main function definitions
-*/
-require_once __DIR__ . '/functions.php';
-
-/*
-	Hooks, actions, filters
-*/
+require_once WOO_IMAGE_SEO['root_dir'] . 'lib/functions/global.php';
 
 if ( is_admin() ) {
-    add_action( 'init', 'woo_image_seo_load_textdomain', PHP_INT_MAX );
-    add_action( 'init', 'woo_image_seo_load_ajax_actions', PHP_INT_MAX );
-    add_action( 'admin_menu', 'woo_image_seo_add_page', PHP_INT_MAX );
-    add_action( 'admin_enqueue_scripts', 'woo_image_seo_i18n_locale_enqueue', PHP_INT_MAX );
-    add_action( 'print_media_templates', 'woo_image_seo_add_info_on_media_popup', PHP_INT_MAX, 2 );
-
-    add_filter( 'plugin_action_links_woo-image-seo/woo-image-seo.php', 'woo_image_seo_add_settings_link', PHP_INT_MAX );
+    require_once WOO_IMAGE_SEO['root_dir'] . 'lib/functions/admin.php';
+    require_once WOO_IMAGE_SEO['root_dir'] . 'lib/hooks/admin.php';
 } else {
-    add_filter( 'wp_get_attachment_image_attributes', 'woo_image_seo_change_image_attributes', PHP_INT_MAX, 2 );
+    require_once WOO_IMAGE_SEO['root_dir'] . 'lib/functions/public.php';
+    require_once WOO_IMAGE_SEO['root_dir'] . 'lib/hooks/public.php';
 }
