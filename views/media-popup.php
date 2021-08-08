@@ -19,7 +19,7 @@
 </script>
 
 <script>
-    jQuery(window).load(function() {
+    jQuery(window).on('load', function() {
         if (wp && wp.media && wp.media.frame) {
             wp.media.frame.on('edit:attachment', function() {
                 if (jQuery('.media-modal-content .attachment-info .settings').length) {
