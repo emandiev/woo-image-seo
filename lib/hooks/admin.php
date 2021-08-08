@@ -39,20 +39,34 @@ add_action( 'admin_enqueue_scripts', function() {
 
     wp_enqueue_style(
         'woo-image-seo-settings-page',
-        WOO_IMAGE_SEO['assets_url'] . 'style.css?version=' . WOO_IMAGE_SEO['version']
+        WOO_IMAGE_SEO['assets_url'] . 'style.css',
+        [],
+        WOO_IMAGE_SEO['version']
     );
 
     wp_enqueue_style(
         'woo-image-seo-cryptocoins',
-        WOO_IMAGE_SEO['assets_url'] . 'cryptocoins.css?version=' . WOO_IMAGE_SEO['version']
+        WOO_IMAGE_SEO['assets_url'] . 'cryptocoins.css',
+        [],
+        WOO_IMAGE_SEO['version']
     );
 
     wp_enqueue_script(
         'woo-image-soe-settings-page',
-        WOO_IMAGE_SEO['assets_url'] . 'settings.js?version=' . WOO_IMAGE_SEO['version']
+        WOO_IMAGE_SEO['assets_url'] . 'settings.js',
+        [],
+        WOO_IMAGE_SEO['version']
     );
 
-    woo_image_seo_i18n_maybe_load_locale_admin_asset( 'css' );
+    // locale-specific css
+    if ( woo_image_seo_i18n_has_key( 'css' ) ) {
+        wp_enqueue_style(
+            'woo-image-seo-i18n',
+            WOO_IMAGE_SEO['root_url'] . 'i18n/assets/' . WOO_IMAGE_SEO['site_locale'] . '/css/admin.css',
+            [],
+            WOO_IMAGE_SEO['version']
+        );
+    }
 }, PHP_INT_MAX );
 
 /**
