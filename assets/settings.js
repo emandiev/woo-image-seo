@@ -1,12 +1,6 @@
 jQuery(document).ready(function($) {
-	// @var reloadMarkup modifies the back-end logic to render the "form-settings" partial
-	function ajaxSaveForm(data, reloadMarkup) {
-		reloadMarkup = typeof reloadMarkup !== 'undefined';
-
-		if (reloadMarkup) {
-			data['reload-form'] = true;
-		}
-
+	// @var applyDefaultSettings modifies the back-end logic to render the "form-settings" partial
+	function ajaxSaveForm(data) {
 		jQuery.ajax({
 			type: 'POST',
 			url: window.ajaxurl,
@@ -15,7 +9,7 @@ jQuery(document).ready(function($) {
 			success: function (response) {
 				successMessageSaved()
 
-				if (reloadMarkup) {
+				if (data.hasOwnProperty('apply_default_settings')) {
 					jQuery('#woo_image_seo_form').html(response)
 				}
 			},
@@ -66,13 +60,12 @@ jQuery(document).ready(function($) {
 			return
 		}
 
-		// Prepare the default settings by adding WP NONCE fields
-		var defaultSettings = $resetSettingsButton.data('default-settings');
-		defaultSettings['action'] = saveAction;
-		defaultSettings['_wpnonce'] = saveActionNonce;
-		defaultSettings['_wp_http_referer'] = saveActionReferer;
-
-		ajaxSaveForm(defaultSettings, true)
+		ajaxSaveForm({
+			action: saveAction,
+			_wpnonce: saveActionNonce,
+			_wp_http_referer: saveActionReferer,
+			apply_default_settings: true,
+		})
 	}
 
 	function feedbackFormSubmitHandle(event) {
