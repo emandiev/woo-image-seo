@@ -8,6 +8,7 @@ add_action( 'wp_ajax_woo_image_seo_save_settings', function() {
     // clean the $_POST variable from the values we don't need in the DB
     unset( $_POST['_wpnonce'] );
     unset( $_POST['_wp_http_referer'] );
+    unset( $_POST['action'] );
     unset( $_POST['reload-form'] );
 
     // save $_POST in JSON format
