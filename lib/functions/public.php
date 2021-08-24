@@ -2,6 +2,17 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
+/*
+	Helper variable used to count the number of images for a given product
+	The goal is to have unique attributes for all images
+	Array key 'id' holds the lastly affected product's id
+	Array key 'image_count' holds the currently affected image's index (starts with 1)
+*/
+$woo_image_seo_product_info = [
+    'id' => 0,
+    'image_count' => 0,
+];
+
 /**
  * The main attribute modification logic
  * @param $attr
