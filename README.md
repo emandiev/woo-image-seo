@@ -61,3 +61,7 @@ Ensure WooCommerce 5.3 compatibility.
 Fix possible issues.  
 Add support for WordPress 5.8 and WooCommerce 5.5.  
 Improve performance.
+
+= 1.2.5 =
+* 24/8/2021:  
+Fix a bug introduced in version 1.2.4
