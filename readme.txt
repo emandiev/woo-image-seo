@@ -2,9 +2,9 @@
 	Contributors: emandiev
 	Tags:  WooCommerce, Woo, Woo SEO, product alt, product seo
 	Requires PHP: 5.4
-	Stable tag: 1.2.5
+	Stable tag: 1.2.6
 	Requires at least: 4.1
-	Tested up to: 5.8
+	Tested up to: 5.9.3
 	License: GPLv3 or later
 	License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -126,3 +126,7 @@ Improve performance.
 = 1.2.5 =
 * 24/8/2021:
 Fix a bug introduced in version 1.2.4
+
+= 1.2.6 =
+* 17/4/2022:
+Add support for WordPress 5.9.3 and WooCommerce 6.4.1

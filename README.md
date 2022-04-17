@@ -65,3 +65,7 @@ Improve performance.
 = 1.2.5 =
 * 24/8/2021:  
 Fix a bug introduced in version 1.2.4
+
+= 1.2.6 =
+* 17/4/2022:  
+Add support for WordPress 5.9.3 and WooCommerce 6.4.1
