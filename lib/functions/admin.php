@@ -19,8 +19,8 @@ function woo_image_seo_i18n_has_key( $key ) {
     return
         ! empty( WOO_IMAGE_SEO['i18n'][ WOO_IMAGE_SEO['site_locale'] ] )
         &&
-        array_key_exists( $key, WOO_IMAGE_SEO['i18n'][ WOO_IMAGE_SEO['site_locale'] ] )
-    ;
+        in_array( $key, WOO_IMAGE_SEO['i18n'][ WOO_IMAGE_SEO['site_locale'] ] )
+        ;
 }
 
 /**
@@ -34,7 +34,7 @@ function woo_image_seo_i18n_image_url( $file_name ) {
     if ( woo_image_seo_i18n_has_key( $file_name ) ) {
         $result = str_replace(
             '/assets/',
-            '/i18n/assets/images/' . WOO_IMAGE_SEO['site_locale'] . '/images/' . $file_name,
+            '/i18n/assets/' . WOO_IMAGE_SEO['site_locale'] . '/images/' . $file_name,
             WOO_IMAGE_SEO['assets_url']
         );
     } else {
