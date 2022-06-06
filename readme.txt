@@ -4,7 +4,7 @@
 	Requires PHP: 5.4
 	Stable tag: 1.2.6
 	Requires at least: 4.1
-	Tested up to: 5.9.3
+	Tested up to: 6.0
 	License: GPLv3 or later
 	License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
