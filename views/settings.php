@@ -12,10 +12,10 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 	</div><!-- /.wrap__inner -->
 
 	<div class="wrap__inner">
+        <?php require_once WOO_IMAGE_SEO['root_dir'] . 'views/partials/postbox/news.php' ?>
+
 		<?php require_once WOO_IMAGE_SEO['root_dir'] . 'views/partials/postbox/feedback.php' ?>
 
 		<?php require_once WOO_IMAGE_SEO['root_dir'] . 'views/partials/postbox/share.php' ?>
-
-		<?php require_once WOO_IMAGE_SEO['root_dir'] . 'views/partials/postbox/support.php' ?>
 	</div><!-- /.wrap__inner -->
 </div>
