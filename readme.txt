@@ -2,7 +2,7 @@
 	Contributors: emandiev
 	Tags:  WooCommerce, Woo, Woo SEO, product alt, product seo
 	Requires PHP: 5.4
-	Stable tag: 1.2.6
+	Stable tag: 1.3.0
 	Requires at least: 4.1
 	Tested up to: 6.0
 	License: GPLv3 or later
@@ -130,3 +130,11 @@ Fix a bug introduced in version 1.2.4
 = 1.2.6 =
 * 17/4/2022:
 Add support for WordPress 5.9.3 and WooCommerce 6.4.1
+
+= 1.3.0 =
+* 07/6/2022:
+Allow skipping images using the "woo-image-seo-skip" class.
+Replace the Support box with Tips.
+Improve the Feedback form.
+Improve i18n support.
+Add support for WordPress 6.0 and WooCommerce 6.5.1
