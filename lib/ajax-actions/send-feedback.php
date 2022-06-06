@@ -13,11 +13,18 @@ add_action( 'wp_ajax_woo_image_seo_send_feedback', function() {
         wp_send_json_error( 'missing required fields' );
     }
 
+    // this data is sent only after the user's agreement :)
+    $message = 'Email: ' . esc_html( $_POST['email'] );
+    $message .= '<br>Message: ' . esc_html( $_POST['message'] );
+    $message .= '<br>Website: ' . home_url();
+    $message .= '<br>Woo Image SEO version: ' . WOO_IMAGE_SEO['version'];
+    $message .= '<br>WooCommerce version: ' . WC()->version;
+
     wp_send_json(
         wp_mail(
             'emandiev@gmail.com',
             'Woo Image SEO Plugin Feedback',
-            'Email: ' . esc_html( $_POST['email'] ) . '<br>Message: ' . esc_html( $_POST['message'] ),
+            $message,
             [
                 'From: Woo Image SEO <emandiev@gmail.com>',
                 'Content-Type: text/html; charset=UTF-8',

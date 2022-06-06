@@ -69,7 +69,11 @@ jQuery(document).ready(function($) {
 	}
 
 	function feedbackFormSubmitHandle(event) {
-		event.preventDefault()
+		event.preventDefault();
+
+		if (!window.confirm("To provide better support, we will collect the following data:\n- The site's URL\n- The version of Woo Image SEO\n- The version of WooCommerce\nDo you agree?")) {
+			return;
+		}
 
 		var $feedbackSubmit = jQuery(this).find('input[type="submit"]');
 		var $feedbackFormBody = jQuery(this).find('.form__body');
