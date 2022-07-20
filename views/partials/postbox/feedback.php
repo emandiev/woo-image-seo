@@ -13,8 +13,6 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 		<div class="form__head">
 			<h2><?php _e( 'Contact the author', 'woo-image-seo' ) ?></h2>
-
-			<img src="<?php echo woo_image_seo_i18n_image_url( 'howdy.jpg' ) ?>" alt="">
 		</div><!-- /.form__head -->
 
 		<div
@@ -22,10 +20,6 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 			data-sent="<?php _e( 'Your message has been sent.', 'woo-image-seo' ) ?>"
 			data-thanks="<?php _e( 'Thank you!', 'woo-image-seo' ) ?>"
 		>
-			<p>
-				<?php _e( 'Howdy!', 'woo-image-seo' ) ?>
-			</p>
-
 			<p>
 				<?php _e( 'Feel free to contact me with any questions or feedback.', 'woo-image-seo' ) ?>
 			</p>

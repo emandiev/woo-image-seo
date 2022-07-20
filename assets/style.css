@@ -12,7 +12,7 @@
 }
 
 #woo_image_seo h2 {
-	margin-bottom: 15px;
+	margin-bottom: 10px;
 	text-align: center;
 	font-size: 21px;
 }
@@ -336,10 +336,6 @@ body.no-focus #woo_image_seo_form input[type="checkbox"]:checked:focus ~ .checkm
 	text-align: center;
 }
 
-#woo_image_seo_feedback .form__head {
-	min-height: 163px;
-}
-
 #woo_image_seo_feedback img {
 	border-radius: 50%;
 	width: 118px;
@@ -356,7 +352,7 @@ body.no-focus #woo_image_seo_form input[type="checkbox"]:checked:focus ~ .checkm
 }
 
 #woo_image_seo_feedback textarea {
-	height: 114px;
+	height: 81.1px;
 }
 
 #woo_image_seo_feedback input[type="submit"] {
@@ -451,4 +447,14 @@ body.no-focus #woo_image_seo_form input[type="checkbox"]:checked:focus ~ .checkm
 
 #crypto-donation strong {
 	display: block;
+}
+
+/*
+	Ad box
+ */
+.postbox--ad {
+	transition: filter .3s;
+}
+.postbox--ad:hover {
+	filter: brightness(1.033);
 }
