@@ -11,6 +11,10 @@
 	font-weight: normal;
 }
 
+#woo_image_seo h1 {
+	margin-top: 5px;
+}
+
 #woo_image_seo h2 {
 	margin-bottom: 10px;
 	text-align: center;
@@ -62,7 +66,7 @@
 #woo_image_seo_form fieldset {
 	border: 1px dotted #999999;
 	padding: 20px;
-	margin: 15px 0;
+	margin: 50px 0;
 	font-size: 0;
 }
 
@@ -75,7 +79,7 @@
 }
 
 #woo_image_seo_form .form__row {
-	margin-bottom: 15px;
+	margin-bottom: 10px;
 }
 
 #woo_image_seo_form .form__row:last-child {
