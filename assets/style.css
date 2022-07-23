@@ -425,35 +425,6 @@ body.no-focus #woo_image_seo_form input[type="checkbox"]:checked:focus ~ .checkm
 }
 
 /*
-	Support box
-*/
-.postbox--support ul {
-	margin: 0;
-}
-
-.postbox--support li {
-	margin-bottom: 8px;
-}
-
-.postbox--support a {
-	transition: opacity .3s;
-}
-.postbox--support a:hover {
-	opacity: .7;
-}
-
-#crypto-donation .cc {
-	float: left;
-	font-size: 2em;
-	line-height: 1.5em;
-	margin-right: 15px;
-}
-
-#crypto-donation strong {
-	display: block;
-}
-
-/*
 	Ad box
  */
 .postbox--ad {

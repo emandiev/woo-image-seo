@@ -44,15 +44,8 @@ add_action( 'admin_enqueue_scripts', function() {
         WOO_IMAGE_SEO['version']
     );
 
-    wp_enqueue_style(
-        'woo-image-seo-cryptocoins',
-        WOO_IMAGE_SEO['assets_url'] . 'cryptocoins.css',
-        [],
-        WOO_IMAGE_SEO['version']
-    );
-
     wp_enqueue_script(
-        'woo-image-soe-settings-page',
+        'woo-image-seo-settings-page',
         WOO_IMAGE_SEO['assets_url'] . 'settings.js',
         [],
         WOO_IMAGE_SEO['version']

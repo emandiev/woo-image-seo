@@ -2,16 +2,16 @@
 # This file is distributed under the same license as the Woo Image SEO plugin.
 msgid ""
 msgstr ""
-"Project-Id-Version: Woo Image SEO 1.2.3\n"
+"Project-Id-Version: Woo Image SEO 1.3.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/woo-image-seo\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2021-04-12T16:09:53+00:00\n"
+"POT-Creation-Date: 2022-07-23T07:44:19+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"X-Generator: WP-CLI 2.4.0\n"
+"X-Generator: WP-CLI 2.6.0\n"
 "X-Domain: woo-image-seo\n"
 
 #. Plugin Name of the plugin
@@ -34,23 +34,23 @@ msgstr ""
 msgid "https://emandiev.com"
 msgstr ""
 
-#: lib/functions.php:127
+#: lib/hooks/admin.php:78
 msgid "Settings"
 msgstr ""
 
-#: views/media-popup.php:6
+#: views/media-popup.php:11
 msgid "Why are the image attributes not updated?"
 msgstr ""
 
-#: views/media-popup.php:12
+#: views/media-popup.php:17
 msgid "Woo Image SEO will not change the image attributes permanently. Instead, they are generated dynamically each time an image is displayed. Your image will have different alt and title attributes depending on the product that is using it."
 msgstr ""
 
-#: views/media-popup.php:15
+#: views/media-popup.php:20
 msgid "For example, let's imagine that we have one image used for two different products - \"Product 1\" and \"Product 2\". If we visit the page of \"Product 1\", the image will have an alt attribute of \"Product 1\". If we open the page of \"Product 2\", then the image will have an alt attribute of \"Product 2\"."
 msgstr ""
 
-#: views/media-popup.php:17
+#: views/media-popup.php:22
 msgid "If you disable the plugin, the automatic attributes will disappear."
 msgstr ""
 
@@ -62,7 +62,7 @@ msgstr ""
 msgid "Reset to Default"
 msgstr ""
 
-#: views/partials/actions.php:17
+#: views/partials/actions.php:16
 msgid "Reset plugin settings?"
 msgstr ""
 
@@ -75,25 +75,53 @@ msgstr ""
 msgid "Click to learn about the Attribute Builder"
 msgstr ""
 
-#: views/partials/form-rows/attribute-builder.php:28
-msgid "Empty"
+#: views/partials/form-rows/attribute-builder.php:24
+msgid "Product Data"
 msgstr ""
 
-#: views/partials/form-rows/attribute-builder.php:33
+#: views/partials/form-rows/attribute-builder.php:28
 msgid "Product Name"
 msgstr ""
 
-#: views/partials/form-rows/attribute-builder.php:38
+#: views/partials/form-rows/attribute-builder.php:33
 msgid "First Category"
 msgstr ""
 
-#: views/partials/form-rows/attribute-builder.php:43
+#: views/partials/form-rows/attribute-builder.php:38
 msgid "First Tag"
 msgstr ""
 
-#: views/partials/form-rows/attribute-builder.php:48
+#: views/partials/form-rows/attribute-builder.php:41
+msgid "Site Data"
+msgstr ""
+
+#: views/partials/form-rows/attribute-builder.php:45
+msgid "Site Name"
+msgstr ""
+
+#: views/partials/form-rows/attribute-builder.php:50
+msgid "Site Description"
+msgstr ""
+
+#: views/partials/form-rows/attribute-builder.php:55
+msgid "Domain Name"
+msgstr ""
+
+#: views/partials/form-rows/attribute-builder.php:58
+msgid "Special"
+msgstr ""
+
+#: views/partials/form-rows/attribute-builder.php:62
+msgid "Current Date"
+msgstr ""
+
+#: views/partials/form-rows/attribute-builder.php:67
 #: views/partials/form-rows/custom-texts.php:9
 msgid "Custom Text"
+msgstr ""
+
+#: views/partials/form-rows/attribute-builder.php:73
+msgid "Empty"
 msgstr ""
 
 #. translators: %s is one of the following: "alt" or "title"
@@ -239,12 +267,7 @@ msgstr ""
 msgid "The fourth image will have the attribute \"Amazing Shirt 4\"."
 msgstr ""
 
-#: views/partials/help-modals.php:62
-#: views/partials/postbox/support.php:41
-msgid "Crypto donation"
-msgstr ""
-
-#: views/partials/postbox/feedback.php:13
+#: views/partials/postbox/feedback.php:15
 msgid "Contact the author"
 msgstr ""
 
@@ -253,31 +276,26 @@ msgid "Your message has been sent."
 msgstr ""
 
 #: views/partials/postbox/feedback.php:21
-#: views/partials/postbox/support.php:13
 msgid "Thank you!"
 msgstr ""
 
 #: views/partials/postbox/feedback.php:24
-msgid "Howdy!"
-msgstr ""
-
-#: views/partials/postbox/feedback.php:28
 msgid "Feel free to contact me with any questions or feedback."
 msgstr ""
 
-#: views/partials/postbox/feedback.php:34
+#: views/partials/postbox/feedback.php:30
 msgid "your email"
 msgstr ""
 
-#: views/partials/postbox/feedback.php:41
+#: views/partials/postbox/feedback.php:37
 msgid "your message"
 msgstr ""
 
-#: views/partials/postbox/feedback.php:47
+#: views/partials/postbox/feedback.php:43
 msgid "Submit"
 msgstr ""
 
-#: views/partials/postbox/feedback.php:48
+#: views/partials/postbox/feedback.php:44
 msgid "Submitting..."
 msgstr ""
 
@@ -285,11 +303,11 @@ msgstr ""
 msgid "Global Settings"
 msgstr ""
 
-#: views/partials/postbox/settings.php:28
+#: views/partials/postbox/settings.php:14
 msgid "Settings Saved"
 msgstr ""
 
-#: views/partials/postbox/settings.php:29
+#: views/partials/postbox/settings.php:15
 msgid "Saving..."
 msgstr ""
 
@@ -299,20 +317,4 @@ msgstr ""
 
 #: views/partials/postbox/share.php:17
 msgid "Share on"
-msgstr ""
-
-#: views/partials/postbox/support.php:9
-msgid "Support the plugin"
-msgstr ""
-
-#: views/partials/postbox/support.php:12
-msgid "Donations are greatly appreciated."
-msgstr ""
-
-#: views/partials/postbox/support.php:23
-msgid "Credit Card donation"
-msgstr ""
-
-#: views/partials/postbox/support.php:32
-msgid "PayPal donation"
 msgstr ""
