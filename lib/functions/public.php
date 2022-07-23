@@ -92,6 +92,26 @@ function woo_image_seo_get_image_attributes( $attr ) {
                     $text_value = $attribute_values['custom'][ $text_key ];
                     break;
 
+                case '[site-name]':
+                    // site name
+                    $text_value = wp_strip_all_tags( get_bloginfo( 'name' ), true );
+                    break;
+
+                case '[site-description]':
+                    // site description
+                    $text_value = wp_strip_all_tags( get_bloginfo( 'description' ) );
+                    break;
+
+                case '[site-domain]':
+                    // site domain
+                    $text_value = $_SERVER['HTTP_HOST'];
+                    break;
+
+                case '[current-date]':
+                    // current date
+                    $text_value = current_time( 'Y-m-d' );
+                    break;
+
                 default:
                     // if value is not one of the above
                     $text_value = '';
