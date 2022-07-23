@@ -2,21 +2,26 @@
 	Contributors: emandiev
 	Tags:  WooCommerce, Woo, Woo SEO, product alt, product seo
 	Requires PHP: 5.4
-	Stable tag: 1.3.0
+	Stable tag: 1.4.0
 	Requires at least: 4.1
-	Tested up to: 6.0
+	Tested up to: 6.0.1
 	License: GPLv3 or later
 	License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
-	Boost your WooCommerce SEO and get more traffic to your store! This plugin will add alt tags and title attributes to all product images using the product's name, category or tag (customizable).
-
 == Description ==
 
-"Woo Image SEO" will boost your store's SEO by automatically adding "alt" and "title" attributes to your product's images.<br />
-No configuration is required.<br />
-However, you can choose to customize the automatic attributes using the attribute builder.<br />
-It lets you build a dynamic attribute from the product's title, category, tag, or custom text in any order.<br />
-This plugin works only with the <a href="https://wordpress.org/plugins/woocommerce/">WooCommerce</a> plugin.<br />
+Boost your WooCommerce SEO by automatically adding alt tags and title attributes to product images.
+No configuration required.
+Attributes can include various data like:
+- Product Name
+- Product Category
+- Product Tag
+- Site Name
+- Site Description
+- Site Domain
+- Current Date
+- ...or any custom text
+Works only with the <a href="https://wordpress.org/plugins/woocommerce/">WooCommerce</a> plugin.<br />
 
 == Installation ==
 
@@ -50,7 +55,7 @@ The plugin's images will get alt="Amazing Shirt" and title="Amazing Shirt".
 
 You can also enable/disable the generation of each attribute and choose whether to allow for user-specified attributes by going to WooCommerce -> Woo Image SEO.
 You can also customize the way this plugin creates attributes.
-For exmple you may want to include each product's category in the alt tags, or even it's tag.
+For example, you may want to include each product's category in the alt tags, or even its tag.
 
 Your actual files or database won't be modified.
 Once you disable the plugin, the automatically generated attributes will be gone.
@@ -138,3 +143,9 @@ Replace the Support box with Tips.
 Improve the Feedback form.
 Improve i18n support.
 Add support for WordPress 6.0 and WooCommerce 6.5.1
+
+= 1.4.0 =
+* 23/7/2022:
+Add 4 new Attribute Builder options - Site Name, Site Description, Site Domain, and Current Date.
+Remove unused code.
+Add affiliate banner.

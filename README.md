@@ -3,10 +3,17 @@ Woo Image SEO - WordPress plugin
 
 https://wordpress.org/plugins/woo-image-seo/
 
-“Woo Image SEO” will boost your store’s SEO by automatically adding “alt” and “title” attributes to your product’s images.
-No configuration is required.
-However, you can choose to customize the automatic attributes using the product’s title, category or tag in any order.
-This plugin works only with the WooCommerce plugin.
+Boost your WooCommerce SEO by automatically adding alt tags and title attributes to product images.  
+No configuration required.  
+Attributes can include various data like:
+- Product Name
+- Product Category
+- Product Tag
+- Site Name
+- Site Description
+- Site Domain
+- Current Date
+- ...or any custom text
 
 ### Changelog
 
@@ -77,3 +84,9 @@ Replace the Support box with Tips.
 Improve the Feedback form.  
 Improve i18n support.  
 Add support for WordPress 6.0 and WooCommerce 6.5.1
+
+= 1.4.0 =
+* 23/7/2022:  
+Add 4 new Attribute Builder options - Site Name, Site Description, Site Domain, and Current Date.  
+Remove unused code.  
+Add affiliate banner.
