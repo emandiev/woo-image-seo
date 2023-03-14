@@ -59,37 +59,29 @@ function woo_image_seo_get_image_attributes( $attr ) {
                     break;
 
                 case '[category]':
+                    // handle unexpected cases
+                    $text_value = '';
                     // get product categories
                     $product_categories = get_the_terms( $product_id, 'product_cat' );
-                    // check if product has a category, it should be an array
-                    if ( is_array( $product_categories ) ) {
-                        // if first category is not "Uncategorized", use it
-                        if ( $product_categories[0]->name !== 'Uncategorized' ) {
-                            $text_value = $product_categories[0]->name;
-                        } else if ( isset($product_categories[1]) ) { // try to get another category
-                            $text_value = $product_categories[1]->name;
-                        } else {
-                            $text_value = '';
+                    // go through the first 2 categories and try to use them
+                    foreach ( [0, 1] as $index ) {
+                        $is_valid_category_name = ! empty( $product_categories[ $index ]->name ) && $product_categories[ $index ]->name !== 'Uncategorized';
+                        if ( $is_valid_category_name ) {
+                            $text_value = $product_categories[ $index ]->name;
+                            break 2;
                         }
-                    } else {
-                        $text_value = '';
                     }
                     break;
 
                 case '[tag]':
                     // get product tags
                     $product_tags = get_the_terms( $product_id, 'product_tag' );
-                    // check if product has a tag
-                    if ( is_array( $product_tags ) ) {
-                        $text_value = $product_tags[0]->name;
-                    } else {
-                        $text_value = '';
-                    }
+                    $text_value = empty( $product_tags[0]->name ) ? '' : $product_tags[0]->name;
                     break;
 
                 case '[custom]':
                     // custom text
-                    $text_value = $attribute_values['custom'][ $text_key ];
+                    $text_value = ! isset( $attribute_values['custom'][ $text_key ] ) ? '' : $attribute_values['custom'][ $text_key ];
                     break;
 
                 case '[site-name]':
@@ -104,7 +96,7 @@ function woo_image_seo_get_image_attributes( $attr ) {
 
                 case '[site-domain]':
                     // site domain
-                    $text_value = $_SERVER['HTTP_HOST'];
+                    $text_value = empty( $_SERVER['HTTP_HOST'] ) ? '' : $_SERVER['HTTP_HOST'];
                     break;
 
                 case '[current-date]':
@@ -118,8 +110,13 @@ function woo_image_seo_get_image_attributes( $attr ) {
                     break;
             }
 
-            // append the proper text
-            if ( ! empty( $text_value ) ) {
+            // handle numbers
+            if ( is_int( $text_value ) ) {
+                $text_value = (string) $text_value;
+            }
+
+            // avoid adding empty strings
+            if ( is_string( $text_value ) && strlen( $text_value ) ) {
                 $attr[ $attribute_name ] .= $text_value . ' ';
             }
         }
