@@ -29,6 +29,7 @@ if ( is_admin() ) {
     require_once WOO_IMAGE_SEO['root_dir'] . 'lib/functions/admin.php';
     require_once WOO_IMAGE_SEO['root_dir'] . 'lib/hooks/admin.php';
 } else {
+    require_once WOO_IMAGE_SEO['root_dir'] . 'lib/functions/tokens.php';
     require_once WOO_IMAGE_SEO['root_dir'] . 'lib/functions/public.php';
     require_once WOO_IMAGE_SEO['root_dir'] . 'lib/hooks/public.php';
 }
