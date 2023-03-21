@@ -7,7 +7,8 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
  * If not found, saves the default settings first
  * @return array Array containing the plugin settings
  */
-function woo_image_seo_get_settings() {
+function woo_image_seo_get_settings(): array
+{
     $settings = get_option( WOO_IMAGE_SEO['option_name'] );
 
     if ( empty( $settings ) ) {

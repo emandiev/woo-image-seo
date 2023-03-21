@@ -11,7 +11,7 @@ define(
 		'option_name' => 'woo_image_seo',
 		'root_dir' => $dirname . '/',
 		'views_dir' => $dirname . '/views/',
-		'root_url' => $plugin_dir_url . '',
+		'root_url' => $plugin_dir_url,
 		'assets_url' => $plugin_dir_url . 'assets/',
 		'default_settings' => '{"alt":{"enable":1,"force":0,"count":0,"text":{"1":"[name]","2":"[none]","3":"[none]"},"custom":{"1":"","2":"","3":""}},"title":{"enable":1,"force":1,"count":0,"text":{"1":"[name]","2":"[none]","3":"[none]"},"custom":{"1":"","2":"","3":""}}}',
 		'version' => '1.4.0',
