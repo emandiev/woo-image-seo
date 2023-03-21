@@ -2,6 +2,11 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
+// provided when rendering this partial
+if ( empty( $type ) ) {
+    return;
+}
+
 ?>
 <div class="form__row">
 	<label class="text-select" for="<?php echo $type ?>[text][1]">
