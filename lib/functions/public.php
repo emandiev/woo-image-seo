@@ -50,22 +50,19 @@ function woo_image_seo_get_image_attributes( array $attr ): array
         ];
     }
 
-    // get plugin settings
-    $settings = woo_image_seo_get_settings();
-
     // check which attributes should be handled - loops through "alt" and "title"
-    foreach ( $settings as $attribute_name => $attribute_values ) {
-        if ( empty( $attribute_values['enable'] ) ) {
+    foreach ( woo_image_seo_get_settings() as $attribute_name => $attribute_settings ) {
+        if ( empty( $attribute_settings['enable'] ) ) {
             continue;
         }
 
         // "forced" attributes will override existing attributes
-        if ( empty( $attribute_values['force'] ) && ! empty( $attr[ $attribute_name ] ) ) {
+        if ( empty( $attribute_settings['force'] ) && ! empty( $attr[ $attribute_name ] ) ) {
             continue;
         }
 
         // build the attribute
-        $attr[ $attribute_name ] = woo_image_seo_build_attribute( $attribute_values, $product_id );
+        $attr[ $attribute_name ] = woo_image_seo_build_attribute( $attribute_settings, $product_id );
     }
 
     // return the modified attributes
@@ -74,30 +71,39 @@ function woo_image_seo_get_image_attributes( array $attr ): array
 
 /**
  * Build the attribute string based on plugin settings
- * @param $attribute_values
+ * @param $attribute_settings
  * @param $product_id
  * @return string
  */
-function woo_image_seo_build_attribute( $attribute_values, $product_id ): string
+function woo_image_seo_build_attribute( $attribute_settings, $product_id ): string
 {
     $result = '';
 
-    foreach ( $attribute_values['text'] as $text_key => $text_value ) {
-        $result .= woo_image_seo_parse_attribute_text(
-            $text_value,
-            $text_key,
-            $attribute_values['custom'],
+    // loop through the Attribute Builder texts and parse them
+    foreach ( $attribute_settings['text'] as $builder_index => $builder_token ) {
+        if ( empty( $builder_token ) ) {
+            continue;
+        }
+
+        $parsed_token = woo_image_seo_parse_token(
+            $builder_token,
+            $builder_index,
+            $attribute_settings['custom'],
             $product_id
         );
+
+        if ( strlen( $parsed_token ) ) {
+            $result .= ' ' . $parsed_token;
+        }
     }
 
-    // trim whitespace
+    // remove whitespaces from the beginning and end of the string
     $result = trim( $result );
 
     // optionally add number at end for products with more than one image
     global $woo_image_seo_product_info;
 
-    if ( ! empty( $attribute_values['count'] ) && $woo_image_seo_product_info['count'] > 1 ) {
+    if ( ! empty( $attribute_settings['count'] ) && $woo_image_seo_product_info['count'] > 1 ) {
         $result .= ' ' . $woo_image_seo_product_info['count'];
     }
 
@@ -106,78 +112,28 @@ function woo_image_seo_build_attribute( $attribute_values, $product_id ): string
 
 /**
  * Parse each of the Attribute Builder texts
- * @param $text_value
- * @param $text_key
- * @param $custom_values
+ * @param $builder_token
+ * @param $builder_index
+ * @param $custom_texts
  * @param $product_id
  * @return string
  */
-function woo_image_seo_parse_attribute_text( $text_value, $text_key, $custom_values, $product_id ): string
+function woo_image_seo_parse_token($builder_token, $builder_index, $custom_texts, $product_id): string
 {
-    $parsed_attribute = '';
+    $token_slug = str_replace( ['[', ']', '-'], ['', '', '_'], $builder_token );
+    $callable = 'woo_image_seo_parse_token_' . $token_slug;
 
-    if ( empty( $text_value ) ) {
-        return $parsed_attribute;
+    if ( ! function_exists( $callable ) ) {
+        return '';
     }
 
-    switch ( $text_value ) {
-        case '[name]':
-            // get product title
-            $parsed_attribute = get_the_title();
-            break;
-
-        case '[category]':
-            // get product categories
-            $product_categories = get_the_terms( $product_id, 'product_cat' );
-            // go through the first 2 categories and try to use them
-            foreach ( [0, 1] as $index ) {
-                $is_valid_category_name = ! empty( $product_categories[ $index ]->name ) && $product_categories[ $index ]->name !== 'Uncategorized';
-                if ( $is_valid_category_name ) {
-                    $parsed_attribute = $product_categories[ $index ]->name;
-                    break 2;
-                }
-            }
-            break;
-
-        case '[tag]':
-            // get product tags
-            $product_tags = get_the_terms( $product_id, 'product_tag' );
-            $parsed_attribute = empty( $product_tags[0]->name ) ? '' : $product_tags[0]->name;
-            break;
-
-        case '[custom]':
-            // custom text
-            $parsed_attribute = ! isset( $custom_values[ $text_key ] ) ? '' : (string) $custom_values[ $text_key ];
-            break;
-
-        case '[site-name]':
-            // site name
-            $parsed_attribute = wp_strip_all_tags( get_bloginfo( 'name' ), true );
-            break;
-
-        case '[site-description]':
-            // site description
-            $parsed_attribute = wp_strip_all_tags( get_bloginfo( 'description' ) );
-            break;
-
-        case '[site-domain]':
-            // site domain
-            $parsed_attribute = empty( $_SERVER['HTTP_HOST'] ) ? '' : $_SERVER['HTTP_HOST'];
-            break;
-
-        case '[current-date]':
-            // current date
-            $parsed_attribute = current_time( 'Y-m-d' );
-            break;
-
-        default:
-            break;
-    }
-
-    // avoid adding empty strings
-    if ( is_string( $parsed_attribute ) && strlen( $parsed_attribute ) ) {
-        $parsed_attribute .= ' ';
-    }
-
-    return $parsed_attribute;
+    return call_user_func_array(
+        $callable,
+        [
+            $builder_token,
+            $builder_index,
+            $custom_texts,
+            $product_id
+        ]
+    );
 }
