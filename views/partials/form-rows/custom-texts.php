@@ -14,7 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 			data-custom-text="1"
 			name="<?php echo $name ?>"
 			id="<?php echo $name ?>"
-			value="<?php echo empty( $settings[ $type ]['custom'][ $i ] ) ? '' : $settings[ $type ]['custom'][ $i ] ?>"
+			value="<?php echo ! isset( $settings[ $type ]['custom'][ $i ] ) ? '' : $settings[ $type ]['custom'][ $i ] ?>"
 		>
 	</div><!-- /.form__row -->
 <?php endfor; ?>
