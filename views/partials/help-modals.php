@@ -22,7 +22,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 	<strong><?php _e( 'Example', 'woo-image-seo' ) ?>:</strong><br>
 	<?php _e( 'You upload an image with the file name "pic3.jpg".', 'woo-image-seo' ) ?><br>
 	<?php _e( 'WordPress will automatically set a title attribute of "pic3".', 'woo-image-seo' ) ?><br>
-	<img src="<?php echo WOO_IMAGE_SEO['assets_url'] . 'force-help.png?version=' . WOO_IMAGE_SEO['version'] ?>">
+	<img src="<?php echo WOO_IMAGE_SEO['assets_url'] . 'force-help.png?version=' . WOO_IMAGE_SEO['version'] ?>" alt="">
 </div>
 
 <div id="attribute-builder-help" class="postbox postbox--help">
@@ -34,12 +34,12 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 	<?php _e( 'Let\'s say we have a product called "Amazing Shirt", with main category "Movie-Inspired Clothing".', 'woo-image-seo' ) ?><br>
 	<?php _e( 'By default, the plugin will build the image attribute using only the Product Name.', 'woo-image-seo' ) ?><br>
 	<?php _e( 'If you want to include the product\'s category, you can use the following configuration', 'woo-image-seo' ) ?>:<br>
-	<img src="<?php echo WOO_IMAGE_SEO['assets_url'] . 'attribute-builder-help-1.png?version=' . WOO_IMAGE_SEO['version'] ?>"><br>
+	<img src="<?php echo WOO_IMAGE_SEO['assets_url'] . 'attribute-builder-help-1.png?version=' . WOO_IMAGE_SEO['version'] ?>" alt=""><br>
 	<?php _e( 'This will result in the attribute "Amazing Shirt Movie-Inspired Clothing".', 'woo-image-seo' ) ?><br>
 	<hr>
 	<?php _e( 'The Custom Text option allows you to enter your own texts.', 'woo-image-seo' ) ?><br>
 	<?php _e( 'For example, the following configuration will result in "Amazing Shirt Movie-Inspired Clothing Free Shipping"', 'woo-image-seo' ) ?>:<br>
-	<img src="<?php echo WOO_IMAGE_SEO['assets_url'] . 'attribute-builder-help-2.png?version=' . WOO_IMAGE_SEO['version'] ?>">
+	<img src="<?php echo WOO_IMAGE_SEO['assets_url'] . 'attribute-builder-help-2.png?version=' . WOO_IMAGE_SEO['version'] ?>" alt="">
 </div>
 
 <div id="count-help" class="postbox postbox--help">
@@ -51,7 +51,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 	<hr>
 	<strong><?php _e( 'Example', 'woo-image-seo' ) ?>:</strong><br>
 	<?php _e( 'Let\'s say we have a product with four images called "Amazing Shirt" and the Attribute Builder is configured to use the Product Name.', 'woo-image-seo' ) ?><br>
-	<img src="<?php echo WOO_IMAGE_SEO['assets_url'] . 'attribute-builder-default.png?version=' . WOO_IMAGE_SEO['version'] ?>"><br>
+	<img src="<?php echo WOO_IMAGE_SEO['assets_url'] . 'attribute-builder-default.png?version=' . WOO_IMAGE_SEO['version'] ?>" alt=""><br>
 	<?php _e( 'The first image will have the attribute "Amazing Shirt".', 'woo-image-seo' ) ?><br>
 	<?php _e( 'The second image will have the attribute "Amazing Shirt 2".', 'woo-image-seo' ) ?><br>
 	<?php _e( 'The third image will have the attribute "Amazing Shirt 3".', 'woo-image-seo' ) ?><br>

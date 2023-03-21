@@ -2,6 +2,11 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
+// provided when rendering this partial
+if ( empty( $type ) ) {
+    return;
+}
+
 ?>
 <?php for ( $i = 1; $i < 4; $i++ ) : $name = $type .'[custom][' . $i . ']'; ?>
 	<div class="form__row">
