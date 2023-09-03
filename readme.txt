@@ -2,9 +2,9 @@
 	Contributors: emandiev
 	Tags:  WooCommerce, Woo, Woo SEO, product alt, product seo
 	Requires PHP: 7.0
-	Stable tag: 1.4.0
+	Stable tag: 1.4.1
 	Requires at least: 4.1
-	Tested up to: 6.1.1
+	Tested up to: 6.3.1
 	License: GPLv3 or later
 	License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -75,6 +75,11 @@ Only if you are using the Divi Builder and wish to improve your loading speed, p
 <a href="https://wordpress.org/plugins/lazy-load-divi-section-backgrounds/">Lazy Load Divi Section Backgrounds</a>
 
 == Changelog ==
+
+= 1.4.1 =
+* 03/9/2023:
+  Ensure compatibility with High-Performance Order Storage (HPOS)
+  Add support for WordPress 6.3.1 and WooCommerce 8.0.3
 
 = 1.4.0 =
 * 23/7/2022:
