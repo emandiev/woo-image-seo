@@ -20,7 +20,8 @@ Attributes can include various data like:
 = 1.4.1 =
 * 03/9/2023:  
   Ensure compatibility with High-Performance Order Storage (HPOS)  
-  Add support for WordPress 6.3.1 and WooCommerce 8.0.3
+  Add support for WordPress 6.3.1 and WooCommerce 8.0.3  
+  Bump required PHP version to 7.0
 
 = 1.4.0 =
 * 23/7/2022:  
