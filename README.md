@@ -17,6 +17,11 @@ Attributes can include various data like:
 
 ### Changelog
 
+= 1.4.1 =
+* 03/9/2023:  
+  Ensure compatibility with High-Performance Order Storage (HPOS)  
+  Add support for WordPress 6.3.1 and WooCommerce 8.0.3
+
 = 1.4.0 =
 * 23/7/2022:  
   Add 4 new Attribute Builder options - Site Name, Site Description, Site Domain, and Current Date.  
