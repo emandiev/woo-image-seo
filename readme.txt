@@ -80,6 +80,7 @@ Only if you are using the Divi Builder and wish to improve your loading speed, p
 * 03/9/2023:
   Ensure compatibility with High-Performance Order Storage (HPOS)
   Add support for WordPress 6.3.1 and WooCommerce 8.0.3
+  Bump required PHP version to 7.0
 
 = 1.4.0 =
 * 23/7/2022:
