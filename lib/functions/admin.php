@@ -2,12 +2,15 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
-/*
-	Render a partial template file
-	reduces duplicate code in main template file
-*/
+/**
+ * Render a partial template file
+ * $type and $settings are passed along
+ */
 function woo_image_seo_render_form_row( $name, $type, $settings ) {
-    require WOO_IMAGE_SEO['root_dir'] . 'views/partials/form-rows/' . $name . '.php';
+	require apply_filters(
+		'woo_image_seo_form_row_path',
+		WOO_IMAGE_SEO['root_dir'] . 'views/partials/form-rows/' . $name . '.php'
+	);
 }
 
 /**
