@@ -108,6 +108,17 @@ jQuery(document).ready(function($) {
 		})
 	}
 
+	// if no option is selected, pick the empty option
+	function validateAttributeBuilder() {
+		jQuery('#woo_image_seo select[name*="[text]"]').each(function () {
+			var $dropdown = jQuery(this);
+
+			if ($dropdown.find('option[selected]').length === 0) {
+				$dropdown.find('option[value="[none]"]').prop('selected', 'selected')
+			}
+		})
+	}
+
 	var saveAction = jQuery('#woo_image_seo_form [name="action"]').val();
 	var saveActionNonce = jQuery('#woo_image_seo_form [name="_wpnonce"]').val();
 	var saveActionReferer = jQuery('#woo_image_seo_form [name="_wp_http_referer"]').val();
@@ -125,6 +136,9 @@ jQuery(document).ready(function($) {
 
 	// show help modal on icon click
 	$wrapper.on('click', 'a.dashicons-editor-help, a.help-trigger', helpIconClickHandle)
+
+	// avoid bad attribute builder values
+	$(window).on( 'load', validateAttributeBuilder)
 
 	// add helper classes for better accessibility
 	$('body').on('mousedown', function() {
