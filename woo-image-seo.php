@@ -11,9 +11,9 @@
 	Text Domain: woo-image-seo
 	Domain Path: /i18n/languages/
 	Requires at least: 4.1
-	Tested up to: 6.3.2
+	Tested up to: 6.4.1
 	WC requires at least: 4.0
-	WC tested up to: 8.2.1
+	WC tested up to: 8.3.0
 */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
