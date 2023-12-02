@@ -17,6 +17,11 @@ Attributes can include various data like:
 
 ### Changelog
 
+= 1.4.2 =
+* 02/12/2023:
+  Remove affiliate banner.  
+  Add support for WordPress 6.4.1 and WooCommerce 8.3.1
+
 = 1.4.1 =
 * 03/9/2023:  
   Ensure compatibility with High-Performance Order Storage (HPOS)  

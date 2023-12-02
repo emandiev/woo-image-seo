@@ -2,9 +2,9 @@
 	Contributors: emandiev
 	Tags:  WooCommerce, Woo, Woo SEO, product alt, product seo
 	Requires PHP: 7.0
-	Stable tag: 1.4.1
+	Stable tag: 1.4.2
 	Requires at least: 4.1
-	Tested up to: 6.3.2
+	Tested up to: 6.4.1
 	License: GPLv3 or later
 	License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -68,6 +68,11 @@ It's designed to help improve your website's SEO.
 The plugin won't load any additional files.
 
 == Changelog ==
+
+= 1.4.2 =
+* 02/12/2023:
+  Remove affiliate banner.
+  Add support for WordPress 6.4.1 and WooCommerce 8.3.1
 
 = 1.4.1 =
 * 03/9/2023:
