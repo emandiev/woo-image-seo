@@ -67,13 +67,6 @@ The plugin will not cause any noticeable slowdown.
 It's designed to help improve your website's SEO.
 The plugin won't load any additional files.
 
-= Any other recommendations? =
-
-Only if you are using the Divi Builder and wish to improve your loading speed, performance, PageSpeed Insights score, etc.
-<a href="https://wordpress.org/plugins/responsive-divi-backgrounds/">Responsive Divi Backgrounds</a>
-<a href="https://wordpress.org/plugins/lazy-load-divi-slider-backgrounds/">Lazy Load Divi Slider Backgrounds</a>
-<a href="https://wordpress.org/plugins/lazy-load-divi-section-backgrounds/">Lazy Load Divi Section Backgrounds</a>
-
 == Changelog ==
 
 = 1.4.1 =
