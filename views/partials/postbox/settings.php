@@ -8,10 +8,5 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 	<?php require_once WOO_IMAGE_SEO['views_dir'] . 'partials/form-settings.php' ?>
 
-	<div
-		id="post-success"
-		class="hidden bg-gray"
-		data-saved="<?php _e( 'Settings Saved', 'woo-image-seo' ) ?>"
-		data-saving="<?php _e( 'Saving...', 'woo-image-seo' ) ?>"
-	></div>
+    <?php do_action( 'woo_image_seo_admin_after_settings' ) ?>
 </div>

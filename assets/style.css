@@ -54,6 +54,30 @@
 /*
 	Settings form
 */
+
+#woo_image_seo_form {
+	position: relative;
+}
+
+#woo_image_seo_form > * {
+	box-sizing: border-box;
+}
+
+#woo_image_seo_form_success {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	padding: 20px;
+	width: 100%;
+	text-align: center;
+	background: #777;
+	color: white;
+	font-size: 20px;
+	box-shadow: 0 0 1px rgba(0,0,0,.75);
+	user-select: none;
+	transition: background .4s;
+}
+
 #woo_image_seo_form .wrap {
 	margin: 0;
 }

@@ -19,3 +19,5 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 		<?php require_once WOO_IMAGE_SEO['root_dir'] . 'views/partials/postbox/share.php' ?>
 	</div><!-- /.wrap__inner -->
 </div>
+
+<?php do_action( 'woo_image_seo_admin_after_wrap' ) ?>
