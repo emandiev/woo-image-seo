@@ -2,9 +2,9 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
-function woo_image_seo_parse_token_name(): string
+function woo_image_seo_parse_token_name( $builder_token, $builder_index, $custom_texts, $product_id ): string
 {
-    return get_the_title();
+    return ! empty( $product_id ) ? get_the_title( $product_id ) : get_the_title();
 }
 
 function woo_image_seo_parse_token_category( $builder_token, $builder_index, $custom_texts, $product_id ): string
