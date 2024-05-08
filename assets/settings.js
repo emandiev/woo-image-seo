@@ -18,13 +18,13 @@ jQuery(document).ready(function($) {
 	}
 
 	function successMessageSaving() {
-		var $successMessage = jQuery('#post-success');
+		var $successMessage = jQuery('#woo_image_seo_form_success');
 
 		$successMessage.text($successMessage.data('saving')).fadeIn()
 	}
 
 	function successMessageSaved() {
-		var $successMessage = jQuery('#post-success');
+		var $successMessage = jQuery('#woo_image_seo_form_success');
 
 		$successMessage.text($successMessage.data('saved')).addClass('bg-green')
 
@@ -36,7 +36,7 @@ jQuery(document).ready(function($) {
 	function ajaxErrorHandle(jqXhr, textStatus, errorThrown) {
 		console.log(errorThrown)
 
-		var $successMessage = jQuery('#post-success');
+		var $successMessage = jQuery('#woo_image_seo_form_success');
 
 		$successMessage.text('ERROR!')
 

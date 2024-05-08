@@ -26,4 +26,11 @@ $settings = woo_image_seo_get_settings();
     <?php require_once WOO_IMAGE_SEO['views_dir'] . 'partials/actions.php' ?>
 
     <?php wp_nonce_field( 'woo_image_seo_save_settings' ) ?>
+
+    <div
+		id="woo_image_seo_form_success"
+		class="hidden bg-gray"
+		data-saved="<?php _e( 'Settings Saved', 'woo-image-seo' ) ?>"
+		data-saving="<?php _e( 'Saving...', 'woo-image-seo' ) ?>"
+	></div>
 </form>
