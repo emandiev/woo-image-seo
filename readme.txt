@@ -2,9 +2,9 @@
 	Contributors: emandiev
 	Tags:  WooCommerce, Woo, Woo SEO, product alt, product seo
 	Requires PHP: 7.0
-	Stable tag: 1.4.2
+	Stable tag: 1.4.3
 	Requires at least: 4.1
-	Tested up to: 6.4.1
+	Tested up to: 6.5.3
 	License: GPLv3 or later
 	License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -68,6 +68,11 @@ It's designed to help improve your website's SEO.
 The plugin won't load any additional files.
 
 == Changelog ==
+
+= 1.4.3 =
+* 05/30/2024:
+  Add support for WordPress 6.5.3 and WooCommerce 8.9.1
+  Code improvements
 
 = 1.4.2 =
 * 02/12/2023:

@@ -17,8 +17,13 @@ Attributes can include various data like:
 
 ### Changelog
 
+= 1.4.3 =
+* 05/30/2024:  
+  Add support for WordPress 6.5.3 and WooCommerce 8.9.1  
+  Code improvements
+
 = 1.4.2 =
-* 02/12/2023:
+* 02/12/2023:  
   Remove affiliate banner.  
   Add support for WordPress 6.4.1 and WooCommerce 8.3.1
 
