@@ -88,7 +88,7 @@ function woo_image_seo_build_attribute( $attribute_settings, $product_id ): stri
         $parsed_token = woo_image_seo_parse_token(
             $builder_token,
             $builder_index,
-            $attribute_settings['custom'],
+            $attribute_settings['custom'] ?? [],
             $product_id
         );
 
