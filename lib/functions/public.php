@@ -137,3 +137,26 @@ function woo_image_seo_parse_token($builder_token, $builder_index, $custom_texts
         ]
     );
 }
+
+/**
+ * Modify the alt and title attributes for the Woo Variation Gallery plugin
+ * @param $props
+ * @param $attachment_id
+ * @param $product_id
+ *
+ * @return array
+ */
+function woo_image_seo_get_variation_gallery_image_attributes( $props, $attachment_id, $product_id ): array {
+	$product = wc_get_product( $product_id );
+
+	if ( empty( $product ) ) {
+		return $props;
+	}
+
+	$image_attributes = woo_image_seo_get_image_attributes( $props );
+
+	$props['alt'] = $image_attributes['alt'] ?? '';
+	$props['title'] = $image_attributes['title'] ?? '';
+
+	return $props;
+}
