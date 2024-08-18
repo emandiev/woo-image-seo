@@ -13,7 +13,7 @@
 	Requires at least: 4.1
 	Tested up to: 6.6.1
 	WC requires at least: 4.0
-	WC tested up to: 8.9.1
+	WC tested up to: 9.1.4
 */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
