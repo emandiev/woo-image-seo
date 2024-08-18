@@ -2,7 +2,7 @@
 	Contributors: emandiev
 	Tags:  WooCommerce, Woo, Woo SEO, product alt, product seo
 	Requires PHP: 7.0
-	Stable tag: 1.4.3
+	Stable tag: 1.4.4
 	Requires at least: 4.1
 	Tested up to: 6.6.1
 	License: GPLv3 or later
@@ -68,6 +68,11 @@ It's designed to help improve your website's SEO.
 The plugin won't load any additional files.
 
 == Changelog ==
+
+= 1.4.4 =
+* 08/18/2024:
+  Ensure compatibility with the "Additional Variation Images Gallery for WooCommerce" plugin
+  Add support for WordPress 6.6.1 and WooCommerce 9.1.4
 
 = 1.4.3 =
 * 05/30/2024:
