@@ -3,7 +3,7 @@
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 /**
- * Filter image attributes to add SEO attributes
+ * Filter common image attributes to add SEO attributes
  */
 add_filter(
     'wp_get_attachment_image_attributes',
