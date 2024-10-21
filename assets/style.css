@@ -279,19 +279,19 @@ body.no-focus #woo_image_seo_form input[type="checkbox"]:checked:focus ~ .checkm
 /*
 	help triggers
 */
-#woo_image_seo_form .dashicons-editor-help {
+#woo_image_seo .dashicons-editor-help {
     vertical-align: middle;
     cursor: pointer;
-    color: #444;
+    color: inherit;
     transition: transform .3s;
 }
 
-#woo_image_seo_form .dashicons-editor-help:hover,
-#woo_image_seo_form .dashicons-editor-help:focus {
+#woo_image_seo .dashicons-editor-help:hover,
+#woo_image_seo .dashicons-editor-help:focus {
     transform: scale(1.2);
 }
 
-#woo_image_seo_form .dashicons-editor-help:focus {
+#woo_image_seo .dashicons-editor-help:focus {
     box-shadow: none;
     color: #0073aa;
 }
