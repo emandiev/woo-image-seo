@@ -24,7 +24,11 @@
 #woo_image_seo p {
     font-size: 15px;
     line-height: 21px;
-    margin: 0 0 14px 0;
+    margin: 0;
+}
+
+#woo_image_seo p + p {
+    margin-top: 14px;
 }
 
 #woo_image_seo .postbox {
