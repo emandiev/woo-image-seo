@@ -80,3 +80,10 @@ add_filter( 'plugin_action_links_woo-image-seo/woo-image-seo.php', function( $li
         $links
     );
 }, PHP_INT_MAX );
+
+/**
+ * Add pro version banner
+ */
+add_action( 'woo_image_seo_admin_after_settings', function() {
+	require_once WOO_IMAGE_SEO['views_dir'] . 'partials/pro-banner.php';
+} );
