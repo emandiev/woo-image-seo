@@ -17,6 +17,11 @@ Attributes can include various data like:
 
 ### Changelog
 
+= 1.4.5 =
+* 25/10/2024:  
+  Add support for WordPress 6.6.2 and WooCommerce 9.3.3  
+  Code improvements  
+
 = 1.4.4 =
 * 08/18/2024:  
   Ensure compatibility with the "Additional Variation Images Gallery for WooCommerce" plugin  
