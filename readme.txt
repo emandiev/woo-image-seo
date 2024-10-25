@@ -7,6 +7,7 @@
 	Tested up to: 6.6.1
 	License: GPLv3 or later
 	License URI: https://www.gnu.org/licenses/gpl-3.0.html
+	Automatically add alt tags and title attributes to product images.
 
 == Description ==
 
