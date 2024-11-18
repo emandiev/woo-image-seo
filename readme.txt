@@ -36,10 +36,10 @@ Your actual files or database won't be modified. Once you disable the plugin, th
 
 For more advanced features, consider <a href="https://www.woothemes.com/woo-image-seo-pro/">Woo Image SEO Pro</a>:
 
-* Yoast SEO and RankMath SEO support (12 new tokens for the attribute builder)
-* Image compression (improves your store's performance, which is a ranking factor)
-* Save to database (image attributes are saved to the database and appear in the Media Library)
-* Attribute checker (see the alt and title of all images on a page)
+* **Yoast SEO and RankMath SEO support** (12 new tokens for the attribute builder)
+* **Image compression** (improves your store's performance, which is a ranking factor)
+* **Save to database** (image attributes are saved to the database and appear in the Media Library)
+* **Attribute checker** (see the alt and title of all images on a page)
 * Priority support and custom-built features on request
 
 == Installation ==
