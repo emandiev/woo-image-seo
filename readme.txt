@@ -1,28 +1,46 @@
 === Woo Image SEO ===
-	Contributors: emandiev
-	Tags:  WooCommerce, Woo, Woo SEO, product alt, product seo
-	Requires PHP: 7.0
-	Stable tag: 1.4.5
-	Requires at least: 4.1
-	Tested up to: 6.6.1
-	License: GPLv3 or later
-	License URI: https://www.gnu.org/licenses/gpl-3.0.html
-	Automatically add alt tags and title attributes to product images.
+Contributors: emandiev
+Tags:  WooCommerce, Woo, Woo SEO, product alt, product seo
+Requires PHP: 7.0
+Stable tag: 1.4.6
+Requires at least: 4.1
+Tested up to: 6.7
+License: GPLv3 or later
+License URI: https://www.gnu.org/licenses/gpl-3.0.html
+
+Improve your WooCommerce SEO! Automatically add alt tags and title attributes to product images using Woo Image SEO.
 
 == Description ==
 
-Boost your WooCommerce SEO by automatically adding alt tags and title attributes to product images.
-No configuration required.
-Attributes can include various data like:
-- Product Name
-- Product Category
-- Product Tag
-- Site Name
-- Site Description
-- Site Domain
-- Current Date
-- ...or any custom text
-Works only with the <a href="https://wordpress.org/plugins/woocommerce/">WooCommerce</a> plugin.<br />
+## Woo Image SEO: The Ultimate Image SEO Plugin for WooCommerce
+
+Boost your SEO with automatic alt and title attributes for your product images!
+
+Woo Image SEO is a simple but powerful SEO plugin that dynamically generates image attributes read by Google, Bing, and other search engines. Enjoy instant results by activating the plugin - no configuration required.
+
+Woo Image SEO helps with accessibility and SEO by automatically adding alt and title attributes to your product images just before they are displayed on your website. This is a great way to improve your website's SEO and make your products more accessible to visually impaired users.
+
+### Better alt tags for your website's images
+
+Alt tags are essential for SEO. They help search engines understand what an image is about. By using the product's name as the alt tag, you can improve your website's SEO and make your products more accessible to visually impaired users. For example, if you have a product called "Amazing Shirt", the product's images will get alt="Amazing Shirt" and title="Amazing Shirt".
+
+You can also enable/disable the generation of each attribute and choose whether to allow for user-specified attributes by going to WooCommerce -> Woo Image SEO. Attributes can include 3 of the following in any order: [product name], [product category], [product tag], [custom text], [site name], [site description], [site domain], and [current date].
+
+### Instant results
+
+Woo Image SEO hooks into a common WordPress function that is called when an image is displayed on your website. This means that the alt and title attributes are generated just before the image is displayed. You don't need to do anything else - just activate the plugin and enjoy the results.
+
+Your actual files or database won't be modified. Once you disable the plugin, the automatically generated attributes will be gone.
+
+### Pro features
+
+For more advanced features, consider <a href="https://www.woothemes.com/woo-image-seo-pro/">Woo Image SEO Pro</a>:
+
+- Yoast SEO and RankMath SEO support (12 new tokens for the attribute builder)
+- Image compression (improves your store's performance, which is a ranking factor)
+- Save to database (image attributes are saved to the database and appear in the Media Library)
+- Attribute checker (see the alt and title of all images on a page)
+- Priority support and custom-built features on request
 
 == Installation ==
 
@@ -34,7 +52,7 @@ Works only with the <a href="https://wordpress.org/plugins/woocommerce/">WooComm
 
 = What are the requirements? =
 
-The WooCommerce plugin by Automattic.
+The <a href="https://wordpress.org/plugins/woocommerce/">WooCommerce</a> plugin<br /> by Automattic.
 
 = What are image "alt" tags or attributes? =
 
@@ -42,31 +60,6 @@ Alt text, also known as "alt attributes" or "alt tags", are used in HTML to desc
 Adding alternative text to photos is a principle of web accessibility. Visually impaired users using screen readers will be read an alt attribute to better understand an on-page image.
 Alt tags will be displayed in place of an image if an image file cannot be loaded.
 Alt tags provide better image context/descriptions to search engine crawlers, helping them to index an image properly.
-
-= Why should I care? =
-
-Adding appropriate alt attributes will improve your SEO. Better ranking should lead to more traffic!
-
-= What will the plugin actually do? =
-
-The plugin will use each product's title (name) to add alt and title attributes to the product's images.
-Example:
-You have a product called "Amazing Shirt".
-The plugin's images will get alt="Amazing Shirt" and title="Amazing Shirt".
-
-You can also enable/disable the generation of each attribute and choose whether to allow for user-specified attributes by going to WooCommerce -> Woo Image SEO.
-You can also customize the way this plugin creates attributes.
-For example, you may want to include each product's category in the alt tags, or even its tag.
-
-Your actual files or database won't be modified.
-Once you disable the plugin, the automatically generated attributes will be gone.
-
-= Will this plugin affect the performance in a bad way? =
-
-No.
-The plugin will not cause any noticeable slowdown.
-It's designed to help improve your website's SEO.
-The plugin won't load any additional files.
 
 == Changelog ==
 
