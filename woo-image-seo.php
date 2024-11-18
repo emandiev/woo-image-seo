@@ -1,19 +1,19 @@
 <?php
 /*
 	Plugin Name: Woo Image SEO
-	Description: Boost your WooCommerce SEO by automatically adding alt tags and title attributes to product images.
-	Version: 1.4.5
+	Description: Improve your WooCommerce SEO! Automatically add alt tags and title attributes to product images using Woo Image SEO.
+	Version: 1.4.6
 	Plugin URI: https://wordpress.org/plugins/woo-image-seo/
 	Author: Danail Emandiev
-	Author URI: https://emandiev.com
+	Author URI: https://wooimageseo.com/
 	License: GPLv3
 	License URI: https://www.gnu.org/licenses/gpl-3.0.html
 	Text Domain: woo-image-seo
 	Domain Path: /i18n/languages/
 	Requires at least: 4.1
-	Tested up to: 6.6.2
+	Tested up to: 6.7
 	WC requires at least: 4.0
-	WC tested up to: 9.3.3
+	WC tested up to: 9.4.1
 */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
