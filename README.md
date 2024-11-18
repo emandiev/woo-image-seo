@@ -20,7 +20,7 @@ Your actual files or database won't be modified. Once you disable the plugin, th
 
 ### Pro features
 
-For more advanced features, consider <a href="https://www.woothemes.com/woo-image-seo-pro/">Woo Image SEO Pro</a>:
+For more advanced features, consider <a href="https://wooimageseo.com/pro/">Woo Image SEO Pro</a>:
 
 - Yoast SEO and RankMath SEO support (12 new tokens for the attribute builder)
 - Image compression (improves your store's performance, which is a ranking factor)
