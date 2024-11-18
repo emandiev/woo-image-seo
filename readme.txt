@@ -36,11 +36,11 @@ Your actual files or database won't be modified. Once you disable the plugin, th
 
 For more advanced features, consider <a href="https://www.woothemes.com/woo-image-seo-pro/">Woo Image SEO Pro</a>:
 
-- Yoast SEO and RankMath SEO support (12 new tokens for the attribute builder)
-- Image compression (improves your store's performance, which is a ranking factor)
-- Save to database (image attributes are saved to the database and appear in the Media Library)
-- Attribute checker (see the alt and title of all images on a page)
-- Priority support and custom-built features on request
+* Yoast SEO and RankMath SEO support (12 new tokens for the attribute builder)
+* Image compression (improves your store's performance, which is a ranking factor)
+* Save to database (image attributes are saved to the database and appear in the Media Library)
+* Attribute checker (see the alt and title of all images on a page)
+* Priority support and custom-built features on request
 
 == Installation ==
 
@@ -62,6 +62,11 @@ Alt tags will be displayed in place of an image if an image file cannot be loade
 Alt tags provide better image context/descriptions to search engine crawlers, helping them to index an image properly.
 
 == Changelog ==
+
+= 1.4.6 =
+* 18/11/2024:
+  Add support for WordPress 6.7 and WooCommerce 9.4.1
+  Rework readme file
 
 = 1.4.5 =
 * 25/10/2024:
