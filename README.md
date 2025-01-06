@@ -20,7 +20,7 @@ Your actual files or database won't be modified. Once you disable the plugin, th
 
 ### Pro features
 
-For more advanced features, consider <a href="https://wooimageseo.com/pro/">Woo Image SEO Pro</a>:
+For more advanced features, consider <a href="https://wooimageseo.com/#pro-features">Woo Image SEO Pro</a>:
 
 - Yoast SEO and RankMath SEO support (12 new tokens for the attribute builder)
 - Image compression (improves your store's performance, which is a ranking factor)
@@ -48,6 +48,10 @@ Alt tags will be displayed in place of an image if an image file cannot be loade
 Alt tags provide better image context/descriptions to search engine crawlers, helping them to index an image properly.
 
 ### Changelog
+
+= 1.4.7 =
+* 18/11/2024:  
+  Add support for WordPress 6.7.1 and WooCommerce 9.5.1
 
 = 1.4.6 =
 * 18/11/2024:  
