@@ -473,7 +473,7 @@ body.no-focus #woo_image_seo_form input[type="checkbox"]:checked:focus ~ .checkm
     margin-top: 21px;
     padding: 10px;
     border-radius: 5px;
-    background: #7f54b2;
+    background: linear-gradient(315deg, #053a72, #9333ea);
     color: #fff;
 }
 
