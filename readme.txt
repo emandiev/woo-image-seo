@@ -2,9 +2,9 @@
 Contributors: emandiev
 Tags:  WooCommerce, Woo, Woo SEO, product alt, product seo
 Requires PHP: 7.0
-Stable tag: 1.4.7
+Stable tag: 1.4.8
 Requires at least: 4.1
-Tested up to: 6.7.1
+Tested up to: 6.8.2
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -62,6 +62,10 @@ Alt tags will be displayed in place of an image if an image file cannot be loade
 Alt tags provide better image context/descriptions to search engine crawlers, helping them to index an image properly.
 
 == Changelog ==
+
+= 1.4.8 =
+* 26/07/2025:
+  Add support for WordPress 6.8.2 and WooCommerce 10.0.4
 
 = 1.4.7 =
 * 06/01/2025:
