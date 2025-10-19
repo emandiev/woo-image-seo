@@ -49,6 +49,10 @@ Alt tags provide better image context/descriptions to search engine crawlers, he
 
 ### Changelog
 
+= 1.4.9 =
+* 19/10/2025:  
+  Add support for WordPress 6.8.3 and WooCommerce 10.2.2
+
 = 1.4.8 =
 * 26/07/2025:  
   Add support for WordPress 6.8.2 and WooCommerce 10.0.4
