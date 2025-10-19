@@ -4,7 +4,7 @@ Tags:  WooCommerce, Woo, Woo SEO, product alt, product seo
 Requires PHP: 7.0
 Stable tag: 1.4.8
 Requires at least: 4.1
-Tested up to: 6.8.2
+Tested up to: 6.8.3
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
