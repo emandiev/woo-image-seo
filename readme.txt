@@ -1,51 +1,41 @@
-=== Woo Image SEO ===
+=== Top Image SEO ===
 Contributors: emandiev
 Tags:  WooCommerce, Woo, Woo SEO, product alt, product seo
 Requires PHP: 7.0
-Stable tag: 1.4.9
+Stable tag: 1.5.0
 Requires at least: 4.1
 Tested up to: 6.8.3
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
-Improve your WooCommerce SEO! Automatically add alt tags and title attributes to product images using Woo Image SEO.
+Improve your WooCommerce SEO! Automatically add alt tags and title attributes to product images using Top Image SEO.
 
 == Description ==
 
-## Woo Image SEO: The Ultimate Image SEO Plugin for WooCommerce
+## Top Image SEO: The Ultimate Image SEO Plugin for WooCommerce
 
 Boost your SEO with automatic alt and title attributes for your product images!
 
-Woo Image SEO is a simple but powerful SEO plugin that dynamically generates image attributes read by Google, Bing, and other search engines. Enjoy instant results by activating the plugin - no configuration required.
+Top Image SEO is a simple but powerful SEO plugin that dynamically generates image attributes read by Google, Bing, and other search engines. Enjoy instant results by activating the plugin - no configuration required.
 
-Woo Image SEO helps with accessibility and SEO by automatically adding alt and title attributes to your product images just before they are displayed on your website. This is a great way to improve your website's SEO and make your products more accessible to visually impaired users.
+Top Image SEO helps with accessibility and SEO by automatically adding alt and title attributes to your product images just before they are displayed on your website. This is a great way to improve your website's SEO and make your products more accessible to visually impaired users.
 
 ### Better alt tags for your website's images
 
 Alt tags are essential for SEO. They help search engines understand what an image is about. By using the product's name as the alt tag, you can improve your website's SEO and make your products more accessible to visually impaired users. For example, if you have a product called "Amazing Shirt", the product's images will get alt="Amazing Shirt" and title="Amazing Shirt".
 
-You can also enable/disable the generation of each attribute and choose whether to allow for user-specified attributes by going to WooCommerce -> Woo Image SEO. Attributes can include 3 of the following in any order: [product name], [product category], [product tag], [custom text], [site name], [site description], [site domain], and [current date].
+You can also enable/disable the generation of each attribute and choose whether to allow for user-specified attributes by going to WooCommerce -> Top Image SEO. Attributes can include 3 of the following in any order: [product name], [product category], [product tag], [custom text], [site name], [site description], [site domain], and [current date].
 
 ### Instant results
 
-Woo Image SEO hooks into a common WordPress function that is called when an image is displayed on your website. This means that the alt and title attributes are generated just before the image is displayed. You don't need to do anything else - just activate the plugin and enjoy the results.
+Top Image SEO hooks into a common WordPress function that is called when an image is displayed on your website. This means that the alt and title attributes are generated just before the image is displayed. You don't need to do anything else - just activate the plugin and enjoy the results.
 
 Your actual files or database won't be modified. Once you disable the plugin, the automatically generated attributes will be gone.
-
-### Pro features
-
-For more advanced features, consider <a href="https://wooimageseo.com/#pro-features">Woo Image SEO Pro</a>:
-
-* **Yoast SEO and RankMath SEO support** (12 new tokens for the attribute builder)
-* **Image compression** (improves your store's performance, which is a ranking factor)
-* **Save to database** (image attributes are saved to the database and appear in the Media Library)
-* **Attribute checker** (see the alt and title of all images on a page)
-* Priority support and custom-built features on request
 
 == Installation ==
 
 1. Visit <strong>Plugins > Add New</strong>
-2. Search for "<strong>Woo Image SEO</strong>"
+2. Search for "<strong>Top Image SEO</strong>"
 3. Download and Activate the plugin.
 
 == Frequently Asked Questions ==
@@ -62,6 +52,10 @@ Alt tags will be displayed in place of an image if an image file cannot be loade
 Alt tags provide better image context/descriptions to search engine crawlers, helping them to index an image properly.
 
 == Changelog ==
+
+= 1.5.0 =
+* 29/11/2025:
+  Rename plugin to "Top Image SEO"
 
 = 1.4.9 =
 * 19/10/2025:

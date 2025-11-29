@@ -71,7 +71,7 @@ jQuery(document).ready(function($) {
 	function feedbackFormSubmitHandle(event) {
 		event.preventDefault();
 
-		if (!window.confirm("To provide better support, we will collect the following data:\n- The site's URL\n- The version of Woo Image SEO\n- The version of WooCommerce\nDo you agree?")) {
+		if (!window.confirm("To provide better support, we will collect the following data:\n- The site's URL\n- The version of Top Image SEO\n- The version of WooCommerce\nDo you agree?")) {
 			return;
 		}
 

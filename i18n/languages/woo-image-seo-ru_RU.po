@@ -1,8 +1,8 @@
 # Copyright (C) 2021 Danail Emandiev
-# This file is distributed under the same license as the Woo Image SEO plugin.
+# This file is distributed under the same license as the Top Image SEO plugin.
 msgid ""
 msgstr ""
-"Project-Id-Version: Woo Image SEO 1.4.0\n"
+"Project-Id-Version: Top Image SEO 1.4.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/woo-image-seo\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Language: ru_RU\n"
 
 #. Plugin Name of the plugin
-msgid "Woo Image SEO"
+msgid "Top Image SEO"
 msgstr ""
 
 #. Plugin URI of the plugin
@@ -41,8 +41,8 @@ msgid "Why are the image attributes not updated?"
 msgstr "Почему атрибуты изображения не обновляются?"
 
 #: views/media-popup.php:17
-msgid "Woo Image SEO will not change the image attributes permanently. Instead, they are generated dynamically each time an image is displayed. Your image will have different alt and title attributes depending on the product that is using it."
-msgstr "Woo Image SEO не будет изменять атрибуты изображения навсегда. Вместо этого они генерируются динамически каждый раз, когда отображается изображение. У вашего изображения будут разные атрибуты alt и title в зависимости от продукта, который его использует."
+msgid "Top Image SEO will not change the image attributes permanently. Instead, they are generated dynamically each time an image is displayed. Your image will have different alt and title attributes depending on the product that is using it."
+msgstr "Top Image SEO не будет изменять атрибуты изображения навсегда. Вместо этого они генерируются динамически каждый раз, когда отображается изображение. У вашего изображения будут разные атрибуты alt и title в зависимости от продукта, который его использует."
 
 #: views/media-popup.php:20
 msgid "For example, let's imagine that we have one image used for two different products - \"Product 1\" and \"Product 2\". If we visit the page of \"Product 1\", the image will have an alt attribute of \"Product 1\". If we open the page of \"Product 2\", then the image will have an alt attribute of \"Product 2\"."

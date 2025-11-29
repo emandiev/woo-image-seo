@@ -18,8 +18,8 @@ add_action( 'init', function() {
 add_action( 'admin_menu', function() {
     add_submenu_page(
         'woocommerce',
-        'Woo Image SEO',
-        'Woo Image SEO',
+        'Top Image SEO',
+        'Top Image SEO',
         'manage_options',
         'woo_image_seo',
         function() {
@@ -89,7 +89,7 @@ add_action( 'woo_image_seo_admin_after_settings', function() {
 } );
 
 /**
- * Display admin notice for Woo Image SEO Pro
+ * Display admin notice for Top Image SEO Pro
  */
 function woo_image_seo_pro_ad_admin_notice() {
 	global $pagenow;
@@ -140,7 +140,7 @@ function woo_image_seo_pro_ad_admin_notice() {
 
         <div class="woo-image-seo-pro-banner__content">
             <div class="woo-image-seo-pro-banner__text">
-                <h2><a href="https://wooimageseo.com/?ref=kb" target="_blank">Woo Image SEO Pro is available!</a></h2>
+                <h2><a href="https://wooimageseo.com/?ref=kb" target="_blank">Top Image SEO Pro is available!</a></h2>
 
                 <p>Advanced features, premium support.</p>
 
